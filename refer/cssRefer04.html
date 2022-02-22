@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS refernece</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <h1><a href="../index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>이유람</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html"><em>CSS 색상</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/Inline</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li class="active"><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssRefer06.html">float</a></li>
+                <li><a href="cssRefer07.html">벤더 프리픽스</a></li>
+                <li><a href="cssRefer08.html">이미지 표현 방법</a></li>
+                <li><a href="cssRefer09.html">ir 효과</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>CSS 색상</h3>
+                <p> CSS 에서 color 속성은 텍스트 글자 색을 바꾸고 싶을 때 사용합니다.
+                    color 속성에 입력하는 값은 6가지 형태로 적용할 수가 있습니다. </p>
+
+                <h4>16진수 HEXA 코드 값</h4>
+                <p> 색상을 표현할 수 있는 16진수 코드 값은 # 과 함께 6자리로 이루어져 있습니다.
+                    앞에서부터 각각 RR(red), GG(green), BB(blue) 로 두 자리씩 정수로 구성되며 16진수 값인 00 ~ FF 사이에 값을 지정할 수가 있습니다.
+                    예를 들어서 #FF0000 이면 빨간색이 됩니다.</p>
+
+                <div class="code">
+                    <pre><code>
+#color1 {color: #ff0000; } 
+#color2 {color: #00ff00; }
+#color3 {color: #0000ff; }
+                    </pre></code>
+                    <style>
+                        #color1 {
+                            color: #ff0000;
+                        }
+
+                        #color2 {
+                            color: #00ff00;
+                        }
+
+                        #color3 {
+                            color: #0000ff;
+                        }
+                    </style>
+
+                    <div>
+                        <div id="color1">CSS 색상</div>
+                        <div id="color2">CSS 색상</div>
+                        <div id="color3">CSS 색상</div>
+                    </div>
+                </div>
+                <h4>RGB</h4>
+                <p> RGB 색상 값은 대부분의 브라우저에서 지원합니다.
+                    함수 형태로 되어 있으며 인수로 red, green, blue 값을 넘깁니다.
+                    인수 값은 16진수가 아닌 10진수로 0 ~ 255 사이 값 입니다.
+                    그러니까 16진수 ff 는 10진수 255가 되는 것입니다.
+                    인수로 숫자 뿐만 아니라 % 값도 넘길 수 있습니다.
+                    아래 샘플을 % 형태로 변경한다면 rgb(100%, 0%, 0%) 이 됩니다.
+                    샘플 결과는 16진수로 표현한 CSS 값과 동일합니다.
+                    투명도는 0과 1사이 값으로 표현합니다.</p>
+                <div class="code">
+                    <pre><code>
+#color1 {color: rgb(255,0,0); } 
+#color2 {color: rgb(0,255,0); }
+#color3 {color: rgb(0,0,255); }
+                    </pre></code>
+                    <style>
+                        #color1 {
+                            color: rgb(255, 0, 0);
+                        }
+
+                        #color2 {
+                            color: rgb(0, 255, 0);
+                        }
+
+                        #color3 {
+                            color: rgb(0, 0, 255);
+                        }
+                    </style>
+
+                    <div>
+                        <div id="color1">CSS 색상</div>
+                        <div id="color2">CSS 색상</div>
+                        <div id="color3">CSS 색상</div>
+                    </div>
+                </div>
+                <h4>RGBA</h4>
+                <p> RGBA 는 RGB 에 alpha 채널을 하나 더 추가한 것입니다.
+                    이것은 IE9 이상이나 파이어폭트 3 이상, 크롬, 사파리에 적용이 되는 값의 형태입니다.
+                    크로스 브라우징에 초점을 맞춰서 개발하신다면 사용에 있어서 신중해야 합니다.
+                    알파 값은 색의 투명도, 즉 배경색과 혼합되는 정도를 말합니다.
+                    인수의 위치는 제일 마지막이며 0 과 1 사이의 값을 가지게 됩니다.
+                    0 이면 완전 투명으로 글자가 안보이게 되고 1 은 완전 불투명으로 아무 변화가 없습니다.</p>
+                <div class="code">
+                    <pre><code>
+#color4 {color: rgba(255,0,0,0.3); } 
+#color5 {color: rgba(0,255,0,0.3); }
+#color6 {color: rgba(0,0,255,0.3); } 
+                    </pre></code>
+                    <style>
+                        #color4 {
+                            color: rgba(255, 0, 0, 0.3);
+                        }
+
+                        #color5 {
+                            color: rgba(0, 255, 0, 0.3);
+                        }
+
+                        #color6 {
+                            color: rgba(0, 0, 255, 0.3);
+                        }
+                    </style>
+
+                    <div>
+                        <div id="color4">CSS 색상</div>
+                        <div id="color5">CSS 색상</div>
+                        <div id="color6">CSS 색상</div>
+                    </div>
+                </div>
+                <h4>HSL</h4>
+                <p> HSL 도 전 브라우저 버전에 적용되는 것은 아닙니다.
+                    RGBA 와 마찬가지로 IE9 이상이나 파이어폭트 3 이상, 크롬, 사파리에 적용 됩니다.
+                    형태는 hsl(색상, 채도, 명도) 로 구성됩니다.
+                    색상(hue) 값은 가장 긴 빨강을 0도 로 했을 때 상대적인 배치 각도를 의미합니다.
+                    그래서 값은 0 ~ 360 도 사이입니다.
+                    0 과 360 은 red, 240 은 blue, 120 은 green 이 되는 것입니다.
+                    채도(Saturation) 는 진한 정도를 나타내는데 0 ~ 100% 사이 값을 가집니다.
+                    0% 는 무채색을 나타납니다.
+                    명도(Lightness) 는 밝기 정도를 나타내는데 0 ~ 100% 사이 값을 가집니다.
+                    0 은 검정색이고 100 은 하얀색 입니다.</p>
+                <div class="code">
+                    <pre><code>
+#color7 {color: hsl(120, 100%, 50%); } 
+#color8 {color: hsl(120, 100%, 75%); }
+#color9 {color: hsl(120, 60%, 70%); }
+                    </pre></code>
+                    <style>
+                        #color7 {
+                            color: hsl(120, 100%, 50%);
+                        }
+
+                        #color8 {
+                            color: hsl(120, 100%, 75%);
+                        }
+
+                        #color9 {
+                            color: hsl(120, 60%, 70%);
+                        }
+                    </style>
+
+                    <div>
+                        <div id="color7">CSS 색상</div>
+                        <div id="color8">CSS 색상</div>
+                        <div id="color9">CSS 색상</div>
+                    </div>
+                </div>
+                <h4>HALA</h4>
+                <p> HSLA 도 전 브라우저 버전에 적용되는 것은 아닙니다.
+                    RGBA 와 마찬가지로 IE9 이상이나 파이어폭트 3 이상, 크롬, 사파리에 적용 됩니다.
+                    마지막에 들어가는 A 값은 RGBA 와 같이 투명도를 나타냅니다.</p>
+                <div class="code">
+                    <pre><code>
+#color10 {color: hsla(120, 100%, 50%, 0.3); } 
+#color11 {color: hsla(120, 100%, 75%, 0.3); }
+#color12 {color: hsla(120, 100%, 70%, 0.3); }
+                    </pre></code>
+                    <style>
+                        #color10 {
+                            color: hsla(120, 100%, 50%, 0.3);
+                        }
+
+                        #color11 {
+                            color: hsla(120, 100%, 75%, 0.3);
+                        }
+
+                        #color12 {
+                            color: hsla(120, 100%, 70%, 0.3);
+                        }
+                    </style>
+
+                    <div>
+                        <div id="color10">CSS 색상</div>
+                        <div id="color11">CSS 색상</div>
+                        <div id="color12">CSS 색상</div>
+                    </div>
+                </div>
+                <h4>색상 이름</h4>
+                <p>모든 브라우저에서 지원하는 색상 명은 140 개로 지정이 되어 있습니다. 크로스 브라이징을 염두 해 두신다면 색상 명으로 개발하는 것이 가독성이 높을 뿐만 아니라 지원하지 않는
+                    브라우저 때문에 속 썩을 일이 없습니다. 하지만 컬러 개수가 얼마 되지 않기 때문에 디테일한 색상 작업은 힘듭니다.</p>
+                <div class="code">
+                    <pre><code>
+#color13 {color: red; } 
+#color14 {color: green; }
+#color15 {color: blue; }
+                    </pre></code>
+                    <style>
+                        #color13 {
+                            color: red;
+                        }
+
+                        #color14 {
+                            color: green;
+                        }
+
+                        #color15 {
+                            color: blue;
+                        }
+                    </style>
+
+                    <div>
+                        <div id="color13">CSS 색상</div>
+                        <div id="color14">CSS 색상</div>
+                        <div id="color15">CSS 색상</div>
+                    </div>
+                </div>
+                <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>

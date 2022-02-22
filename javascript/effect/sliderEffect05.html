@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 이펙트</title>
+    <style>
+        @import url(css/min.css);
+        @import url(css/custom.css);
+        @import url(css/Nexon.css);
+        
+        .slider__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .slider__img {          /* 화면 보이는 구간 */
+            width: 800px;
+            height: 480px;
+            overflow: hidden;
+        }
+        .slider__inner {        /* 이미지 움직이는 영역 */
+            display: flex;
+            width: 4000px;
+            position: relative;    /* left를 사용하기 위해서 */
+        }
+        .slider {
+            width: 800px;
+            position: relative;
+        }
+        .slider::before {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+            padding: 5px 10px 3px;
+        }
+        .slider:nth-child(1)::before {content: '이미지1';}
+        .slider:nth-child(2)::before {content: '이미지2';}
+        .slider:nth-child(3)::before {content: '이미지3';}
+        .slider:nth-child(4)::before {content: '이미지4';}
+        .slider:nth-child(5)::before {content: '이미지5';}
+        
+        .slider__btn {}
+        .slider__btn a {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            background: rgb(0,0,0,0.4);
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            transition: all 0.2s;
+            line-height: 50px;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+        }
+        .slider__btn a.prev {
+            left: 0;
+        }
+        .slider__btn a.next {
+            right: 0;
+        }
+        .slider__btn a:hover{
+            background: rgb(241,96,86);
+        }
+    </style>
+</head>
+<body class="img02">
+    <!-- main -->
+    <main>
+        <section id="sliderType01">
+            <div class="slider__wrap">
+                <div class="slider__img">
+                    <div class="slider__inner">
+                        <div class="slider"><img src="img/images21.jpg" alt="이미지6"></div>
+                        <div class="slider"><img src="img/images22.jpg" alt="이미지7"></div>
+                        <div class="slider"><img src="img/images23.jpg" alt="이미지8"></div>
+                        <div class="slider"><img src="img/images24.jpg" alt="이미지9"></div>
+                        <div class="slider"><img src="img/images25.jpg" alt="이미지10"></div>
+                    </div>
+                </div>
+                <div class="slider__btn">
+                    <a href="#" class="prev">Prev</a>
+                    <a href="#" class="next">Next</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- //main -->
+    <!-- info -->
+    <div class="info">
+    <div class="title">
+        <h1><a href="sliderEffect.html">JavaScript Slider Effect05</a></h1>
+        <p>이미지 슬라이드 - 버튼 추가</p>
+    </div>
+    <div class="number">
+        <ul>
+            <li><a href="sliderEffect01.html">1</a></li>
+            <li><a href="sliderEffect02.html">2</a></li>
+            <li><a href="sliderEffect03.html">3</a></li>
+            <li><a href="sliderEffect04.html">4</a></li>
+            <li class="active"><a href="sliderEffect05.html">5</a></li>
+            <li><a href="sliderEffect06.html">6</a></li>
+            <li><a href="sliderEffect07.html">7</a></li>
+            <li><a href="sliderEffect08.html">8</a></li>
+        </ul>
+    </div>
+    <div class="source">
+        <button class="source-btn">소스보기</button>
+        <div id="modal">
+            <div class="modal-wrap">
+                <div class="modal-cont">
+                    <div class="code-view">
+                        <div class="view-header" aria-hidden="true">
+                            <span class="close"></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="view-title">
+                            <ul>
+                                <li class="active"><a href="#">HTML</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">JavaScript</a></li>
+                                <li><a href="#">jQuery</a></li>
+                            </ul>
+                        </div>
+                        <div class="view-cont">
+                            <div>
+<pre><code class="language-javascript">const modal = function(){
+    document.querySelector(".source-btn").addEventListener("click", () => {
+        document.querySelector("#modal").classList.add("show");
+    });
+    document.querySelector(".modal-close").addEventListener("click", () => { document.querySelector(".modal-close").addEventListener("click", () => { document.querySelector(".modal-close").addEventListener("click", () => {
+        document.querySelector("#modal").classList.remove("show");
+    })
+}
+modal();
+const modal = function(){
+    document.querySelector(".source-btn").addEventListener("click", () => {
+        document.querySelector("#modal").classList.add("show");
+    });
+    document.querySelector(".modal-close").addEventListener("click", () => {
+        document.querySelector("#modal").classList.remove("show");
+    })
+}
+</code></pre>
+                            </div>
+                            <div>
+<pre><code class="language-javascript">const modal = function(){
+    document.querySelector(".source-btn").addEventListener("click", () => {
+        document.querySelector("#modal").classList.add("show");
+    });
+    document.querySelector(".modal-close").addEventListener("click", () => {
+        document.querySelector("#modal").classList.remove("show");
+    })
+}
+modal();
+</code></pre>
+                            </div>
+                            <div>
+<pre><code class="language-javascript">const modal = function(){
+    document.querySelector(".source-btn").addEventListener("click", () => {
+        document.querySelector("#modal").classList.add("show");
+    });
+    document.querySelector(".source-btn").addEventListener("click", () => {
+        document.querySelector("#modal").classList.add("show");
+    });
+    document.querySelector(".source-btn").addEventListener("click", () => {
+        document.querySelector("#modal").classList.add("show");
+    });
+}
+modal();
+
+</code></pre>
+                            </div>
+                            <div>
+<pre><code class="language-javascript">const modal = function(){
+    document.querySelector(".source-btn").addEventListener("click", () => {
+        document.querySelector("#modal").classList.add("show");
+    });
+    document.querySelector(".modal-close").addEventListener("click", () => {
+        document.querySelector("#modal").classList.remove("show");
+    })
+    document.querySelector(".source-btn").addEventListener("click", () => {
+        document.querySelector("#modal").classList.add("show");
+    });
+    document.querySelector(".modal-close").addEventListener("click", () => {
+        document.querySelector("#modal").classList.remove("show");
+    })
+}
+modal();
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="modal-close">닫기</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- //info -->
+   <!-- script -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/highlight.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        highlight();
+        modal ();
+        tabMenu ();
+
+       // slider05
+       const sliderWrap = document.querySelector(".slider__wrap");      //sliderWrap에 div 태그 .slider__wrap 저장
+        const sliderImg = document.querySelector(".slider__img");        //sliderImg에 div 태그 .slider_img 저장, 이미지 한 칸만 보이는 영역
+        const sliderInner = document.querySelector(".slider__inner");    //이미지 움직이는 영역
+        const slider = document.querySelectorAll(".slider");             //slider에 div 태그 .slider (최종적으로 이미지를 담는 다섯개의 div)
+        const sliderBtn = document.querySelector(".slider__btn");
+        const sliderBtnPrev = document.querySelector(".prev");
+        const sliderBtnNext = document.querySelector(".next");
+
+        let currentIndex = 0;
+        let sliderCount = slider.length;
+        let sliderWidth = sliderImg.offsetWidth;
+
+
+        function gotoSlider(num){
+            sliderInner.style.transition = "all 400ms"
+            sliderInner.style.transform = "translateX("+ -sliderWidth *  num +"px)";
+
+            //currentIndex --;
+            //currentIndex ++;
+
+            currentIndex = num;
+        }
+
+        sliderBtnPrev.addEventListener("click", () => {
+            let prevIndex = (currentIndex + (sliderCount -1)) % sliderCount;
+            // 첫번쨰 이미지가 있을 때 0-->4
+            // if(currentIndex == 0) prevIndex = sliderCount-1;
+            // 0 1 2 3 4
+            gotoSlider(prevIndex);
+        })
+
+        sliderBtnNext.addEventListener("click", () => {
+            let nextIndex = (currentIndex + 1) % sliderCount;
+            //이미지 총 갯수 넘어가지 않게
+            gotoSlider(nextIndex);
+        })
+
+                    
+    </script>
+</body>
+</html>

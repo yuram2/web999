@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice01-2</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism2.css">
+
+    <!-- script -->
+    <script src="assets/js/prism2.js"></script>
+</head>
+
+<body>
+
+    <div class="back"><a href="practice01.html">Back</a></div>
+
+    <main id="main">
+        <div class="test">
+            <h2>2.구구단 출력하기</h2>
+
+            <!-- 01 -->
+            <h3>2.1 for문을 이용하여 2단부터 9단까지 출력하시오!</h3>
+
+
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+        for(let i=2; i&lt;=9; i++){
+            document.write("&lt;br&gt;");
+
+            for(let j=1; j&lt;=9; j++){
+                let sum = i * j;
+                document.write( i + " * " + j + " = " + sum, "&lt;br&gt;" );
+            }
+        }
+}</code></pre>
+            <!-- 02 -->
+            <h3>2.2 while문을 이용하여 2단부터 9단까지 출력하시오!</h3>
+
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+    let i = 2, j = 1;
+    while(i &lt;= 9){
+        while(j &lt;= 9){
+            document.write(i + " * " + j + " = " + i*j + "&lt;br&gt;");
+            j++;
+        }
+        j = 1;
+        i++;
+        document.write("&lt;br&gt;");
+    }
+}</code></pre>
+            
+            <!-- 03 -->
+            <h3>2.3 do while문을 이용하여 2단부터 9단까지 출력하시오!</h3>
+
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+                    //while문을 이용해서 구구단 출력
+                    {
+                        let i = 2, j = 1;
+            
+                        while(i &lt;= 9){
+                            while(j &lt;= 9){
+                                console.log(i + " * " + j + " = " + i*j);
+                                j++;
+                            }
+                            j = 1;
+                            i++;
+                        }
+                    }
+}</code></pre>
+
+
+            
+            </div>
+    </main>
+
+    <!-- script -->
+    <script>
+        //2 * 1 = 2
+        //2 * 2 = 4
+        //2 * 3 = 6
+        //2 * 4 = 8
+        //2 * 5 = 10
+        //2 * 6 = 12
+        //2 * 7 = 14
+        //2 * 8 = 16
+        //2 * 9 = 18
+        
+        //  i = for( let i=2; i<=9; i++)
+        //  j = for( let j=1; j<=9; j++)
+
+        //  sum = i * j
+
+        for(let i=2; i<=9; i++){
+            document.write("<br>");
+
+            for(let j=1; j<=9; j++){
+                let sum = i * j;
+                document.write( i + " * " + j + " = " + sum, "<br>" );
+            }
+        }
+        //while문을 이용해서 구구단 출력
+        {
+           let i = 2, j = 1;
+
+            while(i <= 9){
+                while(j <= 9){
+                    console.log(i + " * " + j + " = " + i*j);
+                    j++;
+                }
+                j = 1;
+                i++;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

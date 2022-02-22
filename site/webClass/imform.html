@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMFORM</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #EAF5EA;
+        }
+        #container {
+            width: 1920px;
+            margin: 0 auto;
+        }            
+        #header {
+            width: 1920px;
+            height: 100px;
+            display: flex;
+            justify-content: space-between
+        }
+        #header .logo {
+            margin: 5px 0 0 60px;
+        }
+        #header .logo a {
+            display: inline-block;
+            padding: 20px;
+        }
+        #header .menu ul li {
+            display: inline;
+            margin: 0 20px 0 0;
+        }
+        #header .menu ul li a {
+            margin-top: 30px;
+            padding: 10px 10px;
+            display: inline-block;
+        }
+        #contents{
+            width: 1920px;
+        }
+        #contents .left{
+            width: 360px;
+            height: 2110px;
+            float: left;
+        }
+        #contents .center{
+            width: 1200px;
+            height: 1055px;
+            background-color: #7BB973;
+            float: left;
+        }
+        #contents .center h2{
+            font-size: 48px;
+        }
+        #contents .center .c1{
+            width: 1200px;
+            height: 1055px;
+            background-color: #60695f;
+            float: left;
+        }
+
+        #contents .right{
+            width: 360px;
+            height: 2110px;
+            float: left;
+        }
+        #footter{
+            width: 1920px;
+            height: 380px;
+            background-color: #303137;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1 class="logo">
+                <a>IMFORM</a>
+            </h1>
+            <nav class="menu">
+                <ul>
+                    <li><a>SERVICE</a></li>
+                    <li><a>WORK</a></li>
+                    <li><a>ABOUT</a></li>
+                    <li><a>CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="contents">
+            <div class="center">
+                <h2>We research new opportunities<br>
+                    that inspire success.</h2>
+                <strong>스마트한 카라이프<br>한국타이어</strong>
+                <img src="../webClass/img/f1.png" alt="f1">
+                <strong>한섬 프리미엄 스타일<br>모바일 룩북</strong>
+                <img src="../webClass/img/f2.png" alt="f2">
+
+                <div class="c1">
+                    <img src="../webClass/img/f3.png" alt="f3">
+                    <strong>나는 대만족 입니다<br>대만관광청 홈페이지 리뉴얼</strong>
+                    <img src="../webClass/img/f4.png" alt="f4">
+                    <strong>세련된 감각의 까사미아<br>라이프스타일 매거진</strong>
+                </div>
+            </div>
+            <div class="right"></div>
+        </div>
+        <div id="footter"></div>
+
+    </div>
+</body>
+</html>
