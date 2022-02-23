@@ -131,7 +131,7 @@
                     <div class="modal-cont">
                         <div class="code-view">
                             <div class="view-header" aria-hidden="true">
-                                <span></span>
+                                <span class="close"></span>
                                 <span></span>
                                 <span></span>
                             </div>
@@ -157,14 +157,14 @@
         </div>
         <div class="attr">
             <ul>
-                <li>clientX : <span class="clientX">0</span>px</li>
-                <li>clientY : <span class="clientY">0</span>px</li>
-                <li>offsetX : <span class="offsetX">0</span>px</li>
-                <li>offsetY : <span class="offsetY">0</span>px</li>
-                <li>pageX : <span class="pageX">0</span>px</li>
-                <li>pageY : <span class="pageY">0</span>px</li>
-                <li>screenX : <span class="screenX">0</span>px</li>
-                <li>screenY : <span class="screenY">0</span>px</li>
+                <li>clientX : <span class="clientX"></span>px</li>
+                <li>clientY : <span class="clientY"></span>px</li>
+                <li>offsetX : <span class="offsetX"></span>px</li>
+                <li>offsetY : <span class="offsetY"></span>px</li>
+                <li>pageX : <span class="pageX"></span>px</li>
+                <li>pageY : <span class="pageY"></span>px</li>
+                <li>screenX : <span class="screenX"></span>px</li>
+                <li>screenY : <span class="screenY"></span>px</li>
             </ul>
         </div>
     </div>
@@ -181,7 +181,7 @@
     // modal();
     // tabMenu();
     //출력용
-        window.addEventListener("mousemove", (event) => {
+    window.addEventListener("mousemove", (event) => {
         document.querySelector(".clientX").innerText = event.clientX;
         document.querySelector(".clientY").innerText = event.clientY;
         document.querySelector(".offsetX").innerText = event.offsetX;

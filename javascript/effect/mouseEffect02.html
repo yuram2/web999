@@ -180,10 +180,15 @@
         // follower.style.left = e.pageX -15 + "px";
         // follower.style.top = e.pageY -15 + "px";
 
-        gsap.to(cursor, {duration: .3, left: e.pageX -5, top: e.pageY -5});
-        gsap.to(follower, {duration: .8, left: e.pageX -15, top: e.pageY -15});
+        gsap.to(cursor, {duration: .3, left: e.pageX -5, top: e.pageY -5})
+        gsap.to(follower, {duration: .8, left: e.pageX -15, top: e.pageY -15})
+
+        //출력
+        document.querySelector(".pageX").innerText = e.pageX;
+        document.querySelector(".pageY").innerText = e.pageY;
 
         //오버 효과
+        //mouseover,mouseenter / mouseout,mouseleave
         //span 오버 했을 때 클래스 active 추가 / 나갔을 때 active 삭제
         document.querySelectorAll(".mouse__wrap p span").forEach(span => {
             span.addEventListener(".mouseenter", () => {
@@ -193,13 +198,11 @@
             span.addEventListener("mouseleave", () => {
                 cursor.classList.remove("active");
                 follower.classList.remove("active");
-            })
+            });
         })   
 
 
-        //출력
-        document.querySelector(".pageX").innerText = e.pageX;
-        document.querySelector(".pageY").innerText = e.pageY;
+       
 
     });
 
