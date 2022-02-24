@@ -17,7 +17,7 @@ li {
 
 img {
     width: 100%;
-    vertical-align: top; /*이미지 여백 */
+    vertical-align: top; /*이미지 여백 제거*/
 }
 body {
     width: 100%;
@@ -25,46 +25,11 @@ body {
     background-image: url(../img/images00.jpg);
     background-size: cover;
     background-position: center center;
-    overflow: hidden;
-    color: #fff;
 }
 body.img01 {
     background-image: url(../img/img01.jpg);
 }
-body.img02 {
-    background-image: url(../img/img02.jpg);
-}
-body.img03 {
-    background-image: url(../img/img03.jpg);
-}
-body.img04 {
-    background-image: url(../img/img04.jpg);
-}
-body.img05 {
-    background-image: url(../img/img05.jpg);
-}
-body.img06 {
-    background-image: url(../img/img06.jpg);
-}
-body.img07 {
-    background-image: url(../img/img07.jpg);
-}
-body.img08 {
-    background-image: url(../img/img08.jpg);
-}
-body.img09 {
-    background-image: url(../img/img09.jpg);
-}
-body.img10 {
-    background-image: url(../img/img10.jpg);
-}
-body.img11 {
-    background-image: url(../img/img11.jpg);
-}
-img {
-    width: 100%;
-    vertical-align: top; /* 이미지 여백 제거 */
-}
+
 
 body::before {
     content: '';
