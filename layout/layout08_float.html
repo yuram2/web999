@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃8 : float</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #daf7f8;
+        }
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #b9f6f8;
+        }
+        #main {
+
+        }
+        #aside {
+            width: 30%;
+            height: 780px;
+            background-color: #89dfe2;
+            float: left;
+        }
+        #article1 {
+            width: 70%;
+            height: 260px;
+            background-color: #48b1b4;
+            float: left;         
+        }
+        #article2 {
+            width: 70%;
+            height: 260px;
+            background-color: #32a9ad;
+            float: left;
+        }
+        #article3 {
+            width: 70%;
+            height: 260px;
+            background-color: #198185;
+            float: left;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #068f94;
+            clear: both;
+        }
+        @media (max-width: 1300px){
+            #wrap {
+                width: 96%;              
+            }
+            #main {
+
+            }
+            #aside {
+
+            }
+            #article1 {
+                width: 70%;
+                height: 260px;
+                background-color: #48b1b4;
+                float: left; 
+            }
+            #article2 {
+                width: 35%;
+                height: 520px;
+                background-color: #32a9ad;
+                float: left;
+            }
+            #article3 {
+                width: 35%;
+                height: 520px;
+                background-color: #198185;
+                float: left;
+            }
+        }
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;
+            } 
+            #article1 {
+                width: 70%;
+                height: 390px;
+                background-color: #48b1b4;
+                float: left; 
+            }
+            #article2 {
+                width: 70%;
+                height: 390px;
+                background-color: #32a9ad;
+                float: left;
+            }
+            #article3 {
+               display: none;
+            }
+
+        }
+        @media (max-width: 480px){
+            #aside {
+                width: 100%;
+                height: 200px;
+            }
+            #article1 {
+                width: 100%;
+                height: 430px;
+                background-color: #48b1b4;
+                float: left; 
+            }
+            #article2 {
+                width: 100%;
+                height: 150px;
+                background-color: #32a9ad;
+                float: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <main id="main">
+            <aside id="aside"></aside>
+            <article id="article1"></article>
+            <article id="article2"></article>
+            <article id="article3"></article>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

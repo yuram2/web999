@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0 auto;
+            font-family: 'WorkSans';
+        }
+        #header {
+            width: 1440px;
+            height: 80px;
+            background: rgba(200, 196, 245, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #header .logo {
+            color: #2947a9;
+            padding-left: 80px;
+            font-size: 30px;
+        }
+        #header .menu {
+            font-size: 18px;
+        }
+        #header .menu ul {
+
+        }
+        #header .menu ul li {
+            display: inline-block;
+            
+        }
+        #header .menu li a {
+            color: black;
+            text-decoration: none;
+            padding-right: 36px;
+        }
+        #header .menu ul li.login a {
+            color: #f9995d;
+            padding: 0 60px;
+        }
+        #nav {
+            width: 1440px;
+            height: 646px;
+            background: url(img/bgb.jpg);
+        }
+        #nav h2 {
+            font-size: 72px;
+            padding-left: 112px;
+            padding-top: 236px;
+        }
+        #aside {
+            width: 1440px;
+            height: 433px;
+        }
+        #aside img {
+           padding-right: 56px;
+        }
+        #aside .postit{
+           padding-left: 216px;
+        }
+        #aside h3 {
+            padding-top: 73px;
+            padding-bottom: 39px;
+            font-size: 36px;
+            text-align: center;
+        }
+        #project {
+            width: 1440px;
+            height: 945px;
+            background: #f5f5f5;
+            background: url(img/project.jpg)no-repeat left 112px top 91px;
+            position: relative;
+        }
+        #project .brief {
+            position: absolute;
+            right: 30px;
+            top: 156px;
+            width: 488px;
+            height: 523px;
+            background: #2947a9;
+            padding: 10px 50px;
+        }
+        #project .brief h3 {
+            font-weight: 700;
+            padding-top: 50px;
+            padding-bottom: 37px;
+            font-size: 36px;
+        }
+        #project .brief p {
+            font-size: 20px;
+            padding-bottom: 91px;
+        }
+        #project .brief a {
+            text-decoration: none;
+            font-weight: 700;
+            line-height: 1.6;
+            font-size: 18px;
+            padding: 16px 20px;
+            border: 60px 40px;
+            border-radius: 5px;
+            background: #fff;
+            color: #2947a9;
+        }
+        #services {
+            width: 1440px;
+            height: 608px;
+            background: #f5f5f5;
+            position: relative;
+        }
+        #services h3 {
+            padding-top: 51px;
+            padding-bottom: 34px;
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+        }
+        #services .ser {
+            position: absolute;
+            padding-left: 215px;
+        }
+        #services .ser img {
+            padding-right: 98px;
+            padding-bottom: 45px;
+        }
+        #flow {
+            position: relative;
+            width: 1440px;
+            height: 723px;
+            background: url(img/FC.jpg)no-repeat left 263px top 29px;
+        }
+        #flow .chart {
+            position: absolute;
+            left: 944px;
+            top: 172px;
+        }
+        #flow .chart h3 {
+            font-size: 60px;
+            padding-bottom: 40px;
+            color: #2947a9;
+        }
+        #flow .chart p {
+            font-size: 20px;
+            padding-bottom: 46px;
+            color: #525b7a;
+
+        }
+        #flow .chart a {
+            text-decoration: none;
+            font-weight: 700;
+            line-height: 1.6;
+            font-size: 18px;
+            padding: 16px 20px;
+            border-radius: 6px;
+            background: #2947a9;
+            color: #fff;
+        }
+        #quiz {
+            position: relative;
+            width: 1440px;
+            height: 300px;
+            background: url(img/QUIZ.jpg) no-repeat;
+        }
+        #quiz .ad {
+            padding-left: 116px;
+            padding-top: 72px;
+            color: #fff;
+        }
+        #quiz .ad h3 {
+            font-size: 36px;
+            font-weight: 700;
+        }
+        #quiz .ad p {
+            padding-top: 19px;
+            font-size: 24px;
+        }
+        #quiz a {
+            position: absolute;
+            left: 1120px;
+            top: 96px;
+            padding: 16px 20px;
+            text-decoration: none;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+        #question {
+            width: 1440px;
+            height: 1098px;
+            display: flex;
+            background: rgba(236, 232, 254, 0.7);
+        }
+        #question .Lv {
+            padding-left: 112px;
+            padding-top: 88px;
+        }
+        #question .Lv h3 {
+            font-size: 36px;
+            padding-bottom: 40px;
+        }
+        #question .Lv h4 {
+            font-size: 24px;
+            color: #2947a9;
+            border-left: 4px solid #2947a9;
+            padding-left: 20px;
+        }
+        #question .Lv h5 {
+            padding-top: 20px;
+            padding-left: 16px;
+            font-size: 24px;
+            color: #c2c7d6;
+        }
+        #question .list {
+            padding-top: 170px;
+            padding-left: 200px;
+        }
+        #question .list img {
+            padding-right: 31px;
+            padding-bottom: 71px;
+        }
+        #question .list .btn {
+            display: flex;
+        }
+        #question .list .btn a {
+            color: #fff;
+            padding: 21px 108px;
+            background: #292e3d;
+            margin: 0px 0px 0px 0px;
+            text-decoration: none;
+        }
+        #question .list .btn .dot {
+            width: 14px;
+            height: 14px;
+            background: #fff;
+            border-radius: 50%;
+            display: block;
+            justify-content: space-between;
+        }
+        #question .list .btn .dot .p {
+            width: 14px;
+            height: 14px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            background: #fff;
+        }
+        #question .list .btn .dot .dot.active {
+            margin: 0;
+            padding: 0;
+            background: #2947a9;
+        }
+        #opinion {
+            width: 1440px;
+            height: 632px;
+            background: #f5f5f5;
+        }
+        #opinion h3 {
+            padding-top: 60px;
+            font-size: 36px;
+            text-align: center;
+        }
+        #opinion p {
+            padding-top: 20px;
+            padding-bottom: 48px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #opinion .input {
+            padding-left: 424px;
+        }
+        #opinion .input input {
+            margin-bottom: 20px;
+            margin-right: 32px;
+            width: 280px;
+            height: 41px;
+        }
+        #opinion .input input.indi {
+            width: 602px;
+            height: 135px;
+            margin-bottom: 0;
+        }
+        #opinion .input p {
+            padding-top: 8px;
+            padding-bottom: 48px;
+            font-size: 16px;
+            text-align: left;
+        }
+        #opinion .input a {
+            padding: 16px 104px;
+            background: #2947a9;
+            color: #fff;
+            margin-left: 161px;
+            text-decoration: none;
+        }
+        #info {
+            width: 1440px;
+            height: 377px;
+        }
+        #info .question {
+            padding-top: 86px;
+            padding-left: 112px;
+            display: flex;
+        }
+        #info .question p {
+            margin-bottom: 32px;
+        }
+        #info .question p.logo {
+            font-size: 30px;
+        }
+        #info .question .que {
+            color: #2947a9;
+        }
+        #info .question .ans {
+            padding-left: 21px;
+        }
+        #info .question .noti {
+            padding-left: 250px;
+            
+        }
+        #info .question .noti input {
+            width: 280px;
+            height: 41px;
+            margin-noti: 8px;
+            margin-bottom: 42px;
+        }
+        #info .question .noti span {
+            border-radius: 6px;
+            padding: 13px 24px;
+            background: #f9995d;
+        }
+        #info .question .noti span a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+        }
+        #info .question .noti p {
+            color: #2947a9;
+        }
+        #info .question .noti .sns img {
+            margin-right: 20px;
+        }
+        #footer {
+            width: 1440px;
+            height: 70px;
+            background: rgba(83, 98, 229, 0.5);
+        }
+        #footer h4 {
+            font-size: 16px;
+            color: #fff;
+            padding-left: 112px;
+            padding-top: 25px;
+            font-weight: 300;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo">문푸사</div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">문제풀기</a></li>
+                <li><a href="#">자유게시판</a></li>
+                <li><a href="#">건의사항</a></li>
+                <li><a href="#">내정보</a></li>
+                <li class="login"><a href="#">로그인</a></li>
+            </ul>
+        </div>
+    </header>
+    <nav id="nav">
+        <h2>problematic<br>
+            people</h2>
+        </nav>
+    <aside id="aside">
+        <h3>Team Project</h3>
+        <img class="postit" src="img/as1.jpg" alt="postit1">
+        <img src="img/as2.jpg" alt="postit2">
+        <img src="img/as3.jpg" alt="postit3">
+    </aside>
+    <section id="project">
+        <div class="brief">
+            <h3>Project Brief</h3>
+            <p>여러가지 문제 풀기를 좋아하는 사람들, <br>
+            문제적 남자가 종영해서 아쉽고 재미있게<br>
+            봤던 분들을 위해 여러가지 문제적 남자에<br>
+            나왔던 유형들의 문제를 웹 사이트에서<br>
+            풀어볼수있도록 만들었습니다.</p>
+            <a href="#">More on Our History</a>
+        </div>
+    </section>
+    <section id="services">
+        <h3>Service</h3>
+        <div class="ser">
+            <img src="img/11.jpg" alt="이미지1" style="width: 271px; height: 181px;">
+            <img src="img/12.jpg" alt="이미지2" style="width: 271px; height: 181px;">
+            <img src="img/13.jpg" alt="이미지3" style="width: 271px; height: 181px;">
+            <img src="img/21.jpg" alt="이미지4" style="width: 271px; height: 181px;">
+            <img src="img/22.jpg" alt="이미지5" style="width: 271px; height: 181px;">
+            <img src="img/23.jpg" alt="이미지6" style="width: 271px; height: 181px;">
+        </div>
+    </section>
+    <section id="flow">
+        <div class="chart">
+            <h3>flow<br> 
+                chart</h3>
+            <p>Our company has been the<br> 
+            leading provided construction<br> 
+            services to clients throughout<br>  
+            the USA since 1988.
+            </p>
+            <a href="#">Contact Us</a>
+        </div>
+    </section>
+    <section id="quiz">
+        <div class="ad">
+            <h3>Take the quiz as many times as you like There are<br>
+                many opportunities</h3>
+            <p>Just one call away: +84 1102 2703</p>
+        </div>
+        <a href="#">Get your quiz</a>
+    </section>
+    <section id="question">
+        <div class="Lv">
+            <h3>뇌풀기 문제</h3>
+            <h4>난이도</h4>
+            <h5>상</h5>
+            <h5>중</h5>
+            <h5>하</h5>
+        </div>
+        <div class="list">
+            <img src="img/q1.jpg" alt="이미지1">
+            <img src="img/q2.jpg" alt="이미지2">
+            <img src="img/q3.jpg" alt="이미지3">
+            <img src="img/q4.jpg" alt="이미지4">
+            <div class="btn">
+                <a href="#">← back</a>
+                <span class="dot">
+                        <a href="#" class="dot active"></a>
+                        <p href='#' class='dot'></p>
+                        <p href='#' class='dot'></p>
+                        <p href='#' class='dot'></p>
+                        <p href='#' class='dot'></p>
+                </span>
+                <a href="#">next →</a>
+            </div>
+        </div>
+    </section>
+    <section id="opinion">
+        <h3>Do you wanna take a quiz?</h3>
+        <p>We are ready to work on a project of any complexity,<br> whether it’s commercial or residential.</p>
+        <div class="input">
+            <div class="box">
+                <input type="text" placeholder="Your Name">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="box">
+                <input type="text" placeholder="Reason for Contacting">
+                <input type="text"placeholder="Phone">
+            </div>
+            <input class="indi" type="text" placeholder="Message">
+            <p>indicates a required field</p>
+            <a href="#">Submit</a>
+        </div>
+
+    </section>
+    <section id="info">
+        <div class="question">
+            <div class="que">
+                <p>ADDRESS:</p>
+                <p>PHONE:</p>
+                <p>EMAIL:</p>
+                <p class="logo">문푸사</p>
+            </div>
+            <div class="Ans">
+                <p>경기 안산시 단원구 고잔2길 45 코스모프라자 6층</p>
+                <p>010 1234 5678</p>
+                <p>team4project@gmail.com</p>
+            </div>
+            <div class="noti">
+                <p>새소식 받아보기</p>
+                <input type="text" placeholder="Your email here"><span><a href="#">Subscribe</a></span>
+                <p>소셜</p>
+                <div class="sns">
+                    <a href="#"><img src="img/facebook.jpg" alt="페이스북"></a> 
+                    <a href="#"><img src="img/insta.jpg" alt="인스타"></a>
+                    <a href="#"><img src="img/twitter.jpg" alt="트위터"></a>    
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <h4>MPS Company © 2022. All Rights Reserved</h4>
+    </footer>
+</body>
+
+</html>

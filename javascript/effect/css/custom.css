@@ -17,7 +17,7 @@ li {
 
 img {
     width: 100%;
-    vertical-align: top; /*이미지 여백 */
+    vertical-align: top; /*이미지 여백 제거*/
 }
 body {
     width: 100%;
@@ -25,9 +25,11 @@ body {
     background-image: url(../img/images00.jpg);
     background-size: cover;
     background-position: center center;
-    overflow: hidden;
-    color: #fff;
 }
+body.img01 {
+    background-image: url(../img/img01.jpg);
+}
+
 
 body::before {
     content: '';
@@ -95,6 +97,7 @@ body::before {
     font-size: 16px;
     padding: 10px 30px;
     border-radius: 50px;
+ 
 }
 
 .source button:hover {
@@ -105,8 +108,8 @@ body::before {
 }
 .attr {
     position: absolute;
-    left: 20;
-    bottom: 20;
+    left: 20px;
+    bottom: 20px;
     font-size: 14px;
     font-weight: 1.6;
 }
