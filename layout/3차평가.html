@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3차 평가 - flex</title>
+    <style>
+        * {margin: 0;}
+        body {background: #fff;}
+        #wrap {width: 1440px;margin: 0 auto;}
+        #header {height: 100px;background: #FFDE81;}
+        #nav {height: 300px;background: #FFD34E;}
+        #contents {
+            height: 400px;
+            background: #FFC825;
+            display: grid;
+            grid-template-areas:
+                "article1 article2 article3 article4 article5"
+                "article6 article7 article8 article9 article10"
+            ;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            grid-template-rows: 50% 50%;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+        }
+        .article {width: 50%;height: 50%;border-radius: 20%;background: #FF9900;}
+        #article1 {grid-area: article1;}
+        #article2 {grid-area: article2;}
+        #article3 {grid-area: article3;}
+        #article4 {grid-area: article4;}
+        #article5 {grid-area: article5;}
+        #article6 {grid-area: article6;}
+        #article7 {grid-area: article7;}
+        #article8 {grid-area: article8;}
+        #article9 {grid-area: article9;}
+        #article10 {grid-area: article10;}
+        #footer {height: 100px;background: #FFB200;}
+
+        @media (max-width: 1300px) {
+            #wrap {width: 96%;}
+            #contents {
+                grid-template-areas:
+                    "article1 article2 article3 article4"
+                    "article5 article6 article7 article8";
+                grid-template-columns: 24% 24% 24% 24%;
+                grid-template-rows: 50% 50%;
+            }
+            #article9 {display: none;}
+            #article10 {display: none;}
+        }
+        @media (max-width: 768px) {
+            #contents {height: 600px;
+                grid-template-areas:
+                    "article1 article2 article3"
+                    "article4 article5 article6"
+                    "article7 article8 article9";
+                grid-template-columns: 33% 33% 33%;
+                grid-template-rows: 33% 33% 33%;
+            }
+            #article9 {display: block;}
+        }
+        @media (max-width: 480px) {
+            #contents {height: 1000px;
+                grid-template-areas:
+                    "article1 article2"
+                    "article3 article4"
+                    "article5 article6"
+                    "article7 article8"
+                    "article9 article10";
+                grid-template-columns: 48% 48%;
+                grid-template-rows: 18% 18% 18% 18% 18%;
+            }
+            #article10 {display: block;}
+            .article {width: 50%;height: 50%;border-radius: 20%;background: #FF9900;}
+          }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <contents id="contents">
+            <article id="article1" class="article"></article>
+            <article id="article2" class="article"></article>
+            <article id="article3" class="article"></article>
+            <article id="article4" class="article"></article>
+            <article id="article5" class="article"></article>
+            <article id="article6" class="article"></article>
+            <article id="article7" class="article"></article>
+            <article id="article8" class="article"></article>
+            <article id="article9" class="article"></article>
+            <article id="article10" class="article"></article>
+        </contents>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
