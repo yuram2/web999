@@ -433,7 +433,7 @@
         // }
 
         // 13. 내부 함수
-        {
+        // {
             // function func(){
             //     function funA(){
             //         document.write("함수가 실행되었습니다.")
@@ -445,10 +445,10 @@
             //     funB();
             // }
             // func();
-        }
+        // }
 
         // 14. 즉시 실행 함수
-        {
+        // {
             // function func(){
             //     document.write("함수가 실행되었습니다.")
             // }
@@ -461,7 +461,7 @@
             // (()=>{
             //     document.write("함수가 실행되었습니다.")
             // })();
-        }
+        // }
 
         // 15. 파라미터 함수
         // {
@@ -479,6 +479,31 @@
         //     }
         //     func("함수가 실행되었습니다", "함수가 실행되었습니다?")
         // }
+
+        //재귀함수 : 자기 스스로 호출
+        {
+            // function func(){
+            //     document.write("함수가 실행되었습니다.");
+            //     func();
+            // }
+            // func();
+
+            function func(num){
+                if(num <= 1){
+                    document.write("함수가 실행되었습니다.");
+                } else{
+                    document.write("함수가 실행되었습니다.");
+                    func(num-1);
+                }
+            }
+            func(5);
+        }
+        //재귀함수 : 반복문
+        {
+            
+        }
+
+        //콜백함수 : 
     </script>
     <script src = "assets/js/script.js"></script>
     <script src="assets/js/prism.js"></script>
