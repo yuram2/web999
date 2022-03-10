@@ -65,7 +65,7 @@
             line-height: 20px;
             font-size: 12px;
         }
-        #parallax__title li:active a {
+        #parallax__title li.active a {
             background: #fff;
             color: #000;
         }
@@ -132,7 +132,7 @@
             background-position: center center;
             background-size: cover;
             filter: saturate(0%);
-            transition: all 1s;
+            /* transition: all 1s; */
         }
 
         .content__item__img:hover {
@@ -231,7 +231,7 @@
         } */
 
         /* 개별적으로 나타나기 */
-        #contents > section .content__item__num {
+        /* #contents > section .content__item__num {
             opacity: 0;
             transform: translateY(200px);
             transition: all 1s 0.1s cubic-bezier(0, 0.38, 0.21, 0.99);
@@ -278,7 +278,7 @@
         }
         #contents > section:nth-child(even).show .content__item__desc {
             transform: translateX(0);
-        }
+        } */
 
 
     </style>
@@ -288,7 +288,7 @@
     <!-- parallax__title -->
     <header id="parallax__title">
         <h1><a href="parallaxEffect03.html">Javascript Parallax Effect0</a></h1>
-        <p>패럴랙스 스크롤링 효과 - 나타나기</p>
+        <p>패럴랙스 스크롤링 효과 - 이질감 효과</p>
         <ul>
             <li><a href="parallaxEffect01.html">1</a></li>
             <li><a href="parallaxEffect02.html">2</a></li>
@@ -414,7 +414,8 @@
     <script>
         function scroll() { //재귀함수를 이용한 스크롤값 구하기
             let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;
-            document.querySelector(".scrollTop span").innerText = scrollTop;
+            document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
+
 
 
             document.querySelectorAll(".content__item").forEach(item => {
