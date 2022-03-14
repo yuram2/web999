@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>parallax</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -70,7 +71,7 @@
         .section2__bg {
             width: 100%;
             height: 100vh;
-            background: #000;
+            background: rgb(119, 119, 119);
         }
         .section2_text1 {
             font-size: 4vw;
@@ -80,9 +81,55 @@
         .section2_img1 {
             width: 70vw;
             top: 80%;
+            z-index: 1100;
+        }
+        .section2_img1_site {
+            position: absolute;
+            left: 50%;
+            top: 1.5vw;
+            transform: translate(-50%);
+            width: 55vw;
+            height: calc(100% - 6vw);
+            border-radius: 1vw 1vw 0 0;
+            overflow: hidden;
+        }
+        .section2_img1_site .move {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .section2_img1_site .move a {
+            position: absolute;
+            bottom: 300px; left: 50%;
+            width: 100px; height: 100px;
+            background: rgba(0,0,0,0.9);
+            transform: translateX(-50%);
+            display: inline-block;
+            border-radius: 50%;
+            line-height: 100px;
+            color: #fff;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .section2_img1_site .move a:hover {
+            background: rgba(0,0,0,0.7);
         }
 
-
+        .section2_img2 {
+            width: 70vw;
+            top: 80%;
+            z-index: 1100;
+        }
+        .section2_img3 {
+            width: 70vw;
+            top: 80%;
+            z-index: 1100;
+        }
+        .section2_img4 {
+            width: 70vw;
+            top: 80%;
+            z-index: 1100;
+        }
 
     </style>
 </head>
@@ -142,19 +189,67 @@
                 data-10000 = "width: 100%; height: 100vh; border-radius: 0%"
             ></div>
             <div class="section2_text1 fixed"
-                data-8500 = "transform: translate(-50%, -50%) scale(0.8); top: 50%"
-                data-10500 = "transform: translate(-50%, -50%) scale(1);  top: 50%"
+                data-8500 = "transform: translate(-50%, -50%) scale(0.5); top: 50%"
                 data-11000 = "transform: translate(-50%, -50%) scale(1);  top: 50%"
-                data-12000 = "transform: translate(-50%, -50%) scale(1);  top: -10%"
-
+                data-12000 = "transform: translate(-50%, -50%) scale(1);  top: 10%"
                 >
                 I've Been Working In On Sites
             </div>
             <div class="section2_img1 fixed"
-                data-11000 = "transform: translate(-50%, -50%) scale(0.8) top: 50%"
-                data-12000 = "transform: translate(-50%, -50%) scale(1)  top: -10%"
+                data-11000 = "transform: translate(-50%, -50%) scale(1.3) top: 200%"
+                data-12000 = "transform: translate(-50%, -50%) scale(1.3)  top: 70%"
                 >
                 <img src="img/MacBook Pro 13.png" alt="이미지">
+                <div class="section2_img1_site">
+                    <div class="move"
+                        data-12000 = "top : 0%;"
+                        data-13000 = "top : -350%">
+                    <img src="img/site01.jpg" alt="site01"><a href="#">VIEW</a></div>
+                </div>
+            </div>
+            <div class="section2_img2 fixed"
+                data-13000 = "top: 200%; transform: translate(-50%, -50%) scale(1)"
+                data-14500 = "top: 60%; transform: translate(-50%, -50%) scale(1)"
+                data-16000 = "top: 60%; transform: translate(-50%, -50%) scale(1)"
+                data-17000 = "top: 60%; transform: translate(-50%, -50%) scale(0)"
+                >
+                <img src="img/MacBook Pro 13.png" alt="macbook">
+                <div class="section2_img1_site">
+                    <div class="move"
+                        data-14500 = "top: 0%;"
+                        data-15500 = "top: -350%;"
+                    ><img src="img/site01.jpg" alt="사이트01"><a href="#">VIEW</a></div>
+                </div>
+            </div>
+
+            <div class="section2_img3 fixed"
+                data-16000 = "top: 200%; transform: translate(-50%, -50%) scale(1)"
+                data-17000 = "top: 60%; transform: translate(-50%, -50%) scale(1)"
+                data-18500 = "top: 60%; transform: translate(-50%, -50%) scale(1)"
+                data-20000 = "top: 60%; transform: translate(-50%, -50%) scale(0)"
+                >
+                <img src="img/MacBook Pro 13.png" alt="macbook">
+                <div class="section2_img1_site">
+                    <div class="move"
+                        data-17000 = "top: 0%;"
+                        data-18000 = "top: -350%;"
+                    ><img src="img/site01.jpg" alt="사이트01"><a href="#">VIEW</a></div>
+                </div>
+            </div>
+
+            <div class="section2_img4 fixed"
+                data-19000 = "top: 200%;"
+                data-20000 = "top: 60%;"
+                data-21500 = "top: 60%; transform: translate(-50%, -50%) scale(1)"
+                data-23000 = "top: 60%; transform: translate(-50%, -50%) scale(0)"
+                >
+                <img src="img/MacBook Pro 13.png" alt="macbook">
+                <div class="section2_img1_site">
+                    <div class="move"
+                        data-20000 = "top: 0%;"
+                        data-21000 = "top: -350%;"
+                    ><img src="img/site01.jpg" alt="사이트01"><a href="#">VIEW</a></div>
+                </div>
             </div>
         </section><!-- //section2 -->
         <section id="section3"></section><!-- //section3 -->
