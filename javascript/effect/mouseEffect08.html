@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이펙트</title>
+
+    <link rel="stylesheet" href="css/Nexon.css">
+    <link rel="stylesheet" href="css/min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        }
+        .title p {
+            font-size: 16px;
+            color: #c678dd;
+        }
+        html,
+        body {
+        height: 100%;
+        /* for touch screen */
+        touch-action: none; 
+        }
+
+        body {
+        overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background: #111;
+        -webkit-perspective: 100%;
+                perspective: 100%;
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+        }
+
+        #drag-container, #spin-container {
+        position: absolute;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20%;
+        margin-top: auto;
+        /* margin: auto; */
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+        -webkit-transform: rotateX(-10deg);
+                transform: rotateX(-10deg);
+       }
+
+        #drag-container img, #drag-container video {
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        line-height: 200px;
+        font-size: 50px;
+        text-align: center;
+        -webkit-box-shadow: 0 0 8px #fff;
+                box-shadow: 0 0 8px #fff;
+        -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+        }
+
+        #drag-container img:hover, #drag-container video:hover {
+        -webkit-box-shadow: 0 0 15px #fffd;
+                box-shadow: 0 0 15px #fffd;
+        -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+        }
+
+        #drag-container p {
+        font-family: Serif;
+        font-weight: 300;
+        font-size: 2vw;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        top: 100%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%) rotateX(90deg);
+                transform: translate(-50%,-50%) rotateX(90deg);
+        color: #fff;
+        }
+
+        #ground {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 100%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%) rotateX(90deg);
+                transform: translate(-50%,-50%) rotateX(90deg);
+        background: -webkit-radial-gradient(center center, farthest-side , #9993, transparent);
+        }
+
+        #music-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        }
+
+        @-webkit-keyframes spin {
+        from{
+            -webkit-transform: rotateY(0deg);
+                    transform: rotateY(0deg);
+        } to{
+            -webkit-transform: rotateY(360deg);
+                    transform: rotateY(360deg);
+        }
+        }
+
+        @keyframes spin {
+        from{
+            -webkit-transform: rotateY(0deg);
+                    transform: rotateY(0deg);
+        } to{
+            -webkit-transform: rotateY(360deg);
+                    transform: rotateY(360deg);
+        }
+        }
+        @-webkit-keyframes spinRevert {
+        from{
+            -webkit-transform: rotateY(360deg);
+                    transform: rotateY(360deg);
+        } to{
+            -webkit-transform: rotateY(0deg);
+                    transform: rotateY(0deg);
+        }
+        }
+        @keyframes spinRevert {
+        from{
+            -webkit-transform: rotateY(360deg);
+                    transform: rotateY(360deg);
+        } to{
+            -webkit-transform: rotateY(0deg);
+                    transform: rotateY(0deg);
+        }
+        }
+    </style>
+</head>
+<body>
+    <!-- main -->
+    <main>
+        <div id="drag-container">
+            <div id="spin-container">
+              <!-- Add your images (or video) here -->
+              <img src="img/vimages01.jpg" alt="vimages01">
+              <img src="img/vimages02.jpg" alt="vimages02">
+              <img src="img/vimages03.jpg" alt="vimages03">
+              <img src="img/vimages04.jpg" alt="vimages04">
+              <img src="img/vimages05.jpg" alt="vimages05">
+              <img src="img/vimages06.jpg" alt="vimages06">
+              
+              <!-- Example image with link -->
+              <a target="_blank" href="#">
+                <img src="img/vimages01.jpg" alt="">
+              </a>
+          
+              <!-- Example add video  -->
+              <!-- 동영상 추가 -->
+              <video controls autoplay="autoplay" loop>
+                <source src="img/music-1.mp4" type="video/mp4">
+              </video>
+          
+              <!-- Text at center of ground -->
+              <p>3D <br>이미지<br>드래그<br> 효과</p>
+            </div>
+            <div id="ground"></div>
+          </div>
+    </main>
+    <!-- //main -->
+    <!-- info -->
+    <div class="info">
+        <div class="title">
+            <h1><a href="mouseEffect.html">JavaScript Mouse Effect08</a></h1>
+            <p>마우스 이펙트 - 이미지 드래그 효과</p>
+        </div>
+        <div class="number">
+            <ul>
+                <li><a href="mouseEffect01.html">1</a></li>
+                <li><a href="mouseEffect02.html">2</a></li>
+                <li><a href="mouseEffect03.html">3</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+                <li><a href="mouseEffect05.html">5</a></li>
+                <li><a href="mouseEffect06.html">6</a></li>
+                <li><a href="mouseEffect07.html">7</a></li>
+                <li class="active"><a href="mouseEffect08.html">8</a></li>
+            </ul>
+        </div> 
+        <div class="source">
+            <button class="source-btn">소스보기</button>
+            <div id="modal">
+                <div class="modal-wrap">
+                    <div class="modal-cont">
+                        <div class="code-view">
+                            <div class="view-header" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="view-title">
+                                <ul>
+                                    <li class="active"><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="view-cont">
+                                <div>
+<pre><code class="language-html">
+</code></pre>
+                                </div>
+                                <!-- //cont1 -->
+                                <div>
+<pre><code class="language-javascript">
+</code></pre>
+                                </div>
+                                <!-- //cont2 -->
+                                <div>
+<pre><code class="language-javascript">
+</code></pre>
+                                </div>
+                                <!-- //cont3 -->
+                            </div>
+                        </div>
+                    </div>
+                    <button class="modal-close">닫기</button>
+                </div>
+            </div>
+        </div>
+        <div class="attr">
+            <ul>
+                <li>mousePageX : <span class="mousePageX">0</span>px</li>
+                <li>mousePageY : <span class="mousePageY">0</span>px</li>
+                <li>centerPageX : <span class="centerPageX">0</span>px</li>
+                <li>centerPageY : <span class="centerPageY">0</span>px</li>
+                <li>maxPageX : <span class="maxPageX">0</span>px</li>
+                <li>maxPageY : <span class="maxPageY">0</span>px</li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- //info -->
+    <!-- script -->
+    <script src="js/highlight.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script>
+        // highlight();
+        // modal();
+        // tabMenu();
+
+
+
+// You can change global variables here:
+var radius = 360; // 이미지 간격 턴 사이즈
+var autoRotate = true; // auto rotate or not
+var rotateSpeed = -60; // unit: seconds/360 degrees
+var imgWidth = 240; // 이미지 가로값 + px
+var imgHeight = 340; // 이미지 세로값 + px
+
+/*
+     NOTE:
+       + imgWidth, imgHeight will work for video
+       + if imgWidth, imgHeight too small, play/pause button in <video> will be hidden
+       + Music link are taken from: https://hoangtran0410.github.io/Visualyze-design-your-own-/?theme=HauMaster&playlist=1&song=1&background=28
+*/
+
+
+// ===================== start =======================
+// animation start after 1000 miliseconds
+setTimeout(init, 1000);
+
+var odrag = document.getElementById('drag-container');
+var ospin = document.getElementById('spin-container');
+var aImg = ospin.getElementsByTagName('img');
+var aVid = ospin.getElementsByTagName('video');
+var aEle = [...aImg, ...aVid]; // combine 2 arrays
+
+// Size of images
+ospin.style.width = imgWidth + "px";
+ospin.style.height = imgHeight + "px";
+
+// Size of ground - depend on radius
+var ground = document.getElementById('ground');
+ground.style.width = radius * 3 + "px";
+ground.style.height = radius * 3 + "px";
+
+function init(delayTime) {
+  for (var i = 0; i < aEle.length; i++) {
+    aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
+    aEle[i].style.transition = "transform 1s";
+    aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
+  }
+}
+
+function applyTranform(obj) {
+  // Constrain the angle of camera (between 0 and 180)
+  if(tY > 180) tY = 180;
+  if(tY < 0) tY = 0;
+
+  // Apply the angle
+  obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
+}
+
+function playSpin(yes) {
+  ospin.style.animationPlayState = (yes?'running':'paused');
+}
+
+var sX, sY, nX, nY, desX = 0,
+    desY = 0,
+    tX = 0,
+    tY = 10;
+
+// auto spin
+if (autoRotate) {
+  var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
+  ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
+}
+
+// setup events
+document.onpointerdown = function (e) {
+  clearInterval(odrag.timer);
+  e = e || window.event;
+  var sX = e.clientX,
+      sY = e.clientY;
+
+  this.onpointermove = function (e) {
+    e = e || window.event;
+    var nX = e.clientX,
+        nY = e.clientY;
+    desX = nX - sX;
+    desY = nY - sY;
+    tX += desX * 0.1;
+    tY += desY * 0.1;
+    applyTranform(odrag);
+    sX = nX;
+    sY = nY;
+  };
+
+  this.onpointerup = function (e) {
+    odrag.timer = setInterval(function () {
+      desX *= 0.95;
+      desY *= 0.95;
+      tX += desX * 0.1;
+      tY += desY * 0.1;
+      applyTranform(odrag);
+      playSpin(false);
+      if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+        clearInterval(odrag.timer);
+        playSpin(true);
+      }
+    }, 17);
+    this.onpointermove = this.onpointerup = null;
+  };
+
+  return false;
+};
+
+document.onmousewheel = function(e) {
+  e = e || window.event;
+  var d = e.wheelDelta / 20 || -e.detail;
+  radius += d;
+  init(1);
+};
+    </script>
+</body>
+</html>

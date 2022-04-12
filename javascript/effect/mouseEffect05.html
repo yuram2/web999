@@ -33,49 +33,7 @@
             transform: rotateX(0deg) rotateY(0deg);
             transform-style: preserve-3d;
             will-change: transform;
-        }
-        .mouse__img figure {
-            width: 50vw;
-            position: relative;
-        }
-        .mouse__img figure::before {
-            content: '';
-            position: absolute;
-            left: 5%;
-            bottom: -30px;
-            width: 90%;
-            height: 40px;
-            background: url(img/images00.jpg) center center no-repeat;
-            background-size: 100% 40px;
-            filter: blur(15px) grayscale(50%);
-            opacity: 0.6;
-            z-index: -1;
-        }
-        .mouse__img figcaption {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            font-size: 1vw;
-            white-space: nowrap;
-            line-height: 1.6;
-            background: rgba(0,0,0,0.4);
-            padding: 1vw 2vw;
-            transform: translate3d(-50%, -50%, 150px);
-        }
-        .cursor {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100px;
-            height: 100px;
-            background: #fff;
-            border-radius: 50%;
-            z-index: 1000;
-            user-select: none;
-            pointer-events: none;
-            mix-blend-mode: difference;
-        }
-        
+        }        
 
     </style>
 </head>
@@ -191,8 +149,8 @@
             let centerPageY = window.innerHeight/2 -mousePageY;
 
             //최소값은 -50 최대값은 50 설정
-            let maxPageX = Math.max(-50, Math.min(50, centerPageX));
-            let maxPageY = Math.max(-50, Math.min(50, centerPageY));
+            let maxPageX = Math.max(-300, Math.min(300, centerPageX));
+            let maxPageY = Math.max(-300, Math.min(300, centerPageY));
 
             //각도 줄이는 설정
             let anlexPageX = maxPageX * 0.12;
