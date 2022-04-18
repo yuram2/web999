@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -100,139 +101,181 @@
             80% {transform: translateX(8px);}
             100% {transform: translateX(0);}
         }
+
+        .card__sound {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        .card__sound button {
+            line-height: 40px;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            color: #007BFF;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .card__start {
+            position: absolute;
+            left:20px;
+            top: 20px
+        }
+        .card__start button {
+            line-height: 40px;
+            background: #fff;
+            width: 40px;
+            height: 40px;
+            color: #007BFF;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 0;
+        }
     </style>
 </head>
 
 <body>
     <div class="ContContact">
         <div class="card__inner">
+            <div class="card__start">
+                <button class="material-icons">sentiment_satisfied_alt</button>
+            </div>
+            <div class="card__sound">
+                <button class="material-icons">volume_up</button>
+                <!-- <button class="material-icons">volume_off</button> -->
+                <audio id="song" src="audio/main.mp3" loop="loop"></audio>
+            </div>
             <ul class="cards">
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/crab.png" alt="1">
+                        <img src="img/img-1.png" alt="1">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/crab.png" alt="1">
+                        <img src="img/img-1.png" alt="1">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/crocodile.png" alt="2">
+                        <img src="img/img-2.png" alt="2">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/crocodile.png" alt="2">
+                        <img src="img/img-2.png" alt="2">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/flamingo.png" alt="3">
+                        <img src="img/img-3.png" alt="3">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/flamingo.png" alt="3">
+                        <img src="img/img-3.png" alt="3">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/parrot.png" alt="4">
+                        <img src="img/img-4.png" alt="4">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/parrot.png" alt="4">
+                        <img src="img/img-4.png" alt="4">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/platypus.png" alt="5">
+                        <img src="img/img-5.png" alt="5">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/platypus.png" alt="5">
+                        <img src="img/img-5.png" alt="5">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/rabbit.png" alt="6">
+                        <img src="img/img-6.png" alt="6">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/rabbit.png" alt="6">
+                        <img src="img/img-6.png" alt="6">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/shark.png" alt="7">
+                        <img src="img/img-7.png" alt="7">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/shark.png" alt="7">
+                        <img src="img/img-7.png" alt="7">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/squid.png" alt="8">
+                        <img src="img/img-8.png" alt="8">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/chameleon.png" alt="">
+                        <img src="img/img.png" alt="">
                     </div>
                     <div class="view back">
-                        <img src="img/squid.png" alt="8">
+                        <img src="img/img-8.png" alt="8">
                     </div>
                 </li>
             </ul>
@@ -247,11 +290,76 @@
         //05. 두개의 이미지 비교하기
         //06. 틀린 이미지 애니메이션 효과 주기
         //07. 빨리 클릭하면 버그 발생 처리하기
+        //08. 다 완성했을때
+        //09. 카드 섞기
 
         const cards = document.querySelectorAll(".cards li");
+        const cardSound = document.querySelector(".card__sound button");
+        const cardSong = document.querySelector("#song");
+        const cardStart = document.querySelector(".card__start");
+
 
         let cardOne, cardTwo;
         let disableDeck = false;
+        let matchedCard = 0;
+
+        let sound = [
+            "audio/match.mp3",
+            "audio/match2.mp3",
+            "audio/up.mp3"
+        ]
+        let soundMatch = new Audio(sound[0]);
+        let soundNoMatch = new Audio(sound[1]);
+        let soundSuccess = new Audio(sound[2]);
+
+        //뮤직 재생
+        cardSound.addEventListener("click", () => {
+            cardSound.classList.toggle("is-playing");
+
+            if(cardSound.classList.contains("is-playing")){
+                cardSound.innerText = "volume_up";
+                cardSong.play();
+            } else {
+                cardSound.innerText = "volume_off";
+                cardSong.pause();
+            }
+        });
+        //카드 섞기
+        function shuffledCard(){
+            cardOne, cardTwo = "";
+            disableDeck = false;
+            matchedCard = 0;
+
+            let arr = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
+            let result = arr.sort(() => Math.random() > 0.5 ? 1 : -1);
+
+            cards.forEach((card, index) => {
+
+                setTimeout(() => {
+                    card.classList.add("flip");
+
+                }, 100 * index);
+
+                setTimeout(() => {
+                    card.classList.remove("flip");
+                }, 4000);
+
+                let imgTag = card.querySelector(".back img");
+                imgTag.src = `img/img-${arr[index]}.png`;
+            })
+        }
+        shuffledCard();
+
+        // cardSound.addEventListener("click", function(){
+        //     this.classList.toggle("is-playing");
+        //     if(this.classList.contains("is-playing")){
+        //         this.innerText = "volume_up";
+        //         cardSong.play();
+        //     } else {
+        //         this.innerText = "volume_off";
+        //         cardSong.pause();
+        //     }
+        // });
 
         function flipCard(e) {
             let clickedCard = e.target;
@@ -275,10 +383,18 @@
 
         function matchCards(img1, img2) {
             if (img1 == img2) {
+                matchedCard++;
+
+                if(matchedCard == 8) {
+                    setTimeout(() => {
+                        shuffledCard()
+                    }, 500)
+                }
                 cardOne.removeEventListener("click", flipCard);
                 cardTwo.removeEventListener("click", flipCard);
                 cardOne = cardTwo = "";
                 return disableDeck = false;
+                soundMatch.play();
             } else {
                 setTimeout(() => {
                     cardOne.classList.add("shake");
@@ -291,12 +407,20 @@
                     cardOne = cardTwo = "";
                     disableDeck = false;
                 }, 1200);
+
+                soundNoMatch.play();
             }
         }
+
+        //스타트 버튼
+        cardStart.addEventListener("click", () => {
+            shuffledCard()
+        })
 
         cards.forEach(card => {
             card.addEventListener("click", flipCard);
         })
+
     </script>
 
 </body>
