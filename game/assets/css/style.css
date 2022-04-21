@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'LABDigital';
+}
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+}
+#header {
+    display: flex;
+    background: rgb(120, 67, 182);
+    justify-content: space-between;
+}
+header h1 {
+    font-size: 20px;
+    padding: 5px;
+    color: #fff;
+    text-transform: uppercase;
+}
+#clock {
+    font-size: 20px;
+    padding: 5px;
+    text-align: right;
+    color: #ED99FB;
+    text-transform: uppercase;
+    display: flex;
+}
+.hoverBtn1 {
+}
+.btn {
+    position: absolute;
+    text-align: center;
+}
+.btn a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(140deg, #ED99FB 30%, #C1BBFC 50%, rgba(255,255,255,.6) 70%);
+    transition: all 0.3s;
+}
+.btn a img {
+    width: 30px;
+    padding-top: 10px;
+}
+.btn a span {
+    position: absolute;
+    left: 50%; bottom: -20px;
+    transform: translateX(-50%);
+    background: rgb(49, 248, 204);
+    padding: 0 10px;
+    white-space: nowrap;
+}
+.btn:hover a {
+    background: rgb(49, 248, 204);
+}
+.btn1 {
+    left: 100px;
+    top: 100px;
+}
+.btn2 {
+    left: 200px;
+    top: 100px;
+}
+.btn3 {
+    left: 330px;
+    top: 100px;
+}
+.musicBox {
+    position: absolute;
+    right: -500px;
+    top: 10px;
+    width: 400px;
+    height: 700px;
+    transition: all 0.4s;
+}
+.musicBox.show {
+    right: 10px;
+}
+.memoryBox {
+    position: absolute;
+    right: -800px;
+    top: 50px;
+    width: 700px;
+    height: 850px;
+    border-radius: 20px;
+    transition: all 0.4s;
+}
+.memoryBox.show {
+    right: 364px;
+}
+.typingBox {
+    position: absolute;
+    right: -1000px;
+    top: 10px;
+    width: 900px;
+    height: 600px;
+    transition: all 0.4s;
+}
+.typingBox.show {
+    right: 220px;
+    top: 170px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 20px; */
+}
+.cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 50px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.memoryBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+                0 6px 10px 0 rgba(0,0,0,0.17)
+}
+.memoryBox .show {
+    right: 10px;
+}
