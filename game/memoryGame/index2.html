@@ -189,7 +189,7 @@
     </div>
     <!-- 규칙 박스 -->
     <div class="info__box">
-        <div class="title">메모리 게임을 하기 위한 규칙</div>
+        <div class="title">메모리 게임 규칙</div>
         <div class="list">
             <ol>
                 <li>당신에게는 기회가 <em>5번</em> 있습니다.</li>
@@ -200,8 +200,8 @@
             </ol>
         </div>
         <div class="buttons">
-            <button class="stop">그만하기</button>
             <button class="start">도전하기</button>
+            <button class="stop">그만하기</button>
         </div>
     </div>
 
@@ -343,8 +343,8 @@
 
     <!-- 결과 박스 -->
     <div class="result__box">
-        <div class="title">a</div>
-        <div class="score">b</div>
+        <div class="title">Mission accomplished</div>
+        <div class="score"></div>
     </div>
 
     <script>
@@ -434,6 +434,7 @@
                 soundNoMatch.play();
             }
         }
+        //카드 섞기
         function shuffledCard(){
             cardOne, cardTwo = "";
             disableDeck = false;
@@ -453,6 +454,7 @@
                 imgTag.src = `img/img-${arr[index]}.png`;
             })
         }
+        
     </script>
 </body>
 </html>

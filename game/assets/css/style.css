@@ -59,16 +59,20 @@ header h1 {
     background: rgb(49, 248, 204);
 }
 .btn1 {
-    left: 100px;
-    top: 100px;
+    left: 15px;
+    top: 45px;
 }
 .btn2 {
-    left: 200px;
-    top: 100px;
+    left: 115px;
+    top: 45px;
 }
 .btn3 {
-    left: 330px;
-    top: 100px;
+    left: 245px;
+    top: 45px;
+}
+.btn4 {
+    left: 355px;
+    top: 45px;
 }
 .musicBox {
     position: absolute;
