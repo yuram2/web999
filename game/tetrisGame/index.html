@@ -210,7 +210,7 @@
                 } else {
                     gameMovingItem = {...movingItem};
 
-                    if(moveType === "retry") {
+                    if(moveType === "retry"){
                         clearInterval(gameInterval);
                         gameover();
                     }
@@ -227,7 +227,7 @@
             })
             movingItem.left = left;
             movingItem.top = top;
-            movingItem.direction = direction;
+            movingItem.direction = direction
         }
 
         function seizeBlock(){
@@ -275,7 +275,7 @@
 
             movingItem.type = blockArray[randomIndex][0];
             movingItem.top = 0;
-            movingItem.left = 3;
+            movingItem.left = 2;
             movingItem.direction = 0;
             gameMovingItem = {...movingItem};
             renderBlocks();
@@ -334,7 +334,7 @@
                     dropBlock();
                     break;
                 default:
-                break;
+                    break;
             }
         })
     </script>
