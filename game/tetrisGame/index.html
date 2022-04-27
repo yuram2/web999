@@ -101,12 +101,14 @@
     </div>
     <!-- 테트리스 박스 -->
     <div class="tetris__wrap">
+        <div class="s">0</div>
         <div class="tetris__inner">
             <ul></ul>
         </div>
     </div>
     <script>
         const tetrisInner = document.querySelector(".tetris__inner > ul");
+        const tetrisS = document.querySelector(".tetris__wrap > s");
         const game_rows = 20;
         const game_cols = 10;
         let gameScore = 0;
@@ -130,7 +132,7 @@
                 [[0,0], [1,0], [0,1], [1,1]],
                 [[0,0], [1,0], [0,1], [1,1]],
                 [[0,0], [1,0], [0,1], [1,1]],
-                [[0,0], [1,0], [0,1], [1,1]]              
+                [[0,0], [1,0], [0,1], [1,1]]
             ],
             Zmino : [
                 [[0,0], [1,0], [1,1], [2,1]],
@@ -171,7 +173,8 @@
             for(let i=0; i<game_rows; i++){
                 tetrisLine();
             }
-            renderBlocks();
+            // renderBlocks();
+            generateNewBlock();
         }
         // 블록 만들기
         function tetrisLine(){
@@ -185,7 +188,7 @@
             tetrisInner.prepend(li);
         }
         // 블록 출력하기
-        function renderBlocks(){
+        function renderBlocks(moveType =" "){
             const {type, direction, top, left} = gameMovingItem;
 
             const movingBlocks = document.querySelectorAll(".moving");
@@ -194,7 +197,7 @@
                 moving.classList.remove(type, "moving");
             })
 
-            blocks[type][direction].forEach(block => {
+            blocks[type][direction].some(block => {
                 const x = block[0] + left;
                 const y = block[1] + top;
                 //console.log(tetrisInner)
@@ -206,13 +209,20 @@
                     target.classList.add(type, "moving");
                 } else {
                     gameMovingItem = {...movingItem};
+
+                    if(moveType === "retry") {
+                        clearInterval(gameInterval);
+                        gameover();
+                    }
+
                     setTimeout(() =>{
-                        renderBlocks();
+                        renderBlocks("retry");
 
                         if(moveType === "top"){
-                            sizeBlock();
+                            seizeBlock();
                         }
-                    },10)
+                    }, 0)
+                    return true;
                 }
             })
             movingItem.left = left;
@@ -220,20 +230,68 @@
             movingItem.direction = direction;
         }
 
-        function sizeBlock(){
+        function seizeBlock(){
             const movingBlocks = document.querySelectorAll(".moving");
+            movingBlocks.forEach(moving => {
+                moving.classList.remove("moving");
+                moving.classList.add("seized");
+            })
+            checkMatch();
+        }
+        
+        //블럭 한 줄 제거하기
+        function checkMatch(){
+            const childNodes = tetrisInner.childNodes;
+            childNodes.forEach(child => {
+                let matched = true;
+                child.children[0].childNodes.forEach(li => {
+                    if(!li.classList.contains("seized")){
+                        matched = false;
+                    }
+                })
+                if(matched){
+                    child.remove();
+                    tetrisLine();
+                    gameScore++;
+                    tetrisS.innerText = gameScore
+                }
+            })
+            generateNewBlock(); 
+
+        }
+
+        //새로운 블럭 만들기
+        function generateNewBlock(){
+
+            //자동으로 내려오기
+            clearInterval(gameInterval);
+            gameInterval = setInterval(() => {
+                moveBlock("top", 1)
+            }, gameDuration);
+
+            //랜덤 블럭
+            const blockArray = Object.entries(blocks);
+            const randomIndex = Math.floor(Math.random() * blockArray.length);
+
+            movingItem.type = blockArray[randomIndex][0];
+            movingItem.top = 0;
+            movingItem.left = 3;
+            movingItem.direction = 0;
+            gameMovingItem = {...movingItem};
+            renderBlocks();
         }
 
         function checkEmpty(target){
-            if(!target){
+            if(!target || target.classList.contains("seized")){
                 return false;
             }
             return true;
         }
 
+        //블럭 움직이기
         function moveBlock(moveType, amount){
             gameMovingItem[moveType] += amount;
-            renderBlocks();
+            renderBlocks(moveType);
         }
 
         //모양 변경하기
@@ -241,6 +299,19 @@
             const direction = gameMovingItem.direction;
             direction === 3 ? gameMovingItem.direction = 0 : gameMovingItem.direction += 1;
             renderBlocks();
+        }
+
+        //스페이스바 누르기
+        function dropBlock(){
+            clearInterval(gameInterval);
+            gameInterval = setInterval(() => {
+                moveBlock("top", 1)
+            }, 10);
+        }
+
+        function gameover(){
+            //게임 끝났을 때
+            console.log("게임오버")
         }
 
         // 키보드 이벤트
@@ -258,6 +329,10 @@
                     break;
                 case 38:
                     changeDirection();
+                    break;
+                case 32:
+                    dropBlock();
+                    break;
                 default:
                 break;
             }
