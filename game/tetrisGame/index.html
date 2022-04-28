@@ -109,6 +109,8 @@
     <script>
         const tetrisInner = document.querySelector(".tetris__inner > ul");
         const tetrisS = document.querySelector(".tetris__wrap > s");
+        const restart = document.querySelector(".restart");
+        const startBtn = document.querySelector(".start");
         const game_rows = 20;
         const game_cols = 10;
         let gameScore = 0;
@@ -309,7 +311,7 @@
             }, 10);
         }
 
-        function gameover(){
+        function gameOver(){
             //게임 끝났을 때
             console.log("게임오버")
         }

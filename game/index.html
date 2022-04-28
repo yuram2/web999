@@ -53,7 +53,6 @@
 
     <div class="memoryBox">
         <iframe class="memoryBoxIframe" src="../game/index.html" frameborder="0"></iframe>
-
     </div>
 
     <div class="musicBox">
@@ -68,9 +67,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
+        //드래그
         $(".btn1").draggable();
         $(".btn2").draggable();
         $(".btn3").draggable();
+        
+        //클릭하면 나오기
         $(".btn1").click(function(){
             $(".musicBox").toggleClass("show")
         });
