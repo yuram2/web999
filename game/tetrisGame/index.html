@@ -19,7 +19,69 @@
         }
         .start__btn,
         .info__box,
-        .result__box {display: none;}
+        .result__box {
+            /* display: block; */
+        }
+        button {
+            border: 0;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:active {
+            opacity: 0.6;
+        }
+        .start__btn, .info__box,.card__wrap, .result__box {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.17);
+            opacity: 0;
+            pointer-events: none;
+        }
+        .start__btn.active, .info__box.active, .card__wrap.active, .result__box.active{
+            opacity: 1;
+            z-index: 10;
+            pointer-events: auto;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .start__btn button {
+            background: #fff;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-size: 1.3em;
+        }
+        .info__box {
+            width: 500px;
+            background: #fff;
+            border-radius: 5px;
+            font-size: 1.3em;
+            transition: all 0.3s;
+        }
+        .info__box .title {
+            border-bottom: 1px solid #ccc;
+            padding: 1rem 2rem;
+        }
+        .info__box ol {
+            padding: 1.3rem 2.5rem;
+        }
+        .info__box .buttons {
+            border-top: 1px solid #ccc;
+            text-align: center;
+        }
+        .info__box .buttons button {
+            background: #fff;
+            color: dodgerblue;
+            padding: 0.4rem 2rem;
+            margin: 0.6rem 0;
+            border-radius: 5px;
+            font-size: 1.1em;
+            border: 1px solid dodgerblue;
+        }
+        .info__box .buttons .start {
+            background: dodgerblue;
+            color: #fff;
+        }
+ 
         .tetris__inner {
             width: 250px;
             margin: 100px auto;
@@ -108,7 +170,7 @@
     </div>
     <script>
         const tetrisInner = document.querySelector(".tetris__inner > ul");
-        const tetrisS = document.querySelector(".tetris__wrap > s");
+        const tetrisS = document.querySelector(".tetris__wrap > .s");
         const restart = document.querySelector(".restart");
         const startBtn = document.querySelector(".start");
         const game_rows = 20;
@@ -119,10 +181,10 @@
         let gameMovingItem;
         const blocks = {
             Tmino : [
-                [[2,1],[0,1],[1,0],[1,1]],
-                [[1,2],[0,1],[1,0],[1,1]],
-                [[1,2],[0,1],[2,1],[1,1]],
-                [[2,1],[1,2],[1,0],[1,1]]
+                [[1,0],[0,1],[1,1],[2,1]],
+                [[1,0],[1,1],[1,2],[2,1]],
+                [[0,1],[1,1],[2,1],[1,2]],
+                [[0,1],[1,0],[1,1],[1,2]]
             ],
             Imino : [
                 [[0,0], [0,1], [0,2], [0,3]],
@@ -162,7 +224,7 @@
             ]
         }
         const movingItem = {
-            type: "Jmino",
+            type: "Tmino",
             direction: 0,
             top: 0,
             left: 2,
@@ -177,6 +239,11 @@
             }
             // renderBlocks();
             generateNewBlock();
+        }
+        restart.oneclick = () => {
+            tetrisInner.innerHTML = "";
+            resultbox.classList.remove("active")
+            init()
         }
         // 블록 만들기
         function tetrisLine(){
@@ -255,7 +322,7 @@
                     child.remove();
                     tetrisLine();
                     gameScore++;
-                    tetrisS.innerText = gameScore
+                    tetrisS.innerText = gameScore;
                 }
             })
             generateNewBlock(); 
@@ -311,10 +378,11 @@
             }, 10);
         }
 
-        function gameOver(){
+        function gameover(){
             //게임 끝났을 때
             console.log("게임오버")
         }
+  
 
         // 키보드 이벤트
         document.addEventListener("keydown", e => {

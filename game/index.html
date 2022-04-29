@@ -64,6 +64,7 @@
     <div class="typingBox">
         <!-- <iframe class="typingBoxIframe" src="/javascript/typingGame/index.html" frameborder="0"></iframe> -->
     </div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
@@ -71,6 +72,7 @@
         $(".btn1").draggable();
         $(".btn2").draggable();
         $(".btn3").draggable();
+        $(".btn5").draggable();
         
         //클릭하면 나오기
         $(".btn1").click(function(){
@@ -81,6 +83,9 @@
         });
         $(".btn3").click(function(){
             $(".typingBox").toggleClass("show")
+        });
+        $(".btn5").click(function(){
+            $(".tetrisBox").toggleClass("show")
         });
     </script>
     <script>
