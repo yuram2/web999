@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>패럴랙스 효과</title>
+    <link href="https://webfontworld.github.io/NexonLv2Gothic/NexonLv2Gothic.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        body {
+            color: #fff;
+            font-family: "NexonLv1Gothic";
+            font-weight: 300;
+        }
+
+        #parallax__title {
+            padding: 20px;
+            position: relative;
+            z-index: 1000;
+        }
+
+        #parallax__title h1 {
+            font-size: 30px;
+            border-bottom: 1px dashed #fff;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            font-weight: 400;
+            display: inline-block;
+        }
+
+        #parallax__title p {
+            font-size: 16px;
+        }
+
+        #parallax__title li {
+            display: inline;
+        }
+
+        #parallax__title ul {
+            margin-top: 10px;
+        }
+
+        #parallax__title li a {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px dashed #fff;
+            display: inline-block;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+        }
+
+        #parallax__title li.active a {
+            color: #000;
+        }
+
+        #parallax__cont {
+            max-width: 1600px;
+            width: 98%;
+            margin: 0 auto;
+            /* background-color: rgba(255,255,255,0.1); */
+        }
+
+        .content__item {
+            width: 1000px;
+            max-width: 70vw;
+            margin: 30vw auto;
+            /* background-color: rgba(255,255,255,0.3); */
+            text-align: left;
+            margin-right: 0;
+            position: relative;
+            padding-top: 15vw;
+        }
+
+        .content__item:nth-child(even) {
+            margin-left: 0;
+            text-align: right;
+        }
+
+        .content__item__num {
+            font-size: 35vw;
+            position: absolute;
+            left: -5vw;
+            top: -13vw;
+            opacity: 0.07;
+            font-family: "Lato";
+            font-weight: 100;
+        }
+
+        .content__item:nth-child(even) .content__item__num {
+            left: auto;
+            right: -5vw;
+        }
+
+        .content__item__title {
+            padding-bottom: 5px;
+            font-weight: 400;
+        }
+
+        .content__item__imgWrap {
+            width: 100%;
+            padding-bottom: 56.25%;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content__item__img {
+            position: absolute;
+            left: -5%;
+            top: -5%;
+            width: 110%;
+            height: 110%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            filter: saturate(0%);
+            transition: all 1s;
+        }
+
+        .content__item__img:hover {
+            filter: saturate(100%);
+            transform: scale(1.025);
+        }
+
+        .content__item:nth-child(1) .content__item__img {
+            background-image: url(img/images42.jpg);
+        }
+
+        .content__item:nth-child(2) .content__item__img {
+            background-image: url(img/images41.jpg);
+        }
+
+        .content__item:nth-child(3) .content__item__img {
+            background-image: url(img/images40.jpg);
+        }
+
+        .content__item:nth-child(4) .content__item__img {
+            background-image: url(img/images39.jpg);
+        }
+
+        .content__item:nth-child(5) .content__item__img {
+            background-image: url(img/images38.jpg);
+        }
+
+        .content__item:nth-child(6) .content__item__img {
+            background-image: url(img/images37.jpg);
+        }
+
+        .content__item:nth-child(7) .content__item__img {
+            background-image: url(img/images36.jpg);
+        }
+
+        .content__item:nth-child(8) .content__item__img {
+            background-image: url(img/images35.jpg);
+        }
+
+        .content__item:nth-child(9) .content__item__img {
+            background-image: url(img/images34.jpg);
+        }
+
+        .content__item__desc {
+            font-size: 4vw;
+            line-height: 1.4;
+            margin-top: -5vw;
+            margin-left: -5vw;
+            position: relative;
+            z-index: 100;
+            word-break: keep-all;
+        }
+
+        .content__item:nth-child(even) .content__item__desc {
+            margin-left: auto;
+            margin-right: -4vw;
+        }
+
+        #gradient {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <header id="parallax__title">
+        <h1><a href="parallaxsample.html">GSAP Parallax Effect02</a></h1>
+        <p>패럴랙스 스크롤링 효과 - 나타나기</p>
+        <ul>
+            <li><a href="parallaxEffectGSAP01.html">1</a></li>
+            <li class="active"><a href="parallaxEffectGSAP02.html">2</a></li>
+            <li><a href="parallaxEffectGSAP03.html">3</a></li>
+        </ul>
+    </header>
+
+    <!-- main -->
+    <main id="parallax__cont">
+        <div id="gradient"></div>
+            <div id="contents">
+                <section id="section1" class="content__item">
+                    <span class="content__item__num">01</span>
+                    <h2 class="content__item__title">Section1</h2>
+                    <figure class="content__item__imgWrap">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc">항상 맑으면 사막이 된다.
+                        비가 내리고 바람이 불어야만 비옥한 땅이 된다.</p>
+                </section>
+                <!-- section1 -->
+                <section id="section2" class="content__item">
+                    <span class="content__item__num">02</span>
+                    <h2 class="content__item__title">Section2</h2>
+                    <figure class="content__item__imgWrap">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc">나 자신에 대한 자신감을 잃으면
+                        온 세상이 나의 적이 된다.</p>
+                </section>
+                <!-- section2 -->
+                <section id="section3" class="content__item">
+                    <span class="content__item__num">03</span>
+                    <h2 class="content__item__title">Section3</h2>
+                    <figure class="content__item__imgWrap">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc">같은 실수를 두려워하되
+                        새로운 실수를 두려워하지 마라.
+                        실수는 곧 경험이다.</p>
+                </section>
+                <!-- section3 -->
+                <section id="section4" class="content__item">
+                    <span class="content__item__num">04</span>
+                    <h2 class="content__item__title">Section4</h2>
+                    <figure class="content__item__imgWrap">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc">오늘은 당신의 남은 인생 중,
+                        첫 번째 날이다.</p>
+                </section>
+                <!-- section4 -->
+                <section id="section5" class="content__item">
+                    <span class="content__item__num">05</span>
+                    <h2 class="content__item__title">Section5</h2>
+                    <figure class="content__item__imgWrap">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc">인생은 곱셈이다.
+                        어떤 기회가 와도 내가 제로면
+                        아무런 의미가 없다.</p>
+                </section>
+                <!-- section5 -->
+                <section id="section6" class="content__item">
+                    <span class="content__item__num">06</span>
+                    <h2 class="content__item__title">Section6</h2>
+                    <figure class="content__item__imgWrap">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc">별은 바라보는 자에게 빛을 준다.</p>
+                </section>
+                <!-- section6 -->
+                <section id="section7" class="content__item">
+                    <span class="content__item__num">07</span>
+                    <h2 class="content__item__title">Section7</h2>
+                    <figure class="content__item__imgWrap">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc">생명이 있는 한 희망이 있다.
+                        실망을 친구로 삼을 것인가,
+                        아니면 희망을 친구로 삼을 것인가.</p>
+                </section>
+                <!-- section7 -->
+                <section id="section8" class="content__item">
+                    <span class="content__item__num">08</span>
+                    <h2 class="content__item__title">Section8</h2>
+                    <figure class="content__item__imgWrap">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc">실패란 넘어지는 것이 아니라,
+                        넘어진 자리에 머무는 것이다.</p>
+                </section>
+                <!-- section8 -->
+                <section id="section9" class="content__item">
+                    <span class="content__item__num">09</span>
+                    <h2 class="content__item__title">Section9</h2>
+                    <figure class="content__item__imgWrap">
+                        <div class="content__item__img"></div>
+                    </figure>
+                    <p class="content__item__desc">슬픔이 그대의 삶으로 밀려와
+                        마음을 흔들고 소중한 것을 쓸어가 버릴 때면
+                        그대 가슴에 대고 말하라.
+                        “이것 또한 지나가리라”</p>
+                </section>
+                <!-- section9 -->
+            </div>
+    </main>
+    <!-- //main -->
+
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.utils.toArray(".content__item__imgWrap").forEach(elem => {
+            ScrollTrigger.create({
+                trigger: elem,
+                start: "top 100%",
+                end: "bottom 0%",
+                merkers: true,
+                onEnter: function () {
+                    gsap.fromTo(
+                        elem, {
+                            y: 300,
+                            autoAlpha: 0
+                        }, {
+                            duration: 1.25,
+                            y: 0,
+                            autoAlpha: 1,
+                            ease: "power4.out",
+                            overwrite: "auto"
+                        }
+                    );
+                },
+                onLeave: function () {
+                    gsap.fromTo(
+                        elem, {
+                            autoAlpha: 1,
+                        }, {
+                            autoAlpha: 0,
+                            overwrite: "auto"
+                        }
+                    )
+                },
+                onEnterBack: function () {
+                    gsap.fromTo(
+                        elem, {
+                            y: -100,
+                            autoAlpha: 0,
+                        }, {
+                            duration: 1.25,
+                            y: 0,
+                            autoAlpha: 1,
+                            ease: "power4.out",
+                            overwrite: "auto"
+                        }
+                    )
+                },
+                onLeaveBack: function () {
+                    gsap.fromTo(
+                        elem, {
+                            autoAlpha: 1,
+                        }, {
+                            duration: 0,
+                            overwrite: "auto"
+                        }
+                    );
+                },
+            })
+        });
+    </script>
+</body>
+
+</html>
