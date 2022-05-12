@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portflio</title>
+    <style>
+      body {
+        background: rgb(239, 238, 234);
+        overflow-x: hidden;
+        transition: color 0.3s ease 0s;
+      }
+      .USjoX .hero {
+        width: 100vw;
+        height: 100vh;
+        padding-bottom: 5vh;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        position: relative;
+      }
+      .USjoX .hero .text {
+        position: relative;
+        display: flex;
+        flex-flow: column wrap;
+      }
+      .USjoX .hero .text .line.first_line {
+        text-align: start;
+      }
+      @media (max-width: 780px) {
+        .USjoX .hero .text {
+          margin-top: -25vh;
+        }
+      }
+      @media (max-width: 769px) {
+        .USjoX .hero .text .line.third_line .slider-container {
+          display: flex;
+          -webkit-box-pack: end;
+          justify-content: flex-end;
+          width: 100%;
+          top: 90px;
+          right: 0px;
+        }
+        .USjoX .hero .text .line {
+          font-size: 60px;
+          line-height: 1;
+        }
+      }
+      @media (max-width: 950px) {
+        .USjoX .hero .text .line {
+          font-size: 70px;
+        }
+      }
+      @media (max-width: 1200px) {
+        .USjoX .hero .text .line {
+          font-size: 80px;
+        }
+      }
+      .USjoX .hero .text .line {
+        text-transform: uppercase;
+        width: auto;
+        white-space: nowrap;
+        font-family: Ginger;
+        letter-spacing: 0.03em;
+        color: rgb(20, 20, 20);
+        font-size: 115px;
+        line-height: 0.9;
+      }
+      .USjoX .hero .text .line.second_line {
+        padding-left: 240px;
+      }
+      .USjoX .hero .text .line.third_line {
+        position: relative;
+        padding-left: 150px;
+      }
+      .USjoX .hero .text .line .important_word {
+        font-family: Ginger;
+        text-transform: uppercase;
+        color: rgb(123, 159, 240);
+        position: relative;
+        margin-left: 10px;
+      }
+      .USjoX .hero .text .line .important_word {
+        font-family: Ginger;
+        text-transform: uppercase;
+        color: rgb(123, 159, 240);
+        position: relative;
+        margin-left: 10px;
+      }
+      .hcLQnp .img-container .overlay {
+        width: 100%;
+        height: 100%;
+        background: rgb(123, 159, 240);
+        position: absolute;
+      }
+      .gwTnKB span {
+        display: inline-flex;
+        position: relative;
+        overflow: hidden;
+        -webkit-box-align: baseline;
+        align-items: baseline;
+        white-space: nowrap;
+      }
+      .gwTnKB span .overlay {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        background: rgb(123, 159, 240);
+        z-index: 100;
+      }
+      .gYdDub {
+        display: flex;
+        -webkit-box-pack: end;
+        justify-content: flex-end;
+        pointer-events: auto;
+        width: 20px;
+      }
+      .gYdDub ul {
+        display: flex;
+        flex-flow: row nowrap;
+        -webkit-box-align: baseline;
+        align-items: baseline;
+      }
+      .TwvuK {
+        display: flex;
+        flex-flow: column nowrap;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+      .TwvuK .text {
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        text-transform: uppercase;
+        color: transparent;
+        transform: rotate(180deg);
+        margin-bottom: 14px;
+        font-size: 12px;
+        transition: color 0.4s ease 0s;
+      }
+      .TwvuK:not(:first-child) {
+        margin-left: 8px;
+      }
+      .TwvuK .point {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background: rgb(123, 159, 240);
+      }
+      .hsMqYZ .text {
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        text-transform: uppercase;
+        color: transparent;
+        transform: rotate(180deg);
+        margin-bottom: 14px;
+        font-size: 12px;
+        transition: color 0.4s ease 0s;
+      }
+      .jqkWCZ {
+        padding: 0px 5vw;
+        position: fixed;
+        width: 100vw;
+        display: flex;
+        flex-flow: row nowrap;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        top: 60px;
+        z-index: 100;
+        pointer-events: none;
+      }
+      .jqkWCZ .menu-toggle {
+        width: 40px;
+        height: 40px;
+        pointer-events: auto;
+        color: rgb(20, 20, 20);
+      }
+      button {
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        width: auto;
+        overflow: visible;
+        background: transparent;
+        color: inherit;
+        font-style: inherit;
+        font-variant: inherit;
+        font-weight: inherit;
+        font-stretch: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        line-height: normal;
+        -webkit-font-smoothing: inherit;
+        appearance: none;
+      }
+      .jqkWCZ .menu-toggle .top,
+      .jqkWCZ .menu-toggle .bottom {
+        width: 100%;
+        height: 2px;
+        background: rgb(20, 20, 20);
+      }
+      .jqkWCZ .menu-toggle .bottom {
+        width: 50%;
+        margin-top: 8px;
+        transition: all 0.3s ease-in-out 0s;
+      }
+      .dWOgch {
+        position: fixed;
+        width: 100vw;
+        display: flex;
+        flex-flow: row nowrap;
+        -webkit-box-align: baseline;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        bottom: 60px;
+        z-index: 100;
+        align-items: flex-end;
+        padding: 0px 5vw;
+        pointer-events: none;
+        color: rgb(20, 20, 20);
+        font-family: NeueMontrealRegular;
+        font-size: 12px;
+      }
+      .dWOgch .style {
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+      a {
+        text-decoration: none;
+      }
+      .dWOgch .project {
+        pointer-events: auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 33px;
+      }
+      .dWOgch .project .round {
+        margin: 3px 2px;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        background-color: rgb(181, 181, 181);
+        transition: background-color 0.5s ease 0s;
+      }
+      .dWOgch .theme-toggle {
+        pointer-events: auto;
+        margin-top: 20px;
+        border: 1px solid rgb(181, 181, 181);
+        border-radius: 30px;
+        padding: 5px 14px;
+        transition: background-color 0.4s ease 0s;
+      }
+      .hfyOKy {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        overflow: hidden;
+        will-change: transform;
+      }
+      .hfyOKy .page-container {
+        width: 100%;
+        position: relative;
+      }
+    </style>
+  </head>
+
+  <body class="pace-done">
+    <div class="pace pace-inactive">
+      <div
+        class="pace-progress"
+        data-progress-text="100%"
+        data-progress="99"
+        style="transform: translate3d(100%, 0px, 0px)"
+      >
+        <div class="pace-progress-inner"></div>
+      </div>
+      <div class="pace-activity"></div>
+    </div>
+    <div id="root">
+      <div class="sc-hBEYId iqjeKe" style="opacity: 1">
+        <div
+          class="pointer"
+          style="transform: translate3d(709.5px, 719.5px, 0px)"
+        ></div>
+        <div
+          class="cursor-wrapper"
+          style="transform: translate3d(709.5px, 719.5px, 0px) scale(1)"
+        >
+          <div class="cursor" style="border-color: rgb(123, 159, 240)"></div>
+          <div
+            class="cursor hover-circle"
+            style="transform: scale(0.01, 0.01)"
+          ></div>
+        </div>
+      </div>
+      <div class="sc-bqyKOL jqkWCZ">
+        <a class="logo" href="/"></a
+        ><button class="menu-toggle">
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </button>
+      </div>
+      <div class="sc-ezredP dWOgch">
+        <a href="/works">
+          <div class="project">
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+          </div>
+        </a>
+        <div class="style">
+          <div class="sc-iJuVqt gYdDub">
+            <ul>
+              <li
+                activecolorindex="#F85858"
+                class="sc-giImIA ThaJQ"
+                style="opacity: 1"
+              >
+                <div class="text">salmon</div>
+                <button class="point"></button>
+              </li>
+              <li
+                activecolorindex="#969AF7"
+                class="sc-giImIA jizbAM"
+                style="opacity: 1"
+              >
+                <div class="text">lavender</div>
+                <button class="point"></button>
+              </li>
+              <li
+                activecolorindex="#FFCE29"
+                class="sc-giImIA kpIFif"
+                style="opacity: 1"
+              >
+                <div class="text">lemon</div>
+                <button class="point"></button>
+              </li>
+              <li
+                activecolorindex="#74CC33"
+                class="sc-giImIA hsMqYZ"
+                style="opacity: 1"
+              >
+                <div class="text">avocado</div>
+                <button class="point"></button>
+              </li>
+              <li
+                activecolorindex="#EFA8EF"
+                class="sc-giImIA gCHgXn"
+                style="opacity: 1"
+              >
+                <div class="text">candy</div>
+                <button class="point"></button>
+              </li>
+              <li
+                activecolorindex="#A55420"
+                class="sc-giImIA gXJuBt"
+                style="opacity: 1"
+              >
+                <div class="text">desert</div>
+                <button class="point"></button>
+              </li>
+              <li activecolorindex="#7B9FF0" class="sc-giImIA TwvuK">
+                <div class="text" style="opacity: 1">blueberry</div>
+                <div class="point"></div>
+              </li>
+            </ul>
+          </div>
+          <button class="theme-toggle">DARK</button>
+        </div>
+      </div>
+      <div data-app-container="true">
+        <div class="sc-bkzYnD hfyOKy" style="transform: none">
+          <div class="page-container" style="opacity: 1">
+            <div class="sc-fKFxtB USjoX">
+              <div class="hero">
+                <div class="text">
+                  <div class="line first_line">
+                    <div class="sc-kfzBvY gwTnKB">
+                      <span
+                        >WELCOME TO
+                        <div
+                          class="overlay"
+                          style="
+                            width: 765.281px;
+                            transform: translateX(101%) translateZ(0px);
+                          "
+                        ></div
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="line second_line important_word">
+                    <div class="sc-kfzBvY gwTnKB">
+                      <span
+                        >THE PORTFOLIO
+                        <div
+                          class="overlay"
+                          style="
+                            width: 951.094px;
+                            transform: translateX(-101%) translateZ(0px);
+                          "
+                        ></div
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="line third_line">
+                    <div class="sc-kfzBvY gwTnKB">
+                      <span
+                        >OF <span class="important_word">YURAM</span>
+                        <div
+                          class="overlay"
+                          style="
+                            width: 529.719px;
+                            transform: translateX(-101%) translateZ(0px);
+                          "
+                        ></div>
+                      </span>
+                    </div>
+                    <div class="slider-container">
+                      <div class="sc-fodVek hcLQnp">
+                        <div class="img-container mf-active">
+                          <div
+                            class="overlay"
+                            style="transform: translate(-100%, 0px)"
+                          ></div>
+                          <img
+                            src="https://source.unsplash.com/800x580/?blog,people"
+                            alt=""
+                          />
+                        </div>
+                        <div class="page text-small">(02/15)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="discover" style="opacity: 1">
+                  <span class="discover">discover</span
+                  ><svg
+                    width="8.845"
+                    height="30.585"
+                    viewBox="0 0 8.845 30.585"
+                  >
+                    <g
+                      id="Groupe_3221"
+                      data-name="Groupe 3221"
+                      transform="translate(-1828.616 -972.977)"
+                    >
+                      <path
+                        id="Tracé_250"
+                        data-name="Tracé 250"
+                        d="M11642.237,972.977v29.773"
+                        transform="translate(-9809)"
+                        fill="none"
+                        stroke-width="1"
+                      ></path>
+                      <path
+                        id="Tracé_251"
+                        data-name="Tracé 251"
+                        d="M11637.989,998.2l4.112,4.6,3.981-4.6"
+                        transform="translate(-9809)"
+                        fill="none"
+                        stroke-width="1"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="home-section what-i-do">
+                <div class="headline">what i do</div>
+                <div class="separator"></div>
+                <div class="title text-h2-5">
+                  I am a multidisciplinary
+                  <span class="saol">graphic designer</span> based in Paris,
+                  focus on web design and brand identity. Currently in
+                  internship at <span class="saol">AKQA</span> as UI/UX Designer
+                </div>
+                <a class="button" href="">resume</a>
+              </div>
+              <div class="home-section skills">
+                <div class="headline">skills</div>
+                <div class="separator text-top"></div>
+                <div class="sc-dIUeWJ hdRQhJ">
+                  <div
+                    class="line top-line"
+                    style="transform: translate3d(904.341px, 0px, 0px)"
+                  >
+                    <div class="string">
+                      <span class="text-h1">digital</span
+                      ><span class="text-h1">creative</span
+                      ><span class="text-h1">design</span
+                      ><span class="text-h1">UI/UX</span
+                      ><span class="text-h1">Product</span>
+                    </div>
+                    <div class="string">
+                      <span class="text-h1">digital</span
+                      ><span class="text-h1">creative</span
+                      ><span class="text-h1">design</span
+                      ><span class="text-h1">UI/UX</span
+                      ><span class="text-h1">Product</span>
+                    </div>
+                    <div class="string">
+                      <span class="text-h1">digital</span
+                      ><span class="text-h1">creative</span
+                      ><span class="text-h1">design</span
+                      ><span class="text-h1">UI/UX</span
+                      ><span class="text-h1">Product</span>
+                    </div>
+                  </div>
+                  <div
+                    class="line bottom-line"
+                    style="transform: translate3d(-1146.44px, 0px, 0px)"
+                  >
+                    <div class="string">
+                      <span class="text-h1">photoshop</span
+                      ><span class="text-h1">figma</span
+                      ><span class="text-h1">illustrator</span
+                      ><span class="text-h1">adobexd</span
+                      ><span class="text-h1">indesign</span>
+                    </div>
+                    <div class="string">
+                      <span class="text-h1">photoshop</span
+                      ><span class="text-h1">figma</span
+                      ><span class="text-h1">illustrator</span
+                      ><span class="text-h1">adobexd</span
+                      ><span class="text-h1">indesign</span>
+                    </div>
+                    <div class="string">
+                      <span class="text-h1">photoshop</span
+                      ><span class="text-h1">figma</span
+                      ><span class="text-h1">illustrator</span
+                      ><span class="text-h1">adobexd</span
+                      ><span class="text-h1">indesign</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="separator text-bot"></div>
+              </div>
+              <div class="home-section projects">
+                <div class="headline">projects</div>
+                <div class="separator"></div>
+                <div class="sc-dmlqKv iRFNHK">
+                  <div class="sc-hHfuMS jaXTN">
+                    <div class="content" style="transform: none">
+                      <div class="index">(01)</div>
+                      <a class="title text-h1" href="/">Zhonglin</a>
+                    </div>
+                    <div class="hover-images-wrapper" style="transform: none">
+                      <div
+                        class="hover-images"
+                        style="
+                          opacity: 0;
+                          transform: translate3d(707px, 717px, 0px);
+                        "
+                      >
+                        <img
+                          src="https://source.unsplash.com/800x580/?blog,people"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                  </div>
+                  <div class="sc-hHfuMS jaXTN">
+                    <div class="content" style="transform: none">
+                      <div class="index">(02)</div>
+                      <a class="title text-h1" href="/">Arcane</a>
+                    </div>
+                    <div class="hover-images-wrapper" style="transform: none">
+                      <div
+                        class="hover-images"
+                        style="
+                          opacity: 0;
+                          transform: translate3d(707px, 717px, 0px);
+                        "
+                      >
+                        <img
+                          src="https://source.unsplash.com/800x580/?blog,people"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                  </div>
+                  <div class="sc-hHfuMS jaXTN">
+                    <div class="content" style="transform: none">
+                      <div class="index">(03)</div>
+                      <a class="title text-h1" href="/works/branding"
+                        >Branding</a
+                      >
+                    </div>
+                    <div class="hover-images-wrapper" style="transform: none">
+                      <div
+                        class="hover-images"
+                        style="
+                          opacity: 0;
+                          transform: translate3d(707px, 717px, 0px);
+                        "
+                      >
+                        <img
+                          src="https://source.unsplash.com/800x580/?blog,people"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                  </div>
+                  <div class="sc-hHfuMS jaXTN">
+                    <div class="content" style="transform: none">
+                      <div class="index">(04)</div>
+                      <a class="title text-h1" href="/works/project-x-paris"
+                        >Project X</a
+                      >
+                    </div>
+                    <div class="hover-images-wrapper" style="transform: none">
+                      <div
+                        class="hover-images"
+                        style="
+                          opacity: 0;
+                          transform: translate3d(707px, 717px, 0px);
+                        "
+                      >
+                        <img
+                          src="https://source.unsplash.com/800x580/?blog,people"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                  </div>
+                  <div class="project">
+                    <div class="content" style="transform: none">
+                      <div class="index">(XX)</div>
+                      <a class="title text-h1" href="/works">more projects</a>
+                    </div>
+                    <div class="separator"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="home-section what-i-do">
+                <div class="headline">My passions</div>
+                <div class="separator"></div>
+                <div class="passion_container">
+                  <div class="passion">
+                    <img
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    /><img
+                      class="hover"
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    />
+                    <div class="text-content">
+                      <h3 class="text-h3 number">01</h3>
+                      <div class="text-description">
+                        <h4 class="text-h4">Video games</h4>
+                        <p class="text-regular">Improves my creativity</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="passion">
+                    <img
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    /><img
+                      class="hover"
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    />
+                    <div class="text-content">
+                      <h3 class="text-h3 number">02</h3>
+                      <div class="text-description">
+                        <h4 class="text-h4">Animes</h4>
+                        <p class="text-regular">Gives me inspiration</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="passion">
+                    <img
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    /><img
+                      class="hover"
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    />
+                    <div class="text-content">
+                      <h3 class="text-h3 number">03</h3>
+                      <div class="text-description">
+                        <h4 class="text-h4">Chilly Music</h4>
+                        <p class="text-regular">Helps me stay focused</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="passion">
+                    <img
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    /><img
+                      class="hover"
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    />
+                    <div class="text-content">
+                      <h3 class="text-h3 number">04</h3>
+                      <div class="text-description">
+                        <h4 class="text-h4">Piano</h4>
+                        <p class="text-regular">Relaxes me</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="passion">
+                    <img
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    /><img
+                      class="hover"
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    />
+                    <div class="text-content">
+                      <h3 class="text-h3 number">05</h3>
+                      <div class="text-description">
+                        <h4 class="text-h4">Drawing</h4>
+                        <p class="text-regular">Improves my accuracy</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="passion">
+                    <img
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    /><img
+                      class="hover"
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    />
+                    <div class="text-content">
+                      <h3 class="text-h3 number">06</h3>
+                      <div class="text-description">
+                        <h4 class="text-h4">Food</h4>
+                        <p class="text-regular">
+                          Especially japanese and korean food
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="passion">
+                    <img
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    /><img
+                      class="hover"
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    />
+                    <div class="text-content">
+                      <h3 class="text-h3 number">07</h3>
+                      <div class="text-description">
+                        <h4 class="text-h4">Painting</h4>
+                        <p class="text-regular">I create new things</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="passion">
+                    <img
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    /><img
+                      class="hover"
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    />
+                    <div class="text-content">
+                      <h3 class="text-h3 number">08</h3>
+                      <div class="text-description">
+                        <h4 class="text-h4">Hand crafting</h4>
+                        <p class="text-regular">I bring my ideas to life</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="passion">
+                    <img
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    /><img
+                      class="hover"
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt="passion"
+                    />
+                    <div class="text-content">
+                      <h3 class="text-h3 number">09</h3>
+                      <div class="text-description">
+                        <h4 class="text-h4">3D</h4>
+                        <p class="text-regular">blossoms me</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home-section what-i-do">
+                <div class="headline">Streaming</div>
+                <div class="separator"></div>
+                <div class="title text-h2-5">
+                  I'm also a <span class="saol">Twitch partner</span> and I
+                  stream my work on my Twitch channel :D
+                </div>
+                <a class="button" href="/" target="_blank">Twitch.tv/Katy_v4</a>
+              </div>
+              <div class="demi-spacer"></div>
+              <div class="full-img-container">
+                <div alt="moodboard" class="sc-bdfBQB fUYRQJ">
+                  <img
+                    src="https://source.unsplash.com/800x580/?blog,people"
+                    style="transform: translateY(10%) translateZ(0px)"
+                  />
+                </div>
+              </div>
+              <div class="spacer"></div>
+            </div>
+            <div class="sc-fFucqa hHyBiu">
+              <div class="home-section contact">
+                <div class="headline">contact me</div>
+                <div class="separator"></div>
+                <div class="footer-body">
+                  <a href="" class="text-h1"
+                    >Drop me an
+                    <div class="text-h1 important-word">
+                      <span class="word"
+                        ><span>email</span><span class="post">email</span></span
+                      >
+                    </div></a
+                  >
+                </div>
+                <div class="separator"></div>
+                <div class="small-line">
+                  <div class="left">@2022</div>
+                  <ul class="socials">
+                    <li><a href="" target="_blank">linkedin</a></li>
+                    <li><a href="" target="_blank">twitter</a></li>
+                    <li><a href="" target="_blank">instagram</a></li>
+                    <li><a href="" target="_blank">behance</a></li>
+                    <li><a href="" target="_blank">discord</a></li>
+                  </ul>
+                  <div class="right"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sc-idOiZg ehmXge">
+          <div
+            class="transition-panel"
+            style="transform: translateY(100%) translateZ(0px)"
+          ></div>
+        </div>
+        <div style="height: 8147.52px"></div>
+      </div>
+    </div>
+
+    <div
+      id="awwwards"
+      style="
+        position: fixed;
+        z-index: 999;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 0;
+      "
+    >
+      <a href="/" target="_blank"
+        ><svg width="53.08" height="171.358">
+          <path
+            class="js-color-bg"
+            fill="white"
+            d="M0 0h53.08v171.358H0z"
+          ></path>
+          <g class="js-color-text" fill="black">
+            <path>a</path>
+          </g>
+        </svg></a
+      >
+    </div>
+  </body>
+</html>
