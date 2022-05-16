@@ -38,9 +38,11 @@
         font-family: "GmarketSansMedium";
         src: url("./font/");
       }
-      * {
-        box-sizing: border-box;
-        cursor: none;
+
+      body {
+        background: rgb(239, 238, 234);
+        overflow-x: hidden;
+        transition: color 0.3s ease 0s;
       }
       .logo {
         width: 50px;
@@ -67,7 +69,153 @@
         z-index: 100;
         pointer-events: none;
       }
+      .sc1 {
+        color: rgb(20, 20, 20);
+      }
+      .sc1 .rose {
+        width: 100vw;
+        height: 100vh;
+        padding-bottom: 5vh;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        position: relative;
+      }
+      .sc1 .rose .text {
+        position: relative;
+        display: flex;
+        flex-flow: column wrap;
+      }
+      .sc1 .rose .text .line {
+        text-transform: uppercase;
+        width: auto;
+        white-space: nowrap;
+        font-family: Ginger;
+        letter-spacing: 0.03em;
+        color: rgb(20, 20, 20);
+        font-size: 115px;
+        line-height: 0.9;
+      }
+      .sc1 .rose .text .line.firstline {
+        text-align: start;
+      }
+      .sc1-a span {
+        display: inline-flex;
+        position: relative;
+        overflow: hidden;
+        -webkit-box-align: baseline;
+        align-items: baseline;
+        white-space: nowrap;
+      }
+      .sc1-a span .overlay {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        background: rgb(150, 154, 247);
+        z-index: 100;
+      }
+      .sc1 .rose .text .line.secondline {
+        padding-left: 240px;
+      }
+      .sc1 .rose .text .line.thirdline {
+        position: relative;
+        padding-left: 150px;
+      }
+      .sc1 .rose .text .line .important_word {
+        font-family: Ginger;
+        text-transform: uppercase;
+        color: rgb(150, 154, 247);
+        position: relative;
+        margin-left: 10px;
+      }
+      .sc1 .rose .text .line.thirdline .slider-container {
+        position: absolute;
+        top: 80px;
+        right: 160px;
+      }
+      .sci .img-container {
+        position: relative;
+        width: 250px;
+        height: 160px;
+        overflow: hidden;
+      }
+      .sci .img-container .overlay {
+        width: 100%;
+        height: 100%;
+        background: rgb(150, 154, 247);
+        position: absolute;
+      }
+      .sci .img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .sci .page {
+        position: absolute;
+        right: 0px;
+        margin-top: 4px;
+        text-align: right;
+        font-size: 11px;
+        color: rgb(20, 20, 20);
+      }
+      .text-small {
+        font-family: NeueMontrealRegular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140.62%;
+        letter-spacing: 0.01em;
+      }
+      .sc1 .rose .text .line.thirdline .slider-container::after {
+        position: absolute;
+        content: "Graphic Designer & front end developer based in Y.";
+        width: 250px;
+        top: -60px;
+        left: -20px;
+        font-family: NeueMontrealRegular;
+        font-size: 12px;
+        text-transform: uppercase;
+        white-space: initial;
+        color: rgb(20, 20, 20);
+        line-height: 1.4;
+        letter-spacing: 0.01em;
+      }
+      .sc1 .rose .discover {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .sc1 .rose .discover span {
+        font-family: NeueMontrealRegular;
+        font-size: 0.65rem;
+        text-transform: uppercase;
+      }
+      .sc1 .rose .discover {
+        color: rgb(20, 20, 20);
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .sc1 .rose .discover svg {
+        margin-bottom: 2px;
+        height: 25px;
+        stroke: rgb(20, 20, 20);
+      }
     </style>
+    <script type="module" crossorigin src="./css/ph.js"></script>
   </head>
 
   <body>
@@ -88,7 +236,7 @@
             <div class="round"></div>
           </div>
         </a>
-        <div class="style">
+        <!-- <div class="style">
           <div class="bgpc">
             <ul>
               <li class="1">
@@ -122,18 +270,18 @@
             </ul>
           </div>
           <button class="toggle">DARK</button>
-        </div>
+        </div> -->
       </div>
       <div data-app-container="true">
         <div class="scY" style="transform: translateY() translateZ()">
           <div class="page-container" style="opacity: 1">
             <div class="sc1">
-              <div class="ct1">
+              <div class="rose">
                 <div class="text">
                   <div class="firstline">
                     <div class="sc1-a">
                       <span>
-                        "WELLCOME TO"
+                        WELLCOME TO
                         <div
                           class="overlay"
                           style="
@@ -147,7 +295,7 @@
                   <div class="secondline">
                     <div class="sc1-a">
                       <span>
-                        "THE MY PORTFOLIO"
+                        THE MY PORTFOLIO
                         <div
                           class="overlay"
                           style="
@@ -161,7 +309,7 @@
                   <div class="thirdline">
                     <div class="sc1-a">
                       <span>
-                        "OF"
+                        OF
                         <span class="important_word">YURAM</span>
                         <div
                           class="overlay"
@@ -171,6 +319,21 @@
                           "
                         ></div>
                       </span>
+                    </div>
+                    <div class="slider-container">
+                      <div class="sci">
+                        <div class="img-container">
+                          <div
+                            class="overlay"
+                            style="transform: translate(-100%, 0px)"
+                          ></div>
+                          <img
+                            src="https://source.unsplash.com/800x580/?blog,people"
+                          />
+                        </div>
+                        <div class="pagetextsmall">( 01 / 15 )</div>
+                      </div>
+                      ::after
                     </div>
                   </div>
                   <div class="discover" style="opacity: 1">
