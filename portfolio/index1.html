@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <style>
+      * {
+        background-color: #efeeea;
+      }
+
+      #header {
+        display: flex;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        height: 6vh;
+      }
+
+      #nav {
+        position: fixed;
+        width: 100vw;
+        display: flex;
+        flex-flow: row nowrap;
+        -webkit-box-align: baseline;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        bottom: 60px;
+        z-index: 100;
+        align-items: flex-end;
+        padding: 0px 5vw;
+        pointer-events: none;
+        color: rgb(20, 20, 20);
+        font-family: "Saint Monica";
+        font-size: 12px;
+      }
+
+      #body #header #logo {
+        width: 105px;
+        height: 28px;
+        margin: 9px 47px 141px 40px;
+        font-family: "Saint Monica";
+        font-size: 30px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.95;
+        letter-spacing: normal;
+        text-align: left;
+        color: #030303;
+      }
+
+      #body #header #menu {
+        width: 40px;
+        height: 40px;
+        flex-grow: 0;
+        margin: 0 40px 138px 62px;
+        padding: 10px 7.5px 10.8px 1px;
+      }
+
+      #menu .top {
+        width: 31.3px;
+        height: 1px;
+        flex-grow: 0;
+        margin: 0 0.3px 16px 0;
+        transform: rotate(-180deg);
+        border: solid 2px #464646;
+      }
+
+      #menu .bottom {
+        width: 18.8px;
+        height: 1px;
+        flex-grow: 0;
+        margin: 16px 0 0 12.8px;
+        transform: rotate(-180deg);
+        border: solid 2px #464646;
+      }
+
+      #nav .project {
+        pointer-events: auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 33px;
+      }
+
+      #nav .style {
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+
+      #nav .style .colors {
+        display: flex;
+        -webkit-box-pack: end;
+        justify-content: flex-end;
+        pointer-events: auto;
+        width: 20px;
+      }
+
+      #nav .style .colors ul {
+        display: flex;
+        flex-flow: row nowrap;
+        -webkit-box-align: baseline;
+        align-items: baseline;
+      }
+
+      .qmffnqpfl {
+        display: flex;
+        flex-flow: column nowrap;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+
+      .qmffnqpfl .txt {
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        text-transform: uppercase;
+        color: transparent;
+        transform: rotate(180deg);
+        margin-bottom: 14px;
+        font-size: 12px;
+        transition: color 0.4s ease 0s;
+      }
+
+      .qmffnqpfl .point {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background: rgb(123, 159, 240);
+      }
+
+      .dusdj {
+        display: flex;
+        flex-flow: column nowrap;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+
+      .dusdj:not(:first-child) {
+        margin-left: 8px;
+      }
+
+      .dusdj .txt {
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        text-transform: uppercase;
+        color: transparent;
+        transform: rotate(180deg);
+        margin-bottom: 14px;
+        font-size: 12px;
+        transition: color 0.4s ease 0s;
+      }
+
+      .dusdj .point {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background: rgb(248, 88, 88);
+      }
+
+      .fpahs {
+        display: flex;
+        flex-flow: column nowrap;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+
+      .fpahs:not(:first-child) {
+        margin-left: 8px;
+      }
+
+      .fpahs .txt {
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        text-transform: uppercase;
+        color: transparent;
+        transform: rotate(180deg);
+        margin-bottom: 14px;
+        font-size: 12px;
+        transition: color 0.4s ease 0s;
+      }
+
+      .fpahs .point {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background: rgb(255, 206, 41);
+      }
+
+      .dkqhzkeh {
+        display: flex;
+        flex-flow: column nowrap;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+
+      .dkqhzkeh:not(:first-child) {
+        margin-left: 8px;
+      }
+
+      .dkqhzkeh .txt {
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        text-transform: uppercase;
+        color: transparent;
+        transform: rotate(180deg);
+        margin-bottom: 14px;
+        font-size: 12px;
+        transition: color 0.4s ease 0s;
+      }
+
+      .dkqhzkeh .point {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background: rgb(116, 204, 51);
+      }
+
+      .zosel {
+        display: flex;
+        flex-flow: column nowrap;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+
+      .zosel:not(:first-child) {
+        margin-left: 8px;
+      }
+
+      .zosel .txt {
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        text-transform: uppercase;
+        color: transparent;
+        transform: rotate(180deg);
+        margin-bottom: 14px;
+        font-size: 12px;
+        transition: color 0.4s ease 0s;
+      }
+
+      .zosel .point {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background: rgb(239, 168, 239);
+      }
+
+      .tkakr {
+        display: flex;
+        flex-flow: column nowrap;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+
+      .tkakr:not(:first-child) {
+        margin-left: 8px;
+      }
+
+      .tkakr .txt {
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        text-transform: uppercase;
+        color: transparent;
+        transform: rotate(180deg);
+        margin-bottom: 14px;
+        font-size: 12px;
+        transition: color 0.4s ease 0s;
+      }
+
+      .tkakr .point {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background: rgb(165, 84, 32);
+      }
+
+      .fkqpsej {
+        display: flex;
+        flex-flow: column nowrap;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+
+      .fkqpsej:not(:first-child) {
+        margin-left: 8px;
+      }
+
+      .fkqpsej .txt {
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        text-transform: uppercase;
+        color: transparent;
+        transform: rotate(180deg);
+        margin-bottom: 14px;
+        font-size: 12px;
+        transition: color 0.4s ease 0s;
+      }
+
+      .fkqpsej .point {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background: rgb(150, 154, 247);
+      }
+
+      #nav .style .colors button {
+        display: flex;
+      }
+
+      .project {
+        position: fixed;
+        width: 100vw;
+        display: flex;
+        flex-flow: row nowrap;
+        -webkit-box-align: baseline;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        bottom: 60px;
+        /* z-index: 100; */
+        align-items: flex-end;
+        /* padding: 0px 5vw; */
+        pointer-events: none;
+        color: rgb(20, 20, 20);
+        font-family: "Saint Monica";
+        font-size: 12px;
+      }
+
+      #nav .project .round {
+        margin: 3px 2px;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        background-color: rgb(181, 181, 181);
+        transition: background-color 0.5s ease 0s;
+        bottom: 60px;
+      }
+
+      #section1 .sec1 {
+        display: flex;
+      }
+
+      #section1 .sec1 .discover {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        flex-direction: column;
+        color: #000;
+      }
+
+      #section1 .sec1 .discover span {
+        font-family: "Saint Monica";
+        font-size: 0.65rem;
+        text-transform: uppercase;
+      }
+
+      #section1 .sec1 .discover svg {
+        margin-bottom: 2px;
+        height: 25px;
+        stroke: rgb(20, 20, 20);
+      }
+
+      #section1 .sec1 .text {
+        display: flex;
+      }
+
+      #section1 .sec1 .text h2 {
+        text-transform: uppercase;
+        width: auto;
+        white-space: nowrap;
+        font-family: Ginger;
+        letter-spacing: 0.03em;
+        color: rgb(20, 20, 20);
+        font-size: 115px;
+        line-height: 0.9;
+      }
+
+      #section1 .sec1 .text .split1 {
+        display: flex;
+        width: 826px;
+        height: 174px;
+        font-family: "Saint Monica";
+        font-size: 140px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 4.2px;
+        text-align: left;
+        color: #000;
+      }
+
+      #section1 .sec1 .text .split2 {
+        display: flex;
+        width: 984px;
+        height: 174px;
+        font-family: "Saint Monica";
+        font-size: 140px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 4.2px;
+        text-align: left;
+        color: #000;
+      }
+
+      #section1 .sec1 .text .split3 {
+        display: flex;
+        width: 637px;
+        height: 174px;
+        font-family: "Saint Monica";
+        font-size: 140px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 4.2px;
+        text-align: left;
+        color: #000;
+      }
+
+      #section1 .sec1 .text .split3 span {
+        color: #7b9ff0;
+      }
+
+      #section1 .sec .text .slider-container {
+        position: absolute;
+        top: 80px;
+        right: 160px;
+        display: flex;
+        -webkit-box-pack: end;
+        justify-content: flex-end;
+        width: 100%;
+        top: 90px;
+        right: 0px;
+      }
+
+      .slider-container ::after {
+        position: absolute;
+        content: "Graphic Designer & front end developer based in Y.";
+        width: 250px;
+        top: -60px;
+        left: -20px;
+        font-family: "Saint Monica";
+        font-size: 12px;
+        text-transform: uppercase;
+        white-space: initial;
+        color: rgb(20, 20, 20);
+        line-height: 1.4;
+        letter-spacing: 0.01em;
+      }
+
+      .img-container {
+        position: relative;
+        width: 250px;
+        height: 160px;
+        overflow: hidden;
+      }
+
+      .pagetextsmall {
+        color: #000;
+        font-family: "Saint Monica";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140.62%;
+        letter-spacing: 0.01em;
+      }
+    </style>
+  </head>
+
+  <body id="body">
+    <header id="header">
+      <h1 id="logo">portfolio</h1>
+      <button id="menu">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </button>
+    </header>
+    <!-- header -->
+    <nav id="nav">
+      <a href="#">
+        <div class="project">
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+          <div class="round"></div>
+        </div>
+      </a>
+      <div class="style">
+        <div class="colors">
+          <ul>
+            <li activecilirindex="#7B9FF0" class="qmffnqpfl" style="opacity: 1">
+              <div class="txt">blueberry</div>
+              <button class="point"></button>
+            </li>
+            <li activecilirindex="#F85858" class="dusdj" style="opacity: 1">
+              <div class="txt">salmon</div>
+              <button class="point"></button>
+            </li>
+            <li activecilirindex="#FFCE29" class="fpahs" style="opacity: 1">
+              <div class="txt">lemon</div>
+              <button class="point"></button>
+            </li>
+            <li activecilirindex="#74CC33" class="dkqhzkeh" style="opacity: 1">
+              <div class="txt">abocado</div>
+              <button class="point"></button>
+            </li>
+            <li activecilirindex="#EFA8EF" class="zosel" style="opacity: 1">
+              <div class="txt">candy</div>
+              <button class="point"></button>
+            </li>
+            <li activecilirindex="#A55420" class="tkakr" style="opacity: 1">
+              <div class="txt">desert</div>
+              <button class="point"></button>
+            </li>
+            <li activecilirindex="#969AF7" class="fkqpsej" style="opacity: 1">
+              <div class="txt">lavender</div>
+              <button class="point"></button>
+            </li>
+          </ul>
+        </div>
+        <button class="mode">DARK</button>
+      </div>
+    </nav>
+    <!-- nav -->
+    <main id="content">
+      <section id="section1">
+        <div class="sec1">
+          <div class="text">
+            <h2>
+              <strong class="split1">WELCOME TO</strong>
+              <strong class="split2">THE PORTFOLIO</strong>
+              <strong class="split3"
+                >OF <span class="important_word">YURAM</span></strong
+              >
+              <div class="slider-container">
+                <div class="sec1-slider">
+                  <div class="img-container">
+                    <img
+                      src="https://source.unsplash.com/800x580/?blog,people"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="pagetextsmall">(01/15)</div>
+            </h2>
+          </div>
+          <div class="discover" style="opacity: 0.666667">
+            <span class="discover">discover</span
+            ><svg width="8.845" height="30.585" viewBox="0 0 8.845 30.585">
+              <g
+                id="Groupe_3221"
+                data-name="Groupe 3221"
+                transform="translate(-1828.616 -972.977)"
+              >
+                <path
+                  id="Tracé_250"
+                  data-name="Tracé 250"
+                  d="M11642.237,972.977v29.773"
+                  transform="translate(-9809)"
+                  fill="none"
+                  stroke-width="1"
+                ></path>
+                <path
+                  id="Tracé_251"
+                  data-name="Tracé 251"
+                  d="M11637.989,998.2l4.112,4.6,3.981-4.6"
+                  transform="translate(-9809)"
+                  fill="none"
+                  stroke-width="1"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script>
+    function gt() {
+      return p.exports.createElement(
+        "svg",
+        {
+          width: 8.845,
+          height: 30.585,
+          viewBox: "0 0 8.845 30.585",
+        },
+        p.exports.createElement(
+          "g",
+          {
+            id: "Groupe_3221",
+            "data-name": "Groupe 3221",
+            transform: "translate(-1828.616 -972.977)",
+          },
+          p.exports.createElement("path", {
+            id: "Tracé_250",
+            "data-name": "Tracé 250",
+            d: "M11642.237,972.977v29.773",
+            transform: "translate(-9809)",
+            fill: "none",
+            strokeWidth: 1,
+          }),
+          p.exports.createElement("path", {
+            id: "Tracé_251",
+            "data-name": "Tracé 251",
+            d: "M11637.989,998.2l4.112,4.6,3.981-4.6",
+            transform: "translate(-9809)",
+            fill: "none",
+            strokeWidth: 1,
+          })
+        )
+      );
+    }
+  </script>
+</html>

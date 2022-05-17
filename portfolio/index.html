@@ -69,6 +69,18 @@
         z-index: 100;
         pointer-events: none;
       }
+      .scY {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        overflow: hidden;
+        will-change: transform;
+      }
+      .scY .page-container {
+        width: 100%;
+        position: relative;
+      }
       .sc1 {
         color: rgb(20, 20, 20);
       }
@@ -169,7 +181,7 @@
         line-height: 140.62%;
         letter-spacing: 0.01em;
       }
-      .sc1 .rose .text .line.thirdline .slider-container::after {
+      .sc1 .rose .text .line .thirdline .slider-container::after {
         position: absolute;
         content: "Graphic Designer & front end developer based in Y.";
         width: 250px;
@@ -273,7 +285,7 @@
         </div> -->
       </div>
       <div data-app-container="true">
-        <div class="scY" style="transform: translateY() translateZ()">
+        <div class="scY" style="transform: none">
           <div class="page-container" style="opacity: 1">
             <div class="sc1">
               <div class="rose">
@@ -292,7 +304,7 @@
                       </span>
                     </div>
                   </div>
-                  <div class="secondline">
+                  <div class="secondline important_word">
                     <div class="sc1-a">
                       <span>
                         THE MY PORTFOLIO
@@ -333,7 +345,6 @@
                         </div>
                         <div class="pagetextsmall">( 01 / 15 )</div>
                       </div>
-                      ::after
                     </div>
                   </div>
                   <div class="discover" style="opacity: 1">
@@ -374,13 +385,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div></div>
-    <div></div>
-    <div>OF <span>YURAM</span></div>
-    <div class="imgcontainer">
-      <img src="https://source.unsplash.com/800x580/?blog,people" alt="" />
-      <div>(01/15)</div>
     </div>
   </body>
 </html>
