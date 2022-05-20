@@ -17,43 +17,29 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     />
     <style>
-      #section2 {
-        margin-top: 30vh;
-        padding: 0px 10vw;
+      #section4 {
         height: 100vh;
       }
-      #section2 .hadeline {
+      #section4 .hadeline {
         text-align: center;
         font-size: 1em;
         font-family: "Roboto";
         color: #787775;
       }
-      #section2 .separator {
+      #section4 .separator {
         margin-top: 1vw;
-        margin-left: 1vw;
         margin-bottom: 2vw;
         width: 100%;
         height: 2px;
         background-color: #000;
         opacity: 0.2;
       }
-      #section2 .title {
-        text-align: center;
-        font-family: "ChosunNm";
-        font-size: 2rem;
-        line-height: 1.1;
-        color: #000;
+      #section4 .title {
+        position: relative;
       }
-      #section2 a {
-        border: 1px solid rgb(181, 181, 181);
-        padding: 15px 50px;
-        border-radius: 30px;
-        color: rgb(20, 20, 20);
-        font-family: "ChosunNm";
-        text-align: center;
-        font-size: 1em;
-        margin-top: 5vw;
-        transition: background-color 0.5s ease 0s;
+      #section4 img {
+        width: 1280px;
+        height: 400px;
       }
     </style>
   </head>
@@ -95,158 +81,234 @@
             역시 마찬가지로, 단순히 고통이라는 이유 때문에 고통 그 자체를
             사랑하거나 추구하거나 소유하려는 자는 없다. 다만 노역과 고통이 아주
             큰 즐거움을 선사하는 상황이 때로는 발생하기 때문에 고통을 찾는
-            사람이 있는 것이다. 간단한 예를 들자면,
-            <span class="lavender"
-              >모종의 이익을 얻을 수도 없는데 힘든 육체적 노력을 기꺼이 할
-              사람이 우리들 중에 과연 있겠는가?</span
-            >하지만 귀찮은 일이 뒤따르지 않는 즐거움을 누리는 것을 선택한 사람,
-            <span class="lavender"
-              >혹은 아무런 즐거움도 생기지 않는 고통을 회피하는 사람을 누가 탓할
-              수 있겠는가?</span
-            >
+            <span class="lavender">사람</span>이 있는 것이다. 간단한 예를
+            들자면, 모종의 이익을 얻을 수도 없는데 힘든 육체적 노력을 기꺼이 할
+            <span class="lavender">사람</span>이 우리들 중에 과연 있겠는가?
+            하지만 귀찮은 일이 뒤따르지 않는 즐거움을 누리는 것을 선택한
+            <span class="lavender">사람</span>, 혹은 아무런 즐거움도 생기지 않는
+            고통을 회피하는 <span class="lavender">사람</span>을 누가 탓할 수
+            있겠는가?
+            <br />
+            <img src="https://source.unsplash.com/800x580/?blog,face" alt="" />
           </div>
-          <a href="button" href="#">contact me</a>
+          <!-- <a href="button" href="#">contact me</a> -->
         </div>
       </section>
       <!-- //section2 -->
-      <section id="section3"></section>
+      <section id="section3">
+        <div class="sec3">
+          <p class="hadeline">SKILL</p>
+          <div class="separator"></div>
+          <div class="title">
+            <div class="scroll">
+              <div class="part">
+                <div class="box">JAVASCRIPT REACT VUE PHP</div>
+              </div>
+            </div>
+            <div class="scroll">
+              <div class="part2">
+                <div class="box">JAVASCRIPT REACT VUE PHP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- //section3 -->
-      <section id="section4"></section>
+      <section id="section4">
+        <div class="sec4">
+          <p class="hadeline">PORJECT</p>
+          <div class="separator"></div>
+          <div class="title">
+            <p>(01)</p>
+            <h2>wewebstandard</h2>
+
+            <img
+              src="https://source.unsplash.com/800x580/?blog,gyeongchi"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
       <!-- //section4 -->
       <section id="section5"></section>
       <!-- //section5 -->
+      <section id="section6"></section>
+      <!-- //section6 -->
+      <section id="section7"></section>
+      <!-- //section7 -->
     </div>
-    <script>
-      var canvas = document.getElementById("sec1_bg");
-      var ctx = canvas.getContext("2d");
-      var cw = (canvas.width = window.innerWidth),
-        cx = cw / 1;
-      var ch = (canvas.height = window.innerHeight),
-        cy = ch / 1;
+    <footer id="footer"></footer>
+  </body>
+  <script>
+    var canvas = document.getElementById("sec1_bg");
+    var ctx = canvas.getContext("2d");
+    var cw = (canvas.width = window.innerWidth),
+      cx = cw / 1;
+    var ch = (canvas.height = window.innerHeight),
+      cy = ch / 1;
 
-      ctx.fillStyle = "#000";
-      var circlesRy = [];
-      var circlesNum = 25;
-      var requestId = null;
+    ctx.fillStyle = "#000";
+    var circlesRy = [];
+    var circlesNum = 25;
+    var requestId = null;
 
-      function Circle() {
-        this.r = randomIntFromInterval(25, 170);
-        this.x = randomIntFromInterval(this.r, cw - this.r);
-        this.y = randomIntFromInterval(this.r, ch - this.r);
+    function Circle() {
+      this.r = randomIntFromInterval(25, 170);
+      this.x = randomIntFromInterval(this.r, cw - this.r);
+      this.y = randomIntFromInterval(this.r, ch - this.r);
 
-        this.vx = randomIntFromInterval(25, 100) / 100;
-        this.vy = randomIntFromInterval(25, 100) / 100;
+      this.vx = randomIntFromInterval(25, 100) / 100;
+      this.vy = randomIntFromInterval(25, 100) / 100;
 
-        this.update = function () {
-          this.edges();
-          this.x += this.vx;
-          this.y += this.vy;
-        };
+      this.update = function () {
+        this.edges();
+        this.x += this.vx;
+        this.y += this.vy;
+      };
 
-        this.edges = function () {
-          if (this.x < this.r || this.x > cw - this.r) {
-            this.vx *= -1;
-          }
-          if (this.y < this.r || this.y > ch - this.r) {
-            this.vy *= -1;
-          }
-        };
+      this.edges = function () {
+        if (this.x < this.r || this.x > cw - this.r) {
+          this.vx *= -1;
+        }
+        if (this.y < this.r || this.y > ch - this.r) {
+          this.vy *= -1;
+        }
+      };
 
-        this.draw = function () {
-          ctx.strokeStyle = "#ccc";
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
-          ctx.stroke();
-        };
+      this.draw = function () {
+        ctx.strokeStyle = "#ccc";
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+        ctx.stroke();
+      };
+    }
+
+    for (var i = 0; i < circlesNum; i++) {
+      var circle = new Circle();
+      circlesRy.push(circle);
+    }
+
+    function Draw() {
+      requestId = window.requestAnimationFrame(Draw);
+      ctx.clearRect(0, 0, cw, ch);
+      for (var i = 0; i < circlesRy.length; i++) {
+        var c = circlesRy[i];
+        c.update();
+        c.draw();
       }
+      for (var i = 0; i < circlesRy.length; i++) {
+        var c = circlesRy[i];
+        for (var j = i + 1; j < circlesRy.length; j++) {
+          var c1 = circlesRy[j];
+          var d = dist(c, c1);
+          if (d < c.r + c1.r && d > Math.abs(c.r - c1.r)) {
+            getIntersection(c, c1, d);
+          }
+        }
+      }
+    }
 
+    function Init() {
+      circlesRy.length = 0;
       for (var i = 0; i < circlesNum; i++) {
         var circle = new Circle();
         circlesRy.push(circle);
       }
 
-      function Draw() {
-        requestId = window.requestAnimationFrame(Draw);
-        ctx.clearRect(0, 0, cw, ch);
-        for (var i = 0; i < circlesRy.length; i++) {
-          var c = circlesRy[i];
-          c.update();
-          c.draw();
-        }
-        for (var i = 0; i < circlesRy.length; i++) {
-          var c = circlesRy[i];
-          for (var j = i + 1; j < circlesRy.length; j++) {
-            var c1 = circlesRy[j];
-            var d = dist(c, c1);
-            if (d < c.r + c1.r && d > Math.abs(c.r - c1.r)) {
-              getIntersection(c, c1, d);
-            }
-          }
-        }
+      if (requestId) {
+        window.cancelAnimationFrame(requestId);
+        requestId = null;
       }
 
-      function Init() {
-        circlesRy.length = 0;
-        for (var i = 0; i < circlesNum; i++) {
-          var circle = new Circle();
-          circlesRy.push(circle);
-        }
+      (cw = canvas.width = window.innerWidth), (cx = cw / 2);
+      (ch = canvas.height = window.innerHeight), (cy = ch / 2);
 
-        if (requestId) {
-          window.cancelAnimationFrame(requestId);
-          requestId = null;
-        }
+      Draw();
+    }
 
-        (cw = canvas.width = window.innerWidth), (cx = cw / 2);
-        (ch = canvas.height = window.innerHeight), (cy = ch / 2);
+    setTimeout(function () {
+      Init();
 
-        Draw();
-      }
+      addEventListener("resize", Init, false);
+    }, 15);
 
-      setTimeout(function () {
-        Init();
+    function getIntersection(p1, p2, d) {
+      var p3 = {}; // middle point
+      var p4 = {}; // intersection 1
+      var p5 = {}; // intersection 2
 
-        addEventListener("resize", Init, false);
-      }, 15);
+      var a =
+        (Math.pow(p1.r, 2) - Math.pow(p2.r, 2) + Math.pow(d, 2)) / (2 * d);
+      var h = Math.sqrt(Math.pow(p1.r, 2) - Math.pow(a, 2));
 
-      function getIntersection(p1, p2, d) {
-        var p3 = {}; // middle point
-        var p4 = {}; // intersection 1
-        var p5 = {}; // intersection 2
+      p3.x = p1.x + (a * (p2.x - p1.x)) / d;
+      p3.y = p1.y + (a * (p2.y - p1.y)) / d;
 
-        var a =
-          (Math.pow(p1.r, 2) - Math.pow(p2.r, 2) + Math.pow(d, 2)) / (2 * d);
-        var h = Math.sqrt(Math.pow(p1.r, 2) - Math.pow(a, 2));
+      p4.x = p3.x + (h * (p2.y - p1.y)) / d;
+      p4.y = p3.y - (h * (p2.x - p1.x)) / d;
 
-        p3.x = p1.x + (a * (p2.x - p1.x)) / d;
-        p3.y = p1.y + (a * (p2.y - p1.y)) / d;
+      p5.x = p3.x - (h * (p2.y - p1.y)) / d;
+      p5.y = p3.y + (h * (p2.x - p1.x)) / d;
 
-        p4.x = p3.x + (h * (p2.y - p1.y)) / d;
-        p4.y = p3.y - (h * (p2.x - p1.x)) / d;
+      markPoint(p4);
+      markPoint(p5);
+    }
 
-        p5.x = p3.x - (h * (p2.y - p1.y)) / d;
-        p5.y = p3.y + (h * (p2.x - p1.x)) / d;
+    function dist(p1, p2) {
+      var dx = p2.x - p1.x;
+      var dy = p2.y - p1.y;
+      return Math.sqrt(dx * dx + dy * dy);
+    }
 
-        markPoint(p4);
-        markPoint(p5);
-      }
+    function randomIntFromInterval(mn, mx) {
+      return ~~(Math.random() * (mx - mn + 1) + mn);
+    }
 
-      function dist(p1, p2) {
-        var dx = p2.x - p1.x;
-        var dy = p2.y - p1.y;
-        return Math.sqrt(dx * dx + dy * dy);
-      }
+    function markPoint(p) {
+      ctx.fillStyle = "#749DF0";
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 2, 0, 2 * Math.PI);
+      ctx.fill();
+    }
 
-      function randomIntFromInterval(mn, mx) {
-        return ~~(Math.random() * (mx - mn + 1) + mn);
-      }
+    // // footer-carousel
+    // const part = document.querySelector(".part,part2");
+    // const root = document.querySelector(".title");
+    // const scrollContainer = document.querySelector(".scroll");
 
-      function markPoint(p) {
-        ctx.fillStyle = "#749DF0";
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, 2, 0, 2 * Math.PI);
-        ctx.fill();
-      }
-    </script>
-  </body>
+    // const partWidth = part.clientWidth;
+
+    // scrollContainer.style.width = `${partWidth}px`;
+    // scrollContainer.style.animationName = "scroll";
+
+    // const partClons = [];
+
+    // const updatePartCount = _.throttle(function () {
+    //   const rootWidth = root.clientWidth;
+    //   const cloneCount = Math.floor(rootWidth / partWidth);
+
+    //   if (cloneCount > partClons.length) {
+    //     const addCount = cloneCount - partClons.length;
+
+    //     [...Array(addCount)].forEach(() => {
+    //       const newNode = part.cloneNode(true);
+    //       partClons.push(newNode);
+    //       scrollContainer.appendChild(newNode);
+    //     });
+    //   }
+
+    //   if (cloneCount < partClons.length) {
+    //     const removeCount = partClons.length - cloneCount;
+
+    //     [...Array(removeCount)].forEach(() => {
+    //       const oldNode = partClons.pop();
+    //       scrollContainer.removeChild(oldNode);
+    //     });
+    //   }
+    // }, 200);
+
+    // updatePartCount();
+
+    // window.addEventListener("resize", updatePartCount);
+  </script>
 </html>
