@@ -21,15 +21,12 @@ body {
 }
 
 /* LAYOUT */
+
+/* SECTION1 */
 #section1 {
   height: 100vh;
   position: relative;
 }
-/* #section2 {
-  height: 100vh;
-} */
-
-/* SECTION1 */
 #sec1_bg {
   position: absolute;
   left: 0;
@@ -67,7 +64,8 @@ body {
   left: 78%;
   top: 62%;
   transform: translate(-50%, -50%);
-  width: 20%;
+  width: 400px;
+  height: 300px;
   z-index: 20;
 }
 .sec1_desc {
@@ -87,7 +85,7 @@ body {
 #section2 {
   margin-top: 30vh;
   padding: 0px 10vw;
-  height: 100vh;
+  height: 90vh;
 }
 #section2 .hadeline {
   text-align: center;
@@ -136,8 +134,7 @@ body {
 
 /* SECTION3 */
 #section3 {
-  height: 100vh;
-  padding: 0px 10vw;
+  height: 35vh;
 }
 #section3 .hadeline {
   text-align: center;
@@ -146,6 +143,7 @@ body {
   color: #787775;
 }
 #section3 .separator {
+  padding: 0px 10vw;
   margin-top: 1vw;
   margin-bottom: 2vw;
   width: 100%;
@@ -206,7 +204,7 @@ body {
 
 /* section4 */
 #section4 {
-  height: 300vh;
+  height: 200vh;
   padding: 0px 10vw;
 }
 #section4 .hadeline {
@@ -241,7 +239,7 @@ body {
 
 /* section5 */
 #section5 {
-  height: 250vh;
+  height: 270vh;
   padding: 0px 10vw;
 }
 #section5 .hadeline {
@@ -283,6 +281,8 @@ body {
 /* section6 */
 #section6 {
   height: 250vh;
+}
+#section6 .sec6 {
   padding: 0px 10vw;
 }
 #section6 .hadeline {
@@ -306,15 +306,12 @@ body {
   font-weight: 300;
   font-size: 2rem;
   line-height: 1.1;
-  padding: 0 4vw 6vw;
   text-align: center;
 }
 #section6 .title .lavender {
   color: #749df0;
 }
-#section6 .sec6 .title img {
-  width: 1920px;
-  height: 930px;
+#section6 img {
   position: relative;
   margin-top: 5vh;
 }
