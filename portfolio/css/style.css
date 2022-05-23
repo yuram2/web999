@@ -312,11 +312,11 @@ body {
 #section6 .title .lavender {
   color: #749df0;
 }
-#section6 .title .img {
+#section6 .sec6 .title img {
   width: 1920px;
   height: 930px;
-  position: absolute;
-  margin-top: 1vh;
+  position: relative;
+  margin-top: 5vh;
 }
 
 /* mediaquery */
