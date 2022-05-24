@@ -180,7 +180,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-align: center;
-  animation: scrollm 12s linear infinite;
+  animation: scrollm 20s linear infinite;
 }
 
 #section3 .title .part2 .box {
@@ -193,7 +193,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-align: center;
-  animation: scrollm 12s linear infinite reverse;
+  animation: scrollm 20s linear infinite reverse;
 }
 
 @keyframes scrollm {
