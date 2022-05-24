@@ -202,12 +202,6 @@ body {
   }
 }
 
-@keyframes scroll {
-  100% {
-    text-indent: -60em;
-  }
-}
-
 /* section4 */
 #section4 {
   height: 200vh;
