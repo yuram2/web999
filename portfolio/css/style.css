@@ -174,13 +174,13 @@ body {
 #section3 .title .part .box {
   position: relative;
   color: #000;
-  font-size: 4vw;
+  font-size: 4.5vw;
   font-family: "Saint Monica";
   line-height: 1.4;
   white-space: nowrap;
   overflow: hidden;
   text-align: center;
-  animation: scrollm 20s linear infinite;
+  animation: scrollm 9s linear infinite;
 }
 
 #section3 .title .part2 .box {
@@ -193,7 +193,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-align: center;
-  animation: scrollm 20s linear infinite reverse;
+  animation: scrollm 9s linear infinite reverse;
 }
 
 @keyframes scrollm {
