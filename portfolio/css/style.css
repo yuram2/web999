@@ -14,6 +14,7 @@ body {
   justify-content: space-between;
   padding: 10px 20px;
 }
+
 #header h1 {
   color: #000;
   font-size: 2vw;
@@ -27,6 +28,7 @@ body {
   height: 100vh;
   position: relative;
 }
+
 #sec1_bg {
   position: absolute;
   left: 0;
@@ -36,6 +38,7 @@ body {
   z-index: 10;
   opacity: 0.4;
 }
+
 .sec1_text {
   position: absolute;
   left: 45%;
@@ -48,17 +51,22 @@ body {
   color: #000;
   z-index: 20;
 }
+
 .sec1_text .t1 {
 }
+
 .sec1_text .t2 {
   padding-left: 8vw;
 }
+
 .sec1_text .t3 {
   padding-left: 4vw;
 }
+
 .sec1_text .t4 {
   color: #749df0;
 }
+
 #section1 .sec1_img {
   position: absolute;
   left: 78%;
@@ -68,6 +76,7 @@ body {
   height: auto;
   z-index: 20;
 }
+
 .sec1_desc {
   position: absolute;
   left: 68%;
@@ -85,14 +94,16 @@ body {
 #section2 {
   margin-top: 30vh;
   padding: 0px 10vw;
-  height: 85vh;
+  height: 100vh;
 }
+
 #section2 .hadeline {
   text-align: center;
   font-size: 1em;
   font-family: "Roboto";
   color: #787775;
 }
+
 #section2 .separator {
   margin-top: 1vw;
   margin-bottom: 2vw;
@@ -101,6 +112,7 @@ body {
   background-color: #000;
   opacity: 0.2;
 }
+
 #section2 .title {
   text-align: center;
   font-family: "ChosunNm";
@@ -109,9 +121,11 @@ body {
   color: #000;
   padding: 0 4vw 6vw;
 }
+
 #section2 .title span {
   color: #749df0;
 }
+
 /* #section2 a {
   border: 1px solid rgb(181, 181, 181);
   padding: 15px 50px;
@@ -134,17 +148,20 @@ body {
 
 /* SECTION3 */
 #section3 {
-  height: 35vh;
+  height: 100vh;
 }
+
 #section3 .sec3 {
   padding: 0px 10vw;
 }
+
 #section3 .hadeline {
   text-align: center;
   font-size: 1em;
   font-family: "Roboto";
   color: #787775;
 }
+
 #section3 .separator {
   margin-top: 1vw;
   margin-bottom: 2vw;
@@ -153,13 +170,19 @@ body {
   background-color: #000;
   opacity: 0.2;
 }
+
 #section3 .title .part .box {
   position: relative;
   color: #000;
   font-size: 4vw;
   font-family: "Saint Monica";
   line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  animation: scrollm 12s linear infinite;
 }
+
 #section3 .title .part2 .box {
   position: relative;
   color: #000;
@@ -167,15 +190,21 @@ body {
   font-family: "GmarketSans";
   font-weight: 300;
   line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  animation: scrollm 12s linear infinite reverse;
+}
+
+@keyframes scrollm {
+  100% {
+    text-indent: -22em;
+  }
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-
   100% {
-    transform: translateX(-100%);
+    text-indent: -60em;
   }
 }
 
@@ -184,12 +213,14 @@ body {
   height: 200vh;
   padding: 0px 10vw;
 }
+
 #section4 .hadeline {
   text-align: center;
   font-size: 1em;
   font-family: "Roboto";
   color: #787775;
 }
+
 #section4 .separator {
   margin-top: 1vw;
   margin-bottom: 2vw;
@@ -198,19 +229,23 @@ body {
   background-color: #000;
   opacity: 0.2;
 }
+
 #section4 .title {
   position: relative;
   padding: 0 10vh 0 10vh;
 }
+
 #section4 .title img {
   width: 100%;
   height: 400px;
 }
+
 #section4 p {
   color: #000;
   font-family: "GmarketSans";
   padding-top: 1vw;
 }
+
 #section4 h2 {
   color: #000;
   font-family: "Saint Monica";
@@ -219,6 +254,7 @@ body {
   letter-spacing: 3px;
   font-weight: normal;
 }
+
 #section4 .title .btn a {
   position: absolute;
   width: 5vw;
@@ -235,6 +271,7 @@ body {
   top: 36%;
   left: 85%;
 }
+
 #section4 .title .btn2 a {
   position: absolute;
   width: 5vw;
@@ -251,21 +288,24 @@ body {
   top: 86%;
   left: 85%;
 }
+
 #section4 img {
   padding: 1vw 0 2vw 0;
 }
 
 /* section5 */
 #section5 {
-  height: 150vh;
+  height: 250vh;
   padding: 0px 10vw;
 }
+
 #section5 .hadeline {
   text-align: center;
   font-size: 1em;
   font-family: "Roboto";
   color: #787775;
 }
+
 #section5 .separator {
   margin-top: 1vw;
   margin-bottom: 2vw;
@@ -274,6 +314,7 @@ body {
   background-color: #000;
   opacity: 0.2;
 }
+
 #section5 .title {
   position: relative;
   display: flex;
@@ -281,9 +322,11 @@ body {
   justify-content: space-around;
   align-content: center;
 }
+
 #section5 .title .imgcont .text {
   display: flex;
 }
+
 #section5 .title .imgcont .text h2 {
   color: #000;
   font-family: "GmarketSans";
@@ -292,12 +335,14 @@ body {
   font-weight: 300;
   line-height: 1.8;
 }
+
 #section5 .title .imgcont .text .nom {
   color: #000;
   font-size: 15vh;
   font-family: "Poppins";
   font-weight: 100;
 }
+
 #section5 img {
   width: 680px;
   height: 280px;
@@ -307,15 +352,18 @@ body {
 #section6 {
   height: 170vh;
 }
+
 #section6 .sec6 {
   padding: 0px 10vw;
 }
+
 #section6 .hadeline {
   text-align: center;
   font-size: 1em;
   font-family: "Roboto";
   color: #787775;
 }
+
 #section6 .separator {
   margin-top: 1vw;
   margin-bottom: 2vw;
@@ -324,6 +372,7 @@ body {
   background-color: #000;
   opacity: 0.2;
 }
+
 #section6 .title {
   position: relative;
   color: #000;
@@ -333,9 +382,11 @@ body {
   line-height: 1.1;
   text-align: center;
 }
+
 #section6 .title .lavender {
   color: #749df0;
 }
+
 #section6 img {
   position: relative;
   margin-top: 5vh;
@@ -385,6 +436,7 @@ body {
 #section7 .title .lavender {
   color: #749df0;
 }
+
 /* footer */
 #footer {
   height: 20vh;
@@ -421,6 +473,7 @@ body {
   align-items: center;
   flex-wrap: nowrap;
 }
+
 #footer figure {
   position: relative;
   display: flex;
