@@ -1,5 +1,12 @@
 body {
   background-color: #efeeea;
+
+
+  transition: 0.3s ease-out;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  overscroll-behavior: none;
 }
 
 /* HEADER */
@@ -97,7 +104,8 @@ body {
   height: 100vh;
 }
 
-#section2 .hadeline {
+#section2 .headline {
+  letter-spacing: 0.2vh;
   text-align: center;
   font-size: 1em;
   font-family: "Roboto";
@@ -115,13 +123,14 @@ body {
 
 #section2 .title {
   text-align: center;
-  font-size: 2rem;
-  line-height: 1.1;
-  color: #000;
   padding: 0 4vw 6vw;
 }
-#section2 p {
+#section2 .title p {
+  line-height: 1.4;
+  font-size: 4vh;
+  color: #000;
   font-family: "ChosunNm";
+  font-weight: 100;
 }
 
 #section2 .title span {
@@ -157,7 +166,8 @@ body {
   padding: 0px 10vw;
 }
 
-#section3 .hadeline {
+#section3 .headline {
+  letter-spacing: 0.2vh;
   text-align: center;
   font-size: 1em;
   font-family: "Roboto";
@@ -210,7 +220,8 @@ body {
   padding: 0px 10vw;
 }
 
-#section4 .hadeline {
+#section4 .headline {
+  letter-spacing: 0.2vh;
   text-align: center;
   font-size: 1em;
   font-family: "Roboto";
@@ -295,7 +306,8 @@ body {
   padding: 0px 10vw;
 }
 
-#section5 .hadeline {
+#section5 .headline {
+  letter-spacing: 0.2vh;
   text-align: center;
   font-size: 1em;
   font-family: "Roboto";
@@ -353,7 +365,8 @@ body {
   padding: 0px 10vw;
 }
 
-#section6 .hadeline {
+#section6 .headline {
+  letter-spacing: 0.2vh;
   text-align: center;
   font-size: 1em;
   font-family: "Roboto";
@@ -375,7 +388,7 @@ body {
   font-family: "GmarketSans";
   font-weight: 300;
   font-size: 2rem;
-  line-height: 1.1;
+  line-height: 1.4;
   text-align: center;
 }
 
@@ -394,7 +407,8 @@ body {
   padding: 0px 10vw;
 }
 
-#section7 .hadeline {
+#section7 .headline {
+  letter-spacing: 0.2vh;
   text-align: center;
   font-size: 1em;
   font-family: "Roboto";
@@ -439,7 +453,8 @@ body {
   padding: 0px 10vw;
 }
 
-#footer .hadeline {
+#footer .headline {
+  letter-spacing: 0.2vh;
   text-align: center;
   font-size: 1em;
   font-family: "Roboto";
