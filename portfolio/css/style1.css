@@ -12,7 +12,7 @@ body {
 }
 
 
-.a .headline {
+.line .headline {
   margin-top: 1vw;
   letter-spacing: 0.2vh;
   text-align: center;
@@ -22,7 +22,7 @@ body {
   position: relative;
 }
 
-.a .separator {
+.line .separator {
   margin-top: 1vw;
   margin-bottom: 2vw;
   margin-left: 10%;
@@ -30,6 +30,7 @@ body {
   height: 2px;
   background-color: #000;
   opacity: 0.2;
+  position: relative;
 }
 
 /* HEADER */
@@ -97,8 +98,8 @@ body {
 
 #section1 .sec1_img {
   position: absolute;
-  left: 78%;
-  top: 62%;
+  left: 75%;
+  top: 68%;
   transform: translate(-50%, -50%);
   width: 20%;
   height: auto;
@@ -107,8 +108,8 @@ body {
 
 .sec1_desc p {
   position: absolute;
-  left: 68%;
-  top: 83%;
+  left: 65%;
+  top: 93%;
   transform: translate(-50%, -50%);
   width: 30%;
   font-family: "IropkeBatang";
@@ -135,7 +136,8 @@ body {
 #section2 .separator {
   margin-top: 1vw;
   margin-bottom: 2vw;
-  width: 100%;
+  margin-left: 10%;
+  width: 80%;
   height: 2px;
   background-color: #000;
   opacity: 0.2;
@@ -143,7 +145,7 @@ body {
 
 #section2 .title {
   text-align: center;
-  padding: 0 4vw 6vw;
+  padding: 0 14vw 6vw;
 }
 #section2 .title p {
   line-height: 1.4;
@@ -179,16 +181,21 @@ body {
 
 /* SECTION3 */
 #section3 {
-  white-space: nowrap;
+  /* white-space: nowrap;
   overflow: hidden;
-  height: 50vh !important;
+  height: 50vh !important; */
 }
 
 #section3 a {
   height: 20px;
 }
 #section3 .sec3 {
-  height: 100vh;
+  height: 50vh !important;
+}
+#section3 .title {
+  /* width: 1920px; */
+  /* top: 50%; */
+  position: relative;
 }
 
 #section3 .title .part .box {
@@ -228,7 +235,7 @@ body {
 
 /* 가로모드 */
 section:not(#sectionPin) {
-  min-height: 100vh;
+  /* min-height: 100vh;
   width: 100%;
   position: relative;
   display: grid;
@@ -236,15 +243,21 @@ section:not(#sectionPin) {
   grid-gap: 2rem;
   padding: 50px 10vw;
   margin: auto;
-  place-items: center;
+  place-items: center; */
 }
 
 .pin-wrap img {
-  height: 80vh;
+  height: 100vh;
   width: auto;
-  object-fit: cover;
+  object-fit: none;
 }
-
+.pin-wrap h2 {
+  font-family: 'SCoreDream';
+  color: #000;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
 /* h1 {
   font-size: 5rem;
   line-height: 1;
