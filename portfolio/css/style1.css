@@ -229,6 +229,206 @@ body {
   }
 }
 
+/* section5 */
+#section5 {
+  height: 200vh;
+  padding: 0px 10vw;
+}
+
+#section5 .headline {
+  margin-top: 6vw;
+  letter-spacing: 0.2vh;
+  text-align: center;
+  font-size: 1em;
+  font-family: "Roboto";
+  color: #787775;
+}
+
+#section5 .separator {
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  opacity: 0.2;
+}
+
+#section5 .title {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+#section5 .title .imgcont .text {
+  display: flex;
+}
+
+#section5 .title .imgcont .text h2 {
+  color: #000;
+  font-family: "GmarketSans";
+  font-style: normal;
+  font-size: 5vh;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+#section5 .title .imgcont .text .nom {
+  color: #000;
+  font-size: 15vh;
+  font-family: "Poppins";
+  font-weight: 100;
+}
+
+#section5 img {
+  width: 680px;
+  height: 280px;
+}
+/* section6 */
+#section6 {
+  height: 170vh;
+}
+
+#section6 .sec6 {
+  padding: 0px 10vw;
+}
+
+#section6 .headline {
+  letter-spacing: 0.2vh;
+  text-align: center;
+  font-size: 1em;
+  font-family: "Roboto";
+  color: #787775;
+}
+
+#section6 .separator {
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  opacity: 0.2;
+}
+
+#section6 .title {
+  position: relative;
+  color: #000;
+  font-family: "GmarketSans";
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+#section6 .title .lavender {
+  color: #749df0;
+}
+
+#section6 img {
+  position: relative;
+  margin-top: 5vh;
+}
+
+/* section7 */
+#section7 {
+  height: 50vh;
+  padding: 0px 10vw;
+}
+
+#section7 .headline {
+  letter-spacing: 0.2vh;
+  text-align: center;
+  font-size: 1em;
+  font-family: "Roboto";
+  color: #787775;
+}
+
+#section7 .separator {
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  opacity: 0.2;
+}
+
+#section7 .title {
+  display: flex;
+  position: relative;
+  color: #000;
+  font-family: "GmarketSans";
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 10vh;
+}
+
+#section7 .title h2 {
+  color: #000;
+}
+
+#section7 .title .lavender {
+  color: #749df0;
+}
+
+/* footer */
+#footer {
+  height: 20vh;
+  padding: 0px 10vw;
+}
+
+#footer .headline {
+  letter-spacing: 0.2vh;
+  text-align: center;
+  font-size: 1em;
+  font-family: "Roboto";
+  color: #787775;
+}
+
+#footer .separator {
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  opacity: 0.2;
+}
+
+#footer .title {
+  display: flex;
+  position: relative;
+  color: #000;
+  font-family: "ChosunNm";
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.1;
+  text-align: center;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+#footer figure {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000;
+  font-size: 1vw;
+  font-family: "ChosunNm";
+  padding-top: 4vh;
+  font-weight: 100;
+}
+
+
 
 
 
