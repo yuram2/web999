@@ -184,13 +184,14 @@ body {
   z-index: 20;
 }
 
+#section1 .sec1_desc {
+  position: relative;
+  left: 43%;
+  top: 93%;
+}
 
 .sec1_desc p {
-  position: absolute;
-  left: 65%;
-  top: 93%;
   transform: translate(-50%, -50%);
-  width: 30%;
   font-family: "IropkeBatang";
   font-size: 1vw;
   line-height: 1.6;
@@ -585,7 +586,9 @@ h2 {
   background: var(--text-color);
   color: var(--bg-color);
 }
-
+#pin-bg {
+  
+}
 .pin-wrap {
   height: 100vh;
   display: flex;
