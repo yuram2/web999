@@ -176,8 +176,8 @@ body {
 
 #section1 .sec1_img {
   position: relative;
-  left: 75%;
-  top: 94%;
+  left: 67%;
+  top: 97%;
   transform: translate(-50%, -50%);
   width: 20%;
   height: auto;
@@ -186,8 +186,8 @@ body {
 
 #section1 .sec1_desc {
   position: relative;
-  left: 43%;
-  top: 93%;
+  left: 22%;
+  top: 87%;
 }
 
 .sec1_desc p {
@@ -586,9 +586,7 @@ h2 {
   background: var(--text-color);
   color: var(--bg-color);
 }
-#pin-bg {
-  
-}
+
 .pin-wrap {
   height: 100vh;
   display: flex;
