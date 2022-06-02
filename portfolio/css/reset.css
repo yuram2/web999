@@ -71,7 +71,7 @@ button,
 table {
   font-size: 18px;
   line-height: 1;
-  color: #fff;
+  /* color: #fff; */
   letter-spacing: -1px;
 }
 
@@ -101,7 +101,7 @@ h5,
 h6 {
   font-size: 13px;
   font-weight: normal;
-  color: #fff;
+  /* color: #fff; */
 }
 
 /* 버튼 초기화 */
