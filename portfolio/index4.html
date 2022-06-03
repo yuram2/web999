@@ -98,63 +98,78 @@
                 </div>
                 <div class="sec1-4">
                     <h2>projects</h2>
-                    <div class="ani__cont">
+                    <div class="pro__cont">
                         <div class="container">
                             <ul>
-                                <li class="ani01">
-                                    <div class="ani01-image_wrapper">
-                                            <div class="ani01-image_inner">
-                                                <img class="ani01-image" src="#" alt="" style="display: none;"/>
-                                                    <div class="ani__item01">
+                                <li class="pro01">
+                                    <div class="pro01-image_wrap">
+                                            <div class="pro01-image_inner">
+                                                <img class="pro01-image" src="./img/webstandard.png" style="display: none;"/>
+                                                    <div class="pro__item01">
                                                 
                                                     </div>
                                             </div>
                                     </div>
-                                    <span class="ani01-text">
-                                    <span class="ani01-innertext-num">(01)</span>
-                                    <span class="ani01-innertext">Rotating<br>Animation</span>
+                                    <span class="pro01-text">
+                                    <span class="pro01-innertext-num">(01)</span>
+                                    <span class="pro01-innertext">WEBSTANDARD</span>
                                     </span>
+                                    <div class="line"></div>
                                 </li>
-                                <li class="ani01">
-                                    <div class="ani01-image_wrapper">
-                                            <div class="ani01-image_inner">
-                                                <img class="ani01-image" src="006.jpg" alt="" />
-                                                    <div class="ani__item02">
+                                <li class="pro01">
+                                    <div class="pro01-image_wrap">
+                                            <div class="pro01-image_inner">
+                                                <img class="pro01-image" src="./img/webstandard.png" />
+                                                    <div class="pro__item02">
                                                         
                                                     </div>
                                             </div>
                                     </div>
-                                    <span class="ani01-text">
-                                    <span class="ani01-innertext-num">(02)</span>
-                                    <span class="ani01-innertext">Animation<br>Name</span>
+                                    <span class="pro01-text">
+                                    <span class="pro01-innertext-num">(02)</span>
+                                    <span class="pro01-innertext">RESPONSIVE SITE</span>
                                     </span>
                                 </li>
-                                <li class="ani01">
-                                    <div class="ani01-image_wrapper">
-                                            <div class="ani01-image_inner">
-                                                <img class="ani01-image" src="006.jpg" alt="" />
-                                                    <div class="ani__item03">
+                                <li class="pro01">
+                                    <div class="pro01-image_wrap">
+                                            <div class="pro01-image_inner">
+                                                <img class="pro01-image" src="./img/webstandard.png"/>
+                                                    <div class="pro__item03">
                                                         
                                                     </div>
                                             </div>
                                     </div>
-                                    <span class="ani01-text">
-                                    <span class="ani01-innertext-num">(03)</span>
-                                    <span class="ani01-innertext">Animation<br>Name</span>
+                                    <span class="pro01-text">
+                                    <span class="pro01-innertext-num">(03)</span>
+                                    <span class="pro01-innertext">PHP SITE</span>
                                     </span>
                                 </li>
-                                <li class="ani01">
-                                    <div class="ani01-image_wrapper">
-                                            <div class="ani01-image_inner">
-                                                <img class="ani01-image" src="006.jpg" alt="" />
-                                                    <div class="ani__item04">
+                                <li class="pro01">
+                                    <div class="pro01-image_wrap">
+                                            <div class="pro01-image_inner">
+                                                <img class="pro01-image" src="./img/webstandard.png"/>
+                                                    <div class="pro__item04">
                                                         
                                                     </div>
                                             </div>
                                     </div>
-                                    <span class="ani01-text">
-                                    <span class="ani01-innertext-num">(04)</span>
-                                    <span class="ani01-innertext">Animation<br>Name</span>
+                                    <span class="pro01-text">
+                                    <span class="pro01-innertext-num">(04)</span>
+                                    <span class="pro01-innertext">REACT SITE</span>
+                                    </span>
+                                </li>
+                                <li class="pro01">
+                                    <div class="pro01-image_wrap">
+                                            <div class="pro01-image_inner">
+                                                <img class="pro01-image" src="./img/webstandard.png"/>
+                                                    <div class="pro__item05">
+                                                        
+                                                    </div>
+                                            </div>
+                                    </div>
+                                    <span class="pro01-text">
+                                    <span class="pro01-innertext-num">(05)</span>
+                                    <span class="pro01-innertext">VUE SITE</span>
                                     </span>
                                 </li>
                             </ul>
@@ -383,7 +398,7 @@
             circlesRy.push(circle);
         }
         function Draw() {
-            requestId = window.requestAnimationFrame(Draw);
+            requestId = window.requestpromationFrame(Draw);
             ctx.clearRect(0, 0, cw, ch);
             for (var i = 0; i < circlesRy.length; i++) {
                 var c = circlesRy[i];
@@ -408,7 +423,7 @@
                 circlesRy.push(circle);
             }
             if (requestId) {
-                window.cancelAnimationFrame(requestId);
+                window.cancelpromationFrame(requestId);
                 requestId = null;
             }
             cw = canvas.width = window.innerWidth,
@@ -453,13 +468,13 @@
     </script> -->
 
     <script>
-        console.clear();
+console.clear();
 
 const { gsap } = window;
 
 gsap.timeline()
-	.set(".ani__cont", { autoAlpha: 1 })
-	.from(".ani01-text", {
+	.set(".pro__cont", { autoAlpha: 1 })
+	.from(".pro01-text", {
 		delay: 1,
 		duration: 0.85,
 		yPercent: 125,
@@ -467,34 +482,33 @@ gsap.timeline()
 		skewY: gsap.utils.wrap([-8, 8]),
 		ease: "expo.out",
 	})
-	.set(".ani__cont", { pointerEvents: "all" });
+	.set(".pro__cont", { pointerEvents: "all" });
 
 gsap.defaults({
 	duration: 0.55,
 	ease: "expo.out",
 });
 
-const menuItems = document.querySelectorAll(".ani01");
+const menuItems = document.querySelectorAll(".pro01");
 
 menuItems.forEach((item) => {
-	const imageWrapper = item.querySelector(".ani01-image_wrapper");
-	const imageWrapperBounds = imageWrapper.getBoundingClientRect();
+	const imageWrap = item.querySelector(".pro01-image_wrap");
+	const imageWrapBounds = imageWrap.getBoundingClientRect();
 	let itemBounds = item.getBoundingClientRect();
 
 	const onMouseEnter = () => {
-		gsap.set(imageWrapper, { scale: 0.8, yPercent: 50, rotation: -15 });
-		gsap.to(imageWrapper, { opacity: 1, scale: 1, yPercent: 0, rotation: 0 });
+		gsap.set(imageWrap, { yPercent: 50, scale: 0.8, rotation: -15 });
+		gsap.to(imageWrap, { yPercent: 0, scale: 1, rotation: 0, opacity: 1});
 	};
 	const onMouseLeave = () => {
-		gsap.to(imageWrapper, { opacity: 0, yPercent: -50, scale: 0.8, rotation: -15 });
+		gsap.to(imageWrap, { yPercent: -50, scale: 0.8, rotation: -15, opacity: 0,});
 	};
 	const onMouseMove = ({ x, y }) => {
-		let yOffset = itemBounds.top / imageWrapperBounds.height;
-		yOffset = gsap.utils.mapRange(0, 1.5, -150, 150, yOffset);
-		gsap.to(imageWrapper, {
+        
+		gsap.to(imageWrap, {
 			duration: 1.25,
-			x: Math.abs(x - itemBounds.left) - imageWrapperBounds.width / 1.55,
-			y: Math.abs(y - itemBounds.top) - imageWrapperBounds.height / 1.75 - yOffset,
+			x: Math.abs(x - itemBounds.left),
+			y: Math.abs(y - itemBounds.top)
 		});
 	};
 
