@@ -6,29 +6,32 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 1020px;
+    width: 100%;
     max-width: 100%;
     margin: auto;
     overflow: hidden;
     position: absolute;
     left: 41%;
-    top: 5.4%;
+    top: 150vh;
 }
 
 #section1 .sec1_wrap .slide {
     position: relative;
-    width: 32%;
+    width: 20%;
 }
 
 @media (max-width: 780px) {
     #section1 .sec1_wrap .slide {
-        width: 48%;
+        width: 15%;
     }
 }
 
 @media (max-width: 450px) {
     #section1 .sec1_wrap .slide {
-        width: 100%;
+        width: 15%;
+        position: absolute;
+        left: 42%;
+        top: 165vh;
     }
 }
 
@@ -294,6 +297,9 @@ body {
     height: 25vw;
     margin: 0 auto;
     position: relative;
+    border-bottom: 1px solid #000;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #section1 .pro01 h2{
@@ -337,7 +343,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: 70vw;
+    width: 80%;
     height: 10vw;
     overflow: hidden;
 }
@@ -447,7 +453,7 @@ body {
 #section1 .pro01-innertext-num {
     position: absolute;
     display: inline-block;
-    left: 20%;
+    left: 12%;
     top: 20%;
     transform:translate(-50%,-50%);
     transition: all 0.5s;

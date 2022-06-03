@@ -113,17 +113,28 @@
                                 <li class="pro01">
                                     <div class="pro01-image_wrap">
                                             <div class="pro01-image_inner">
-                                                <img class="pro01-image" src="./img/webstandard.png" style="display: none;"/>
+                                                <svg>
+                                                    <rect x="0" y="0" width="40vh" height="30vh"></rect>
+                                                    <style>
+                                                        rect {
+                                                            background-color: red;
+                                                        }
+                                                    </style>
+                                                    <script>
+
+                                                    </script>
+
+                                                </svg> 
+                                                <!-- <img class="pro01-image" src="./img/webstandard.png" style="display: none;"/>
                                                     <div class="pro__item01">
                                                 
-                                                    </div>
+                                                    </div> -->
                                             </div>
                                     </div>
                                     <span class="pro01-text">
                                     <span class="pro01-innertext-num" style="color:#F85858;">(01)</span>
                                     <span class="pro01-innertext">WEBSTANDARD</span>
                                     </span>
-                                    <div class="line"></div>
                                 </li>
                                 <li class="pro01">
                                     <div class="pro01-image_wrap">
@@ -559,66 +570,39 @@ gsap.defaults({
 	ease: "expo.out",
 });
 //이미지
-// const mouseImg = document.querySelectorAll(".pro01");
-
-// mouseImg.forEach((item) => { //item = mouseimg
-// 	const imageWrap = item.querySelector(".pro01-image_wrap");
-// 	const imageWrapBounds = imageWrap.getBoundingClientRect();  //위치값을 가져옴
-// 	let itemBounds = item.getBoundingClientRect();  //item의 위치값
-
-// 	const onMouseEnter = () => {  //마우스가 영역에 들어왔을때
-// 		gsap.set(imageWrap, { yPercent: 50, scale: 0.8, rotation: -15 }); //set = 설정해주는거
-// 		gsap.to(imageWrap, { yPercent: 0, scale: 1, rotation: 0, opacity: 1});
-// 	};
-// 	const onMouseLeave = () => { //마우스가 영역을 떠났을때
-// 		gsap.to(imageWrap, { yPercent: -50, scale: 0.8, rotation: -15, opacity: 0,});
-// 	};
-// 	const onMouseMove = ({ x, y }) => { //마우스 움직일때
-        
-// 		gsap.to(imageWrap, {
-// 			duration: 1.25,
-// 			x: Math.abs(x - itemBounds.left), //x 1000이면 itemBounds값이 500이됨 -,+되든 절대값으로 만들어줌
-// 			y: Math.abs(y - itemBounds.top)
-// 		});
-// 	};
-
-// 	item.addEventListener("mouseenter", onMouseEnter);
-// 	item.addEventListener("mouseleave", onMouseLeave);
-// 	item.addEventListener("mousemove", onMouseMove);
-
-// 	window.addEventListener("resize", () => {
-// 		itemBounds = item.getBoundingClientRect();
-// 	});
-// });
-
 const mouseImg = document.querySelectorAll(".pro01");
 
-         mouseImg.forEach((item) => {   
-            const imageWrap = item.querySelector(".pro01-image_wrap")
-            const imageWrapBounds = imageWrap.getBoundingClientRect();  
-            let itemBounds = item.getBoundingClientRect(); 
+mouseImg.forEach((item) => { //item = mouseimg
+	const imageWrap = item.querySelector(".pro01-image_wrap");
+	const imageWrapBounds = imageWrap.getBoundingClientRect();  //위치값을 가져옴
+	let itemBounds = item.getBoundingClientRect();  //item의 위치값
 
-            const onMouseEnter = () => {   
-                gsap.set(imageWrap, {xPercent: -50, yPercent: 50, rotation: -15, scale:0.3, opacity:0});   
-                gsap.to(imageWrap, {xPercent: -300, yPercent: 2000, rotation: 0, scale:1, opacity:1})
-            }
+	const onMouseEnter = () => {  //마우스가 영역에 들어왔을때
+		gsap.set(imageWrap, {xPercent: -50, yPercent: 50, scale: 0.8, rotation: -15 }); //set = 설정해주는거
+		gsap.to(imageWrap, {xPercent: -100, yPercent: -50, scale: 1, rotation: 0, opacity: 1});
+	};
+	const onMouseLeave = () => { //마우스가 영역을 떠났을때
+		gsap.to(imageWrap, {xPercent: -50, yPercent: -50, scale: 0.8, rotation: -15, opacity: 0,});
+	};
+	const onMouseMove = ({ x, y }) => { //마우스 움직일때
+        
+		gsap.to(imageWrap, {
+			duration: 1.25,
+			x: Math.abs(x - itemBounds.left), //x 1000이면 itemBounds값이 500이됨 -,+되든 절대값으로 만들어줌
+			// y: Math.abs(y - itemBounds.top)
+		});
+	};
 
-            const onMouseLever = () => {    
-                gsap.to(imageWrap, {xPercent: -300, yPercent: 2000, rotation: 15, scale: 0.3, opacity:1})
-            }
+	item.addEventListener("mouseenter", onMouseEnter);
+	item.addEventListener("mouseleave", onMouseLeave);
+	item.addEventListener("mousemove", onMouseMove);
 
-            const onMouseMove = ({x, y}) => {     
-                gsap.to(imageWrap, {
-                    duration: 1.25,
-                    x: Math.abs(x - itemBounds.left), 
-                    y: Math.abs(y - itemBounds.top),
-                })
-            }
+	window.addEventListener("resize", () => {
+		itemBounds = item.getBoundingClientRect();
+	});
+});
 
-            item.addEventListener("mouseenter", onMouseEnter)
-            item.addEventListener("mouseleave", onMouseLever)
-            item.addEventListener("mousemove", onMouseMove)
-        })
+
     </script>
 </body>
 </html>
