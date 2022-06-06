@@ -11,7 +11,7 @@ body {
     margin: auto;
     overflow: hidden;
     position: absolute;
-    left: 41%;
+    left: 0;
     top: 150vh;
 }
 
@@ -488,8 +488,5 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-
-
 
 
