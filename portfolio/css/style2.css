@@ -513,12 +513,12 @@ body {
 }
 #section2 p {
     font-family: "Saint Monica";
-    background-color: #000;
     color: #efeeea;
     font-size: 8vh;
 }
 #section2 iframe {
     position: relative;
     height: -webkit-fill-available;
+    background-color: none;
     left: 25%;
 }
