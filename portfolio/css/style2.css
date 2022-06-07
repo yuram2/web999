@@ -17,7 +17,7 @@ body {
 
 #section1 .sec1_wrap .slide {
     position: relative;
-    width: 20%;
+    width: 19%;
 }
 
 @media (max-width: 780px) {
@@ -56,7 +56,19 @@ body {
     display: none;
 }
 
-
+#section1 .slides figure figcaption {
+    font-family: "Saint Monica";
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    font-size: 3vw;
+    opacity: 1;
+    z-index: 3;
+    padding-bottom: 1vw;
+    letter-spacing: 0.1em;
+    line-height: 0.5;
+}
 
 
 #header {
@@ -186,7 +198,6 @@ body {
     height: 25vw;
     border-radius: 50%;
 }
-
 
 
 
@@ -520,5 +531,14 @@ body {
     position: relative;
     height: -webkit-fill-available;
     background-color: none;
-    left: 25%;
+}
+
+#sec2-2 {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    left: 0;
+    width: 100vw;
+    min-width: 100vw;
+    height: -webkit-fill-available;
 }
