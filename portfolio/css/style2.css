@@ -243,12 +243,22 @@ body {
 }
 
 /* sec1-4 */
+.sec1-4 {
+    margin-top: -10%;
+}
 .sec1-4 h2 {
     font-family: 'Roboto';
     font-size: 14px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 4px;
+    border-bottom: 1px solid #000;
+    margin-left: 10%;
+    margin-right: 10%;
+    opacity: 0.5;
+    padding-bottom: 1%;
+}
+.sec1-4 h1 {
     border-bottom: 1px solid #000;
     margin-left: 10%;
     margin-right: 10%;
@@ -352,7 +362,7 @@ body {
 }
   
 #section1 .pro01:last-child {
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #000;
 }
 
 #section1 .container {
@@ -490,3 +500,25 @@ body {
 }
 
 
+/* section2 */
+#section2 {
+}
+
+#section2 h2 {
+    font-family: "Saint Monica";
+    font-size: 45vh;
+    z-index: -1;
+    margin-left: 2.5vw;
+    letter-spacing: 0.5;
+}
+#section2 p {
+    font-family: "Saint Monica";
+    background-color: #000;
+    color: #efeeea;
+    font-size: 8vh;
+}
+#section2 iframe {
+    position: relative;
+    height: -webkit-fill-available;
+    left: 25%;
+}
