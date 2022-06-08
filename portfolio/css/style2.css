@@ -311,7 +311,7 @@ body {
 
 
 
-
+/*  */
 
 #section1 .pro01 {
     width: 70vw;
@@ -403,7 +403,7 @@ body {
     height: 100%;
     overflow: hidden;
 }
-#section1 .pro01-image_inner .pro01-image {
+/* #section1 .pro01-image_inner .pro01-image {
     position: absolute;
     left: 0;
     top: 0;
@@ -443,6 +443,14 @@ body {
     width: 100%;
     background-color: #d9ac51;
 }
+#section1 .pro01-image_inner .pro__item05 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #d9ac51;
+} */
   
 #section1 .pro01-text {
     position: relative;
@@ -498,7 +506,7 @@ body {
 }
   
   
-#section1 .pro01-image_inner .pro__item01 {
+/* #section1 .pro01-image_inner .pro__item01 {
     position: absolute;
     left: 0;
     top: 0;
@@ -508,7 +516,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 
 /* section2 */
@@ -519,7 +527,6 @@ body {
     font-family: "Saint Monica";
     font-size: 42vh;
     z-index: -1;
-    margin-left: 2.5vw;
     letter-spacing: 0.5;
 }
 #section2 p {
