@@ -12,7 +12,7 @@ body {
     overflow: hidden;
     position: absolute;
     left: 0;
-    top: 150vh;
+    top: 165vh;
 }
 
 #section1 .sec1_wrap .slide {
@@ -156,7 +156,7 @@ body {
 
 /* sec1-2 */
 .sec1-2 {
-    height: 100vh;
+    height: 130vh;
     padding: 200px 0;
     text-align: center;
 }
@@ -534,9 +534,11 @@ body {
     color: #efeeea;
     font-size: 8vh;
 }
+
 #section2 iframe {
     position: relative;
-    height: -webkit-fill-available;
+    width: 40%;
+    height: 70%;
     background-color: none;
 }
 
