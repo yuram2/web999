@@ -43,6 +43,78 @@
         <!-- //menu -->
         <div class="refer">
             <div class="doc">
+                <h3>개요</h3>
+                <p><strong>float</strong>의 단어는 '뜨다'라는 의미이며, 원래 웹페이지에서 이미지를 어떻게 띄워서 텍스트와 함께 배치할 것인가에 대한 속성입니다.</p>
+                <div class="line">
+                    <h4 class="mt0">float 속성의 값</h4>
+                    <table>
+                        <tr>
+                            <td>inher</td>
+                            <td>: 부모 요소에서 상속</td>
+                        </tr>
+                        <tr>
+                            <td>left</td>
+                            <td>: 왼쪽에 부유하는 블록 박스를 생성. 페이지 내용은 박스 오른쪽에 위치하며 위에서 아래로 흐름.</td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top">right</td>
+                            <td>: 오른쪽에 부유하는 블록 박스를 생성. 페이지 내용은 박스 왼쪽에 위치하며 위에서 아래로 흐름. <br>이후 요소에 clear 속성이 있으면 페이지 흐름이 달라짐. none 이 아니라면 display 속성은 무시된다.</td>
+                        </tr>
+                        <tr>
+                            <td>none</td>
+                            <td>: 요소를 부유시키지 않음</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>left와 right를 통해 부유속성을 지정시 display는 무시됩니다. (none은 제외)
+                    또한 이후 요소에 clear 속성이 있으면 페이지 흐름이 달라집니다.</p>
+                <div class="line">
+                    <h4 class="mt0">사용법</h4>
+                    .content > img {float: left;}
+                </div>
+
+                <div class="line mt15">
+                    <h4 class="mt0">float 예제</h4>
+                    <img src="img/float1.jpg" alt="예제소스">
+                    <h4 class="mt0">결과</h4>
+                    <img src="img/float2.jpg" alt="예제결과">
+                </div>
+
+                <h3>레이아웃에서의 float</h3>
+                <p>float 속성은 원래 이미지와 텍스트 배치 용도로 등장했지만, 요즘에는 레이아웃용으로 많이 사용하고 있습니다.</p>
+                
+                <h3>float으로 인한 영역 깨짐을 방지하는 방법</h3>
+                <p>css 속성 중 float를 사용하게 되면 height 값이 사라져 영역이 깨지는 현상이 생깁니다.</p>
+
+                <h4>방법1 : 깨지는 영역에 똑같이 Float: left를 사용</h4>
+                <p>모든 박스에 float: left를 사용해야 하며 구조가 복잡해 지면 어디에 float: left를 넣어야 할지 알기가 어려워 짐으로 추천하지 않습니다.</p>
+
+                <h4>밥법2 : 깨지는 영역에 Clear: both를 사용</h4>
+                <p>위치를 잡을 수 있으나 구조가 복잡할 때는 어떤 영역이 깨졌는지 찾기가 어렵기에 추천하지 않습니다.</p>
+                
+                <h4>방법3 : Float을 사용한 상위 박스에게 Overflow: hidden을 사용</h4>
+                <p>현재 가장 많이 사용하는 방법이지만 2단 메뉴 사용 시에는 사용 할 수 없어 추천하지 않습니다.</p>
+                <div class="line">
+<pre><code>.nav { overflow: hidden; }
+.nav > div{ float: left; }</code></pre>
+                </div> 
+                
+                <h4>방법4 : 부모요소에 Display:inline-block을 사용</h4>
+                <p>이를 사용하면 박스의 성질 자체가 달라지기 때문에 이전에 작성한 태그의 결과물이 달라 질 수 있어 추천 하지 않습니다.</p>
+                
+                <h4>방법5 : Clearfix를 만들어 class로 사용 (추천)</h4>
+                <p>특별한 문제점이 발생되지 않아 제일 많이 사용하는 방법입니다. 아래와 같이 clearfix를 만들어 클래스로 사용하면 됩니다.</p>
+
+                <div class="line">
+<pre><code><p>float 속성을 Clearfix 하기 위해서 가상 선택자 ::after를 사용.
+float 속성을 적용한 요소들의 부모 컨테이너에 다음과 같은 ::after 스타일을 추가.</p>
+.clearfix::before,
+.clearfix::after {
+    content: ''; display: block; clear: both;
+}</code></pre>
+                </div>        
+            </div>
+        </div>
         <!-- //refer -->
 
         <div class="doc"></div>

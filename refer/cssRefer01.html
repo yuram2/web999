@@ -43,13 +43,78 @@
         <div class="refer">
             <div class="doc">
                 <h3>CSS란?</h3>
-                <p>
-                    CSS(Cascading Style Sheets)은 HTML을 꾸며주는 디자인 언어입니다.
-                </p>
+                <p>CSS(Cascading Style Sheets)은 HTML을 꾸며주는 디자인 언어입니다.</p>
+                <p>사용예시</p>
+                <div class="code">
+<pre><code>&lt;style&gt;
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #E5E5E5;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+#wrap #header {
+    width: 1200px;
+    height: 100px;
+    background-color: #BDE3F9;
+}
+#wrap #nav {
+    width: 1200px;
+    display: flex;
+}
+#wrap #nav .leftnav {
+    width: 600px;
+    height: 100px;
+    background-color: #94D2F6;
+}
+#wrap #nav .rightnav{
+    width: 600px;
+    height: 100px;
+    background-color: #90B9CE;
+}
+#wrap #content {
+    width: 1200px;
+    background-color: #5AB3F0;
+    display: flex;
+}
+#wrap #content .aside{
+    width: 290px;
+    height: 520px;
+    background-color: #70C0F2;
+}
+#wrap #content .article .article1{
+    width: 910px;
+    height: 260px;
+    background-color: #5AB3F0;
+}
+#wrap #content .article .article2{
+    width: 910px;
+    height: 260px;
+    background-color: #4BA6EE;
+}
+#wrap .articlebottom{
+    width: 1200px;
+    height: 260px;
+    background-color: #4599DF;
+}
+#wrap #footer {
+    width: 1200px;
+    height: 100px;
+    background-color: #3B86CB;
+}
+&lt;/style&gt;</code></pre>
+                </div>
 
                 <h3>CSS 주석 표시</h3>
                 <p>주석 표시는 프로그램에 영향을 미치지 않으며, 설명이나 메모를 목적으로 사용합니다.</p>
-                <div class="code"><pre><code>{/* CSS 주석 */}</code></pre>
+                <div class="code">
+                    <pre><code>{/* CSS 주석 */}</code></pre>
                 </div>
 
                 <h3>CSS 선언 방법</h3>

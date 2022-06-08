@@ -542,7 +542,7 @@ body {
     background-color: none;
 }
 
-#sec2-2 {
+/* #sec2-2 {
     height: 100vh;
     overflow: hidden;
     display: flex;
@@ -550,4 +550,4 @@ body {
     width: 100vw;
     min-width: 100vw;
     height: -webkit-fill-available;
-}
+} */

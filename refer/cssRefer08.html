@@ -23,7 +23,7 @@
     </header>
 
     <main id="contents">
-        <h2><a href="css.html"> <em>이미지 표현 방법</em></a></h2>
+        <h2><a href="css.html"> <em>벤더 프리픽스</em></a></h2>
 
         <div class="menu">
             <ul>
@@ -43,33 +43,77 @@
         <!-- //menu -->
         <div class="refer">
             <div class="doc">
-                <h3>IR 효과</h3>
-                <p>
-                    1. [ir_pm] 의미있는 이미지의 대체 텍스트를 제공하는 경우
-                </p>
+                <h3>웹 사이트에서 이미지를 표현하는 방법 </h3>
+                <p>웹 사이트에서 이미지를 표현하는 방법에는 세 가지가 있습니다.</p>
 
-                <div class="code"><pre><code>
-.ir_pm {display:block; overflow:hidden; font-size:0; line-height:0; text-indent:-9999px;}
+                <div class="line">
+                    1. HTML 태그이용<br>
+                    2. CSS 속성이용<br>
+                    3. 이미지 스프라이트
+                </div>
+                
+                <h4>HTML 태그</h4>
+                <p>HTML의 &lt;img&gt;태그로 이미지를 출력하는 방법입니다. &lt;img&gt;태그로 이미지를 출력 할 때는 의미가 있는 이미지(ex:로고, 메뉴)여야 합니다. 그리고 이미지 로드에 실패 할 경우 대체문자(alt) 값도 넣어주어야 합니다.</p>
 
-</code></pre>                               
+                <div class="line">
+                    <h4 class="mt0">기본 형태</h4>
+<pre><code> &lt;img src="이미지 주소 기입" alt="대체 문자 기입"&gt;</code></pre>
+
+                    <h4>예제</h4>
+<pre><code>&lt;img src="img/htmlimgtag.jpg" alt="img태그대체문자" style="width: 500px;"&gt;</code></pre>
+
+                    <h4>출력결과</h4>
+                    <img src="img/htmlimgtag.jpg" alt="img태그대체문자" style="width: 500px;">
+
+                    <h4>대체문자출력</h4>
+                    <img src="img/htmlimgta.jpg" alt="img태그대체문자" style="width: 500px;">
+                </div>
+                
+                <h4>CSS 속성</h4>
+                <p>CSS의 background 속성으로 이미지를 출력하는 방법입니다. background 속성으로 이미지를 출력 할 때는 의미가 없는 이미지(ex:배경, 색표현)여야 합니다. 의미가 없기 때문에 대체 문자를 입력하지 않아도 됩니다.
+                   대체 문자가 필요할 경우 IR(Image Replacement)기법를 사용합니다.</p>
+                
+                <div class="line">
+                    <h4 class="mt0">기본 형태</h4>
+<pre><code>-background: url(이미지 주소) center top repeat-x;
+background: url(이미지 주소) no-repeat 9px(가로) 8px(세로);</code></pre>
+
+                    <h4>예제</h4>
+<pre><code>&lt;style&gt;
+    .cssimg {
+        width: 500px;
+        height: 300px;
+        background: url(img/cssbackground.jpg) center;
+    }
+&lt;/style&gt;
+
+&lt;div class="cssimg"&gt;&lt;/div&gt;</code></pre>
+
+                    <h4>출력결과</h4>
+                    <div class="cssimg"></div>
+                </div>
+
+                <h4>이미지 스프라이트(Image Sprite)</h4>
+                <p>이미지 스프라이트(image sprite)란 여러 개의 이미지를 하나의 이미지로 합쳐서 관리하는 이미지를 의미합니다.<br>
+                    웹 페이지에 이미지가 사용될 경우 해당 이미지를 다운받기 위해 웹 브라우저는 서버에 이미지를 요청하게 됩니다.
+                    하지만 사용된 이미지가 많을 경우 웹 브라우저는 서버에 해당 이미지의 수만큼 요청해야만 하므로 웹 페이지의 로딩 시간이 오래 걸리게 됩니다.<br>
+                    이미지 스프라이트(image sprite)를 사용하면 이미지를 다운받기 위한 서버 요청을 단 몇 번으로 줄일 수 있습니다.<br>
+                    모바일 환경과 같이 한정된 자원을 사용하는 플랫폼(platform)에서는 웹 페이지의 로딩 시간을 단축해주는 효과가 있습니다.
+                    또한, 많은 이미지 파일을 관리하는 대신 몇 개의 스프라이트 이미지(sprite image) 파일만을 관리하면 되므로 매우 간편합니다.</p>
+
+                    <div class="line">
+                        <h4 class="mt0">예제</h4>
+                        <img src="img/imagespriteex.jpg" alt="이미지스프라이트 예제 css코드"><br>
+                        <p style="font-size: 5px;">-CSS코드-</p><br>
+                        <img src="img/imagespriteex2.jpg" alt="이미지스프라이트 예제 html코드">
+                        <p style="font-size: 5px;">-HTML코드-</p>
+
+                        <h4>출력결과</h4>
+                        <img src="img/imagespriteex3.jpg" alt="이미지스프라이트 예제 출력결과" style="border: 1px solid crimson;">
+                    </div>
             </div>
-            <p>2. [ir_wa] 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때</p>
-
-            <div class="code"><pre><code>
-.ir_wa {display:block; overflow:hidden; position:relative; z-index:-1; width:100%; height: 100%;}
-            
-</code></pre> 
-            </div>
-            <p>3. [ir_so] 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때</p>
-            
-            <div class="code"><pre><code>
-.ir_so {overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px;} 
-
-</code></pre> 
-            </div>
+        </div>
         <!-- //refer -->
-
-        <div class="doc"></div>
     </main>
 
     <!-- script -->

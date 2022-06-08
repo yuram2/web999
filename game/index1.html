@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link
+      href="https://webfontworld.github.io/neodgm/NeoDunggeunmo.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./bg.css" />
+    <link rel="stylesheet" href="./assets/css/style1.css" />
+  </head>
+
+  <body>
+    <div class="cursor">
+      <img src="https://assets.codepen.io/756881/pointer.svg" alt="" />
+    </div>
+    <header id="header">
+      <div class="logo">GAME SITE</div>
+      <span id="clock"></span>
+      <div class="music">
+        <img id="musicIcon" src="./assets/img/cd.ico" alt="" />
+        <span>Play</span>
+      </div>
+    </header>
+    <div id="wrap">
+      <div class="iconBoX">
+        <div class="card icon">
+          <img src="./assets/img/msdos.ico" alt="" />
+          <div class="text">Card Game</div>
+        </div>
+        <div class="puzzle icon">
+          <img src="./assets/img/cube.gif" alt="" />
+          <div class="text">Puzzle Game</div>
+        </div>
+        <div class="typing icon">
+          <img src="./assets/img/key.ico" alt="" />
+          <div class="text">Typing Game</div>
+        </div>
+        <div class="tetris icon">
+          <img src="./assets/img/tetris.png" alt="" />
+          <div class="text">Tetris Game</div>
+        </div>
+      </div>
+      <div class="iconBox2">
+        <div class="icon react">
+          <a href="https://yuram2react.netlify.app" target="_blank">
+            <img src="./assets/img/react.ico" alt="" />
+            <div class="text">React Site</div>
+          </a>
+        </div>
+      </div>
+      <!-- // icon -->
+
+      <div class="musicBox">
+        <iframe
+          src="./musicPlayer/index.html"
+        ></iframe>
+      </div>
+      <div class="cardGame">
+        <span class="cardClose close">X</span>
+        <iframe
+          src="./memoryGame/index2.html"
+        ></iframe>
+      </div>
+      <div class="puzzleGame">
+        <span class="puzzleClose close">X</span>
+        <iframe
+          src="./puzzleGame/index.html"
+        ></iframe>
+      </div>
+      <div class="typingGame">
+        <span class="typingClose close">X</span>
+        <iframe
+          src="./typingGame/index.html"
+        ></iframe>
+      </div>
+      <div class="tetrisGame">
+        <span class="tetrisClose close">X</span>
+        <iframe
+          src="./tetrisGame/index1.html"
+        ></iframe>
+      </div>
+      
+      <!-- contentsBox -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+      // 드래그 & 드롭
+      $(".icon").draggable();
+
+      // 음악 재생
+      $(".music").mouseenter(function () {
+        $("#musicIcon").attr("src", "./assets/img/cd_blu.ico");
+      });
+      $(".music").mouseleave(function () {
+        if (!$("#musicIcon").hasClass("rotate")) {
+          $("#musicIcon").attr("src", "./assets/img/cd.ico");
+        }
+      });
+      $(".music").click(function () {
+        $("#musicIcon").toggleClass("rotate");
+        $(".musicBox").toggleClass("jjan");
+      });
+
+      //열기
+      $(".card").click(function () {
+        $(".cardGame").addClass("jjan");
+        $(".cardGame").removeClass("close");
+      });
+      $(".puzzle").click(function () {
+        $(".puzzleGame").addClass("jjan");
+        $(".puzzleGame").removeClass("close");
+      });
+      $(".typing").click(function () {
+        $(".typingGame").addClass("jjan");
+        $(".typingGame").removeClass("close");
+      });
+      $(".tetris").click(function () {
+        $(".tetrisGame").addClass("jjan");
+        $(".tetrisGame").removeClass("close");
+      });
+
+
+      // 닫기
+      $(".musicClose").click(function () {
+        $(".cardGame").removeClass("jjan");
+        $(".cardGame").addClass("close");
+      });
+      $(".cardClose").click(function () {
+        $(".cardGame").removeClass("jjan");
+        $(".cardGame").addClass("close");
+      });
+      $(".puzzleClose").click(function () {
+        $(".puzzleGame").removeClass("jjan");
+        $(".puzzleGame").addClass("close");
+      });
+      $(".typingClose").click(function () {
+        $(".typingGame").removeClass("jjan");
+        $(".typingGame").addClass("close");
+      });
+      $(".tetrisClose").click(function () {
+        $(".tetrisGame").removeClass("jjan");
+        $(".tetrisGame").addClass("close");
+      });
+
+
+      // 커서
+      window.addEventListener("mousemove", (e) => {
+        let x = e.clientX - 5 + "px";
+        let y = e.clientY - 5 + "px";
+        document.querySelector(".cursor").style.cssText =
+          "left:" + x + "; top:" + y;
+      });
+
+      // 시간나타내기
+      function printTime() {
+        var clock = document.getElementById("clock");
+        var now = new Date();
+        var nowTime =
+          now.getFullYear() +
+          "년" +
+          (now.getMonth() + 1) +
+          "월" +
+          now.getDate() +
+          "일" +
+          now.getHours() +
+          "시" +
+          now.getMinutes() +
+          "분" +
+          now.getSeconds() +
+          "초";
+        clock.innerHTML = nowTime;
+        setTimeout("printTime()", 1000);
+      }
+
+      window.onload = function () {
+        printTime();
+      };
+    </script>
+  </body>
+</html>
