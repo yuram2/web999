@@ -577,25 +577,33 @@ body {
     align-content: center;
     align-items: center;
     justify-items: center;
-    margin-left: 5%;
+    margin-left: 8%;
+    padding-top: 5%;
 }
 #section2 h2 {
-    font-family: "Saint Monica";
-    font-size: 42vh;
+    font-family: "SCoreDream";
+    font-size: 10vh;
     letter-spacing: 0.5;
     line-height: 1;
 }
 #section2 p {
-    font-family: "Saint Monica";
+    font-family: "SCoreDream";
     color: #000;
-    font-size: 8vh;
+    font-size: 25vh;
+    line-height: 1;
+    opacity: 0.1;
+}
+#section2 em {
+    text-align: left;
+    font-family: "IropkeBatang";
+    font-size: 2vh;
 }
 
 #section2 iframe {
     position: relative;
-    top: -40%;
-    left: 45%;
-    width: 40%;
+    top: -45%;
+    left: 40%;
+    width: 60%;
     height: 70%;
     background-color: none;
 }
@@ -615,7 +623,8 @@ body {
 /* section3 */
 #section3 {
     height: 100vh;
-    padding: 0px 10vw;
+    padding: 5vh 10vw;
+    margin-bottom: 7vh;
   }
   
   #section3 .headline {
@@ -656,10 +665,10 @@ body {
     line-height: 1.8;
   }
   
-  #section3 .title .imgcont .text .nom {
+  #section3 .title .text .nom {
     color: #000;
     font-size: 15vh;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-weight: 100;
   }
   
@@ -718,7 +727,7 @@ body {
     position: relative;
     left: 10%;
     width: 80%;
-    height: 80%;
+    height: 85%;
     top: 10%;
   }
   
