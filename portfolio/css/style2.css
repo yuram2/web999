@@ -612,71 +612,10 @@ body {
 
 
 
-/* section5 */
-#section5 {
+/* section3 */
+#section3 {
     height: 100vh;
     padding: 0px 10vw;
-  }
-  
-  #section5 .headline {
-    letter-spacing: 0.2vh;
-    text-align: center;
-    font-size: 1em;
-    font-family: "Roboto";
-    color: #787775;
-  }
-  
-  #section5 .separator {
-    margin-top: 1vw;
-    margin-bottom: 2vw;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-    opacity: 0.2;
-  }
-  
-  #section5 .title {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
-  }
-  
-  #section5 .title .imgcont .text {
-    display: flex;
-  }
-  
-  #section5 .title .imgcont .text h2 {
-    color: #000;
-    font-family: "GmarketSans";
-    font-style: normal;
-    font-size: 6vh;
-    font-weight: 300;
-    line-height: 1.8;
-  }
-  
-  #section5 .title .imgcont .text .nom {
-    color: #000;
-    font-size: 15vh;
-    font-family: "Poppins";
-    font-weight: 100;
-  }
-  
-  #section5 img {
-    width: 680px;
-    height: 280px;
-  }
-
-
-
-/* section3 */
-/* #section3 {
-    height: 150vh;
-  }
-  
-  #section3 .sec3 {
-    padding: 5vh 10vw;
   }
   
   #section3 .headline {
@@ -698,30 +637,48 @@ body {
   
   #section3 .title {
     position: relative;
-    color: #000;
-    font-family: "GmarketSans";
-    font-weight: 300;
-    font-size: 2rem;
-    line-height: 1.4;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
   }
   
-  #section3 .title .lavender {
-    color: #749df0;
+  #section3 .title .imgcont .text {
+    display: flex;
+  }
+  
+  #section3 .title .imgcont .text h2 {
+    color: #000;
+    font-family: "GmarketSans";
+    font-style: normal;
+    font-size: 6vh;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+  
+  #section3 .title .imgcont .text .nom {
+    color: #000;
+    font-size: 15vh;
+    font-family: "Poppins";
+    font-weight: 100;
   }
   
   #section3 img {
-    position: relative;
-    margin-top: 5vh;
-  } */
-  
-  /* section4 */
-  #section4 {
-    padding: 0px 10vw;
-  }
-  #section4 .sec4 {
+    width: 680px;
+    height: 280px;
   }
 
+
+
+/* section4 */
+#section4 {
+    height: 100vh;
+  }
+  
+  #section4 .sec4 {
+    padding: 5vh 10vw;
+  }
+  
   #section4 .headline {
     letter-spacing: 0.2vh;
     text-align: center;
@@ -740,6 +697,57 @@ body {
   }
   
   #section4 .title {
+    position: relative;
+    color: #000;
+    font-family: "GmarketSans";
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  #section4 .title .lavender {
+    color: #749df0;
+  }
+  
+  /* #section4 img {
+    position: relative;
+    margin-top: 5vh;
+  } */
+  #section4 iframe {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+  }
+  
+  /* section5 */
+  #section5 {
+    padding: 0px 10vw;
+    height: 100vh;
+  }
+  #section5 .sec5 {
+  }
+
+  #section5 .headline {
+    letter-spacing: 0.2vh;
+    text-align: center;
+    font-size: 1em;
+    font-family: "Roboto";
+    color: #787775;
+  }
+  
+  #section5 .separator {
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    opacity: 0.2;
+  }
+  
+  #section5 .title {
     display: flex;
     position: relative;
     color: #000;
@@ -754,11 +762,11 @@ body {
     padding-top: 10vh;
   }
   
-  #section4 .title h2 {
+  #section5 .title h2 {
     color: #000;
   }
   
-  #section4 .title .lavender {
+  #section5 .title .lavender {
     color: #749df0;
   }
   
