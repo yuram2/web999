@@ -14,8 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <style>
         /* layout */
-        #section2 {background-color: #000;}
-        #section4 {background-color: #B9B3A9; height: 100vh;}
+        #section2 {background-color: #efeeea;}
+        #section3 {background-color: #efeeea;}
+        #section4 {background-color: #efeeea; height: 100vh;}
         #section2 {
             height: 100vh;
             overflow: hidden;
@@ -33,7 +34,7 @@
             min-width: 100vw;
             height: 100vh;
         }
-        /* .sec2-1 {background-color: #000000;}
+        .sec2-1 {background-color: #000000;}
         .sec2-2 {background-color: #B9B3A9;}
         .sec2-3 {background-color: #51442B;}
         .sec2-4 {background-color: #c3b69d;}
@@ -45,12 +46,12 @@
         .sec2-10 {background-color: #d1cec8;}
         .sec2-11 {background-color: #4a3610;}
         .sec2-12 {background-color: #d8d0c0;}
-        .sec2-13 {background-color: #432c00;} */
+        .sec2-13 {background-color: #432c00;}
     </style>
 </head>
 <body>
-    <header id="header">
-        <h1>PORTFLIO</h1>
+    <header id="header" style="--reveal-speed: 0.75">
+        <a href="#" style="--delay: 1.0; --color: #F85858;">PORTFLIO</a>
         <nav></nav>
     </header>
     <!-- //header -->
@@ -151,8 +152,8 @@
                 <!-- skill -->
                 <div class="sec1-3">
                     <h2>skill</h2>
-                    <p class="line1" data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">REACT JAVASCRIPT VUE PHP FIGMA REACT JAVASCRIPT VUE PHP FIGMA</p>
-                    <p class="line2" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">JAVASCRIPT VUE PHP FIGMA REACT JAVASCRIPT VUE PHP FIGMA REACT</p>
+                    <p class="line1" data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">REACT JAVASCRIPT VUE PHP FIGMA HTML CSS MYSQL jQuery</p>
+                    <p class="line2" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">REACT HTML CSS MYSQL jQuery JAVASCRIPT VUE PHP FIGMA</p>
                     <div class="line"></div>
                 </div>
                 <!-- //skill -->
@@ -259,50 +260,150 @@
         <section id="section2">
             <div class="sec2_wrap">
                 <div id="sec2-1">
-                    <h2 data-scroll data-scroll-speed="-11" data-scroll-direction="vertical" style="color:#F85858;">01</h2>
-                    <p data-scroll data-scroll-speed="11" data-scroll-direction="vertical" style="padding-left: 1vh">JAVASCRIPT</p>
-                    <iframe style="left: 33%; top:-40%; background: #ffffff; border-radius: 3%;" src="../javascript/index.html" frameborder="0"></iframe>
+                    <!-- <h2 data-scroll data-scroll-speed="-11" data-scroll-direction="vertical" style="color:#F85858;">01</h2>
+                    <p data-scroll data-scroll-speed="11" data-scroll-direction="vertical" style="padding-left: 1vh">JAVASCRIPT</p> -->
+                    <div class="desc">
+                        <h2 style="color:#F85858;">01</h2>
+                        <p style="">JAVASCRIPT</p>
+                    </div>
+                    <iframe style="background: #ffffff; border-radius: 3%;" src="../javascript/index.html" frameborder="0"></iframe>
                 </div>
                 <div class="sec2-2">
-                    <h2 data-scroll data-scroll-speed="-9" data-scroll-direction="vertical" data-scroll-initPosition="{ x: 500vh, y: 100vh }" style="color: #969AF7;">02</h2>
-                    <p data-scroll data-scroll-speed="8" data-scroll-direction="vertical"  data-scroll-initPosition="{ x: 500vh, y: 200vh }" style="margin-left: 23vh;">CSS</p>
-                    <iframe style="left: 33%; top:-40%;" src="../refer/index.html" frameborder="0"></iframe>
+                    <div class="desc">
+                        <h2 style="color: #969AF7;">02</h2>
+                        <p style="">CSS</p>
+                    </div>
+                    <iframe style="" src="../refer/index.html" frameborder="0"></iframe>
                 </div>
                 <div class="sec2-3">
-                    <h2 data-scroll data-scroll-speed="-7" data-scroll-direction="vertical" style="color: #74CC33;">03</h2>
-                    <p data-scroll data-scroll-speed="5" data-scroll-direction="vertical" style="margin-left: 14vw;">GRID</p>
-                    <iframe style="left: 33%; top:-40%;" src="../grid/index.html" frameborder="0"></iframe>
+                    <div class="desc">
+                        <h2 style="color: #74CC33;">03</h2>
+                        <p style="">GRID</p>
+                    </div>
+                    <iframe style="" src="../grid/index.html" frameborder="0"></iframe>
                 </div>
                 <div class="sec2-4">
-                    <h2 data-scroll data-scroll-speed="-5" data-scroll-direction="vertical" data-scroll-initPosition="{ x: 800vh, y: 100vh }"style="color: #7B9FF0;">04</h2>
-                    <p data-scroll data-scroll-speed="3" data-scroll-direction="vertical" style="margin-left: 14vw;">FLEX</p>
-                    <iframe style="left: 32%; top:-40%;" src="../flex/index.html" frameborder="0"></iframe>
+                    <div class="desc">
+                        <h2 style="color: #7B9FF0;">04</h2>
+                        <p style="">FLEX</p>
+                    </div>
+                    <iframe style="" src="../flex/index.html" frameborder="0"></iframe>
                 </div>
                 <div class="sec2-5">
-                    <h2 data-scroll data-scroll-speed="-3" data-scroll-direction="vertical" style="color: #A55420;">05</h2>
-                    <p data-scroll data-scroll-speed="1" data-scroll-direction="vertical" style="margin-left: 2vw;">MOUSE EFFECT</p>
-                    <iframe style="left: 33%; top:-40%;" src="../javascript/effect/mouseEffect01.html" frameborder="0"></iframe>
+                    <div class="desc">
+                        <h2 style="color: #A55420;">05</h2>
+                        <p style="">MOUSE EFFECT</p>
+                    </div>
+                    <iframe style="" src="../javascript/effect/mouseEffect01.html" frameborder="0"></iframe>
                 </div>
                 <div class="sec2-6">
-                    <h2 data-scroll data-scroll-speed="-1" data-scroll-direction="vertical" style="color: #FFCE29;">06</h2>
-                    <p data-scroll data-scroll-speed="-1" data-scroll-direction="vertical" style="margin-left: 1vw;">PARALLAX EFFECT</p>
-                    <iframe style="left: 35%; top:-40%; padding-left: 1%;" src="../javascript/effect/parallaxEffect01.html" frameborder="0"></iframe>
+                    <div class="desc">
+                        <h2 style="color: #FFCE29;">06</h2>
+                        <p style="">PARALLAX EFFECT</p>
+                    </div>
+                    <iframe style="" src="../javascript/effect/parallaxEffect01.html" frameborder="0"></iframe>
                 </div>
                 <div class="sec2-7">
-                    <h2 data-scroll data-scroll-speed="1" data-scroll-direction="vertical" style="color: #FFCE29;">07</h2>
-                    <p data-scroll data-scroll-speed="-3" data-scroll-direction="vertical" style="margin-left: 3vw;">SLIDER EFFECT</p>
-                    <iframe style="left: 33%; top:-40%;" src="../javascript/effect/sliderEffect01.html" frameborder="0"></iframe>
+                    <div class="desc">
+                        <h2 style="color: #FFCE29;">07</h2>
+                        <p style="">SLIDER EFFECT</p>
+                    </div>
+                    <iframe style="" src="../javascript/effect/sliderEffect01.html" frameborder="0"></iframe>
                 </div>
                 <div class="sec2-8">
-                    <h2 data-scroll data-scroll-speed="1" data-scroll-direction="vertical" style="color: #74CC33;">08</h2>
-                    <p data-scroll data-scroll-speed="-5" data-scroll-direction="vertical" style="margin-left: 4vw;">GAME EFFECT</p>
-                    <iframe style="left: 33%; top:-45%; width: 60%; height: 90%;" src="../game/index1.html" frameborder="0"></iframe>
+                    <div class="desc" style="margin-left: 3%;">
+                        <h2 style="color: #74CC33;">08</h2>
+                        <p style="">GAME EFFECT</p>
+                    </div>
+                    <iframe style="left: 35%; top:-45%; width: 60%; height: 90%;" src="../game/index1.html" frameborder="0"></iframe>
                 </div>
             </div>
         </section>
+        <!-- //section2 -->
+
+        <!-- section3 -->
+        <section id="section5">
+            <div class="sec5">
+              <p class="headline">SCRIPT</p>
+              <div class="separator"></div>
+              <div class="title">
+                <div class="imgcont">
+                  <img src="https://source.unsplash.com/800x580/?blog,fruit" alt="">
+                  <div class="text">
+                    <p class="nom">01</p>
+                    <h2>Memory Game</h2>
+                  </div>
+                </div>
+                <div class="imgcont">
+                  <img src="https://source.unsplash.com/800x580/?blog,fruit" alt="">
+                  <div class="text">
+                    <p class="nom">02</p>
+                    <h2>Puzzle Game</h2>
+                  </div>
+                </div>
+                <div class="imgcont">
+                  <img src="https://source.unsplash.com/800x580/?blog,fruit" alt="">
+                  <div class="text">
+                    <p class="nom">03</p>
+                    <h2>tetris Game</h2>
+                  </div>
+                </div>
+                <div class="imgcont">
+                  <img src="https://source.unsplash.com/800x580/?blog,fruit" alt="">
+                  <div class="text">
+                    <p class="nom">04</p>
+                    <h2>Typing Game</h2>
+                  </div>
+                </div>
+              </div>
+          </section>
 
 
-        <section id="section4">section4</section>
+
+
+
+
+        <!-- <section id="section3">
+            <div class="sec3">
+              <p class="headline">GAME</p>
+              <div class="text"></div>
+              <div class="separator"></div>
+              <div class="title">
+                <span class="lavender">MEMORY GAME </span><span class="lavender"> MUSIC PLAYER </span><br>
+                <span class="lavender">PUZZLE GAME </span><span class="lavender"> TETRIS GAME </span><br>
+                <span class="lavender">TYPING GAME </span>
+              </div>
+            </div>
+            <img src="./img/img1.png" alt="" />
+      
+          </section> -->
+          <!-- //section3 -->
+          <!-- section4 -->
+          <section id="section4">
+            <div class="sec4">
+              <p class="headline">CONTACT ME</p>
+              <div class="text"></div>
+              <div class="separator"></div>
+              <div class="title">
+                <h2>DROP ME AN <span class="lavender">EMAIL</span></h2>
+              </div>
+            </div>
+          </section>
+          <!-- //section4 -->
+      
+          <footer id="footer">
+            <div class="separator"></div>
+            <div class="title">
+              <p>GITHUB</p>
+              <p>DOTHOME</p>
+              <p>FIGMA</p>
+              <p>NOTION</p>
+              <p>SLACK</p>
+              <p>DISCODE</p>
+            </div>
+            <figure>@2022 yuram.</figure>
+          </footer>
+          <!-- //footer -->
     </main>
     <!-- slide -->
     <script id="vs" type="x-shader/x-vertex">
@@ -526,8 +627,16 @@ mouseImg.forEach((item) => { //item = mouseimg
 		itemBounds = item.getBoundingClientRect();
 	});
 });
+    </script>
 
-
+    <script>
+        //리빌효과
+const restart = () => {
+  const blocks = document.querySelector("#header");
+  const newBlocks = blocks.cloneNode(true);
+  document.body.removeChild(blocks);
+  document.body.appendChild(newBlocks);
+};
     </script>
 </body>
 </html>

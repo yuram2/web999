@@ -1,7 +1,87 @@
 body {
     background-color: #efeeea;
 }
+/* header */
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+}
 
+  :root {
+    --base-delay: 0.5;
+    --reveal-speed: 0.5;
+    --stagger: 0.1;
+  }
+  
+  #header a {
+    color: #000;
+    font-size: 24px;
+    font-family: "Saint Monica";
+    -webkit-animation: show-text calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) steps(1) both;
+            animation: show-text calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) steps(1) both;
+    overflow: hidden;
+    position: relative;
+  }
+  #header a:after {
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--color, #1e90ff);
+    position: absolute;
+    -webkit-animation: block-reveal calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) both;
+            animation: block-reveal calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) both;
+  }
+  @-webkit-keyframes block-reveal {
+    0% {
+      transform: translate(-110%, 0);
+    }
+    45%, 55% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(110%, 0);
+    }
+  }
+  @keyframes block-reveal {
+    0% {
+      transform: translate(-110%, 0);
+    }
+    45%, 55% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(110%, 0);
+    }
+  }
+  @-webkit-keyframes show-text {
+    0% {
+      color: transparent;
+    }
+    50%, 100% {
+      color: #000;
+    }
+  }
+  @keyframes show-text {
+    0% {
+      color: transparent;
+    }
+    50%, 100% {
+      color: #000;
+    }
+  }
+  /* //header */
+
+/* section1 */
 #section1 .sec1_wrap .slides {
     display: flex;
     justify-content: space-between;
@@ -70,26 +150,6 @@ body {
     line-height: 0.5;
 }
 
-
-#header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-}
-
-#header h1 {
-    color: #000;
-    font-size: 24px;
-    font-family: "Saint Monica";
-}
-
-/* section1 */
 .sec1-1 {
     height: 100vh;
     position: relative;
@@ -199,11 +259,6 @@ body {
     border-radius: 50%;
 }
 
-
-
-
-
-
 /* sec1-3 */
 .sec1-3 {
     width: 100%;
@@ -304,15 +359,6 @@ body {
     padding-top: 1vh;
 }
 
-
-
-
-
-
-
-
-/*  */
-
 #section1 .pro01 {
     width: 70vw;
     height: 25vw;
@@ -352,7 +398,7 @@ body {
 }
 #section1 .pro01:hover .num {
     left: -10%;
-}*/
+}
 
 #section1 .pro__cont {
     opacity: 0;
@@ -523,20 +569,32 @@ body {
 #section2 {
 }
 
+#section2 .desc {
+    display: grid;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-left: 5%;
+}
 #section2 h2 {
     font-family: "Saint Monica";
     font-size: 42vh;
-    z-index: -1;
     letter-spacing: 0.5;
+    line-height: 1;
 }
 #section2 p {
     font-family: "Saint Monica";
-    color: #efeeea;
+    color: #000;
     font-size: 8vh;
 }
 
 #section2 iframe {
     position: relative;
+    top: -40%;
+    left: 45%;
     width: 40%;
     height: 70%;
     background-color: none;
@@ -551,3 +609,207 @@ body {
     min-width: 100vw;
     height: -webkit-fill-available;
 } */
+
+
+
+/* section5 */
+#section5 {
+    height: 100vh;
+    padding: 0px 10vw;
+  }
+  
+  #section5 .headline {
+    letter-spacing: 0.2vh;
+    text-align: center;
+    font-size: 1em;
+    font-family: "Roboto";
+    color: #787775;
+  }
+  
+  #section5 .separator {
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    opacity: 0.2;
+  }
+  
+  #section5 .title {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+  }
+  
+  #section5 .title .imgcont .text {
+    display: flex;
+  }
+  
+  #section5 .title .imgcont .text h2 {
+    color: #000;
+    font-family: "GmarketSans";
+    font-style: normal;
+    font-size: 6vh;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+  
+  #section5 .title .imgcont .text .nom {
+    color: #000;
+    font-size: 15vh;
+    font-family: "Poppins";
+    font-weight: 100;
+  }
+  
+  #section5 img {
+    width: 680px;
+    height: 280px;
+  }
+
+
+
+/* section3 */
+/* #section3 {
+    height: 150vh;
+  }
+  
+  #section3 .sec3 {
+    padding: 5vh 10vw;
+  }
+  
+  #section3 .headline {
+    letter-spacing: 0.2vh;
+    text-align: center;
+    font-size: 1em;
+    font-family: "Roboto";
+    color: #787775;
+  }
+  
+  #section3 .separator {
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    opacity: 0.2;
+  }
+  
+  #section3 .title {
+    position: relative;
+    color: #000;
+    font-family: "GmarketSans";
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  #section3 .title .lavender {
+    color: #749df0;
+  }
+  
+  #section3 img {
+    position: relative;
+    margin-top: 5vh;
+  } */
+  
+  /* section4 */
+  #section4 {
+    padding: 0px 10vw;
+  }
+  #section4 .sec4 {
+  }
+
+  #section4 .headline {
+    letter-spacing: 0.2vh;
+    text-align: center;
+    font-size: 1em;
+    font-family: "Roboto";
+    color: #787775;
+  }
+  
+  #section4 .separator {
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    opacity: 0.2;
+  }
+  
+  #section4 .title {
+    display: flex;
+    position: relative;
+    color: #000;
+    font-family: "GmarketSans";
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 10vh;
+  }
+  
+  #section4 .title h2 {
+    color: #000;
+  }
+  
+  #section4 .title .lavender {
+    color: #749df0;
+  }
+  
+  /* footer */
+  #footer {
+    height: 20vh;
+    padding: 0px 10vw;
+  }
+  
+  #footer .headline {
+    letter-spacing: 0.2vh;
+    text-align: center;
+    font-size: 1em;
+    font-family: "Roboto";
+    color: #787775;
+  }
+  
+  #footer .separator {
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    opacity: 0.2;
+  }
+  
+  #footer .title {
+    display: flex;
+    position: relative;
+    color: #000;
+    font-family: "ChosunNm";
+    font-weight: 100;
+    font-size: 1rem;
+    line-height: 1.1;
+    text-align: center;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  
+  #footer figure {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000;
+    font-size: 1vw;
+    font-family: "ChosunNm";
+    padding-top: 4vh;
+    font-weight: 100;
+  }
