@@ -570,26 +570,26 @@ body {
 }
 
 #section2 .desc {
-    display: grid;
+  display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-content: center;
-    align-items: center;
+    align-items: flex-start;
     justify-items: center;
-    margin-left: 8%;
+    /* margin-left: 8%; */
     padding-top: 5%;
 }
 #section2 h2 {
     font-family: "SCoreDream";
-    font-size: 10vh;
+    font-size: 15vh;
     letter-spacing: 0.5;
     line-height: 1;
 }
 #section2 p {
     font-family: "SCoreDream";
     color: #000;
-    font-size: 25vh;
+    font-size: 40vh;
     line-height: 1;
     opacity: 0.1;
 }
@@ -597,12 +597,13 @@ body {
     text-align: left;
     font-family: "IropkeBatang";
     font-size: 2vh;
+    line-height: 1.3;
 }
 
 #section2 iframe {
     position: relative;
-    top: -45%;
-    left: 40%;
+    top: -50%;
+    left: 35%;
     width: 60%;
     height: 70%;
     background-color: none;
@@ -827,7 +828,7 @@ body {
     color: #000;
     font-family: "ChosunNm";
     font-weight: 100;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.1;
     text-align: center;
     align-content: center;
