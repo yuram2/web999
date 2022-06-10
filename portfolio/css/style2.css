@@ -148,7 +148,7 @@ body {
     padding-bottom: 1vw;
     letter-spacing: 0.1em;
     line-height: 0.5;
-}
+  }
 
 .sec1-1 {
     height: 100vh;
@@ -657,7 +657,7 @@ body {
   }
   
   #section3 .title .imgcont .text h2 {
-    color: #000;
+    color: #969AF7;
     font-family: "GmarketSans";
     font-style: normal;
     font-size: 6vh;
@@ -666,10 +666,9 @@ body {
   }
   
   #section3 .title .text .nom {
-    color: #000;
     font-size: 15vh;
     font-family: 'Poppins';
-    font-weight: 100;
+    font-weight: 300;
   }
   
   #section3 img {
@@ -682,6 +681,7 @@ body {
 /* section4 */
 #section4 {
     height: 100vh;
+    margin-bottom: 10vh;
   }
   
   #section4 .sec4 {
@@ -734,9 +734,10 @@ body {
   /* section5 */
   #section5 {
     padding: 0px 10vw;
-    height: 100vh;
+    height: 80vh;
+    margin-top: 15vh;
   }
-  #section5 .sec5 {
+  #section5 .sec5 {    
   }
 
   #section5 .headline {
@@ -758,25 +759,43 @@ body {
   
   #section5 .title {
     display: flex;
-    position: relative;
-    color: #000;
-    font-family: "GmarketSans";
-    font-weight: 300;
-    font-size: 2rem;
-    line-height: 1.1;
-    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
     justify-content: center;
     align-items: center;
-    align-content: center;
-    padding-top: 10vh;
   }
   
   #section5 .title h2 {
     color: #000;
+    font-size: 12vh;
+    font-family: 'IropkeBatang';
+    padding-bottom: 10vh;
+    letter-spacing: 1.5vh;
   }
   
   #section5 .title .lavender {
     color: #749df0;
+  }
+
+  #section5 img {
+    position: relative;
+    width: 30%;
+    left: -20%;
+  }
+
+  #section5 address {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: 'IropkeBatang';
+    font-size: 5vh;
+    left: 50%;
+    padding-top: 20vh;
   }
   
   /* footer */
