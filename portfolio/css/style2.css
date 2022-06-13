@@ -143,13 +143,18 @@ body {
     align-items: center;
     position: relative;
     font-size: 3vw;
-    opacity: 1;
+    overflow: hidden;
+    opacity: 0;
     z-index: 3;
     padding-bottom: 1vw;
     letter-spacing: 0.1em;
     line-height: 0.5;
   }
-
+  #section1 .slides figure figcaption:hover {
+    overflow: visible;
+    opacity: 1;
+    
+  }
 .sec1-1 {
     height: 100vh;
     position: relative;
