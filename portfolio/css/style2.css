@@ -413,7 +413,7 @@ body {
 #section1 .pro01 {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     position: relative;
     width: 80%;
     height: 10vw;
@@ -440,13 +440,7 @@ body {
     pointer-events: none;
     opacity: 0;
 }
-#section1 .pro01-image_wrap {
-    position: absolute;
-    width: 380px;
-    height: 380px;
-    pointer-events: none;
-    opacity: 0;
-}
+
   
 #section1 .pro01-image_inner {
     position: relative;
@@ -603,11 +597,12 @@ body {
     font-family: "IropkeBatang";
     font-size: 2vh;
     line-height: 1.3;
+    padding-top: 2%;
 }
 
 #section2 iframe {
     position: relative;
-    top: -50%;
+    top: -55%;
     left: 35%;
     width: 60%;
     height: 70%;
