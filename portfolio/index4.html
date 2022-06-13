@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,7 +57,7 @@
         <nav></nav>
     </header>
     <!-- //header -->
-    <main id="main">
+    <main id="main" data-scroll-container>
         <section id="section1">
             <div class="sec1_wrap">
                 <div class="sec1-1">
@@ -108,8 +108,8 @@
                         <div class="canvas"></div>
                         <div class="plane">
                             <figure>
-                                <img data-sampler="texture0" id="texture0" src="./img/lemon.png" crossorigin="anonymous" />
                                 <figcaption style="color: #969AF7;">AMBITION</figcaption>
+                                <img data-sampler="texture0" id="texture0" src="./img/lemon.png" crossorigin="anonymous" />
                             </figure>
                             <img data-sampler="texture1" id="texture1" src="./img/pro1.jpg" crossorigin="anonymous" />
                             <img data-sampler="map" id="map" src="https://raw.githubusercontent.com/ivanalbizu/WEBGL-texture-Hover/main/src/img/displacements/03.jpg" crossorigin="anonymous" />
@@ -119,8 +119,8 @@
                         <div class="canvas"></div>
                         <div class="plane">
                             <figure>
-                                <img data-sampler="texture0" id="texture0" src="./img/avocado.png" crossorigin="anonymous" />
                                 <figcaption>DEFIANCE</figcaption>
+                                <img data-sampler="texture0" id="texture0" src="./img/avocado.png" crossorigin="anonymous" />
                             </figure>
                             <img data-sampler="texture1" id="texture1" src="./img/pro2.jpg" crossorigin="anonymous" />
                             <img data-sampler="map" id="map" src="https://raw.githubusercontent.com/ivanalbizu/WEBGL-texture-Hover/main/src/img/displacements/05.jpg" crossorigin="anonymous" />
@@ -130,8 +130,8 @@
                         <div class="canvas"></div>
                         <div class="plane">
                             <figure>
-                                <img data-sampler="texture0" id="texture0" src="./img/candy.png" crossorigin="anonymous" />
                                 <figcaption style="color: #969AF7;">ENDEAVOR</figcaption>
+                                <img data-sampler="texture0" id="texture0" src="./img/candy.png" crossorigin="anonymous" />
                             </figure>
                             <img data-sampler="texture1" id="texture1" src="./img/pro3.jpg" crossorigin="anonymous" />
                             <img data-sampler="map" id="map" src="https://raw.githubusercontent.com/ivanalbizu/WEBGL-texture-Hover/main/src/img/displacements/04.jpg" crossorigin="anonymous" />
@@ -141,8 +141,8 @@
                         <div class="canvas"></div>
                         <div class="plane">
                             <figure>
-                                <img data-sampler="texture0" id="texture0" src="./img/desert.png" crossorigin="anonymous" />
                                 <figcaption>MODESTY</figcaption>
+                                <img data-sampler="texture0" id="texture0" src="./img/desert.png" crossorigin="anonymous" />
                             </figure>
                             <img data-sampler="texture1" id="texture1" src="./img/pro4.jpg" crossorigin="anonymous" />
                             <img data-sampler="map" id="map" src="https://raw.githubusercontent.com/ivanalbizu/WEBGL-texture-Hover/main/src/img/displacements/06.jpg" crossorigin="anonymous" />
@@ -344,7 +344,7 @@
                         </em>
                         <p style="margin-left: 6%; margin-top: 14%;">07</p>
                     </div>
-                    <iframe style="top: -82%; left: 34%;" src="../javascript/effect/parallaxEffect01.html" frameborder="0"></iframe>                    
+                    <iframe style="top: -82%; left: 34%;" src="../javascript/effect/parallaxEffect06.html" frameborder="0"></iframe>                    
                 </div>
                 <!-- <div class="sec2-8">
                     <div class="desc" style="margin-left: 3%;">
@@ -612,6 +612,30 @@
                 },
                 x: -horizontal2,
                 ease: "none"
+            });
+
+            const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
+            scrollColorElems.forEach((colorSection, i) => {
+                const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;
+                const prevText = i === 0 ? "" : scrollColorElems[i - 1].dataset.textcolor;
+
+                ScrollTrigger.create({
+                trigger: colorSection,
+                scroller: "[data-scroll-container]",
+                start: "top 50%",
+                onEnter: () =>
+                    gsap.to("body", {
+                    backgroundColor: colorSection.dataset.bgcolor,
+                    color: colorSection.dataset.textcolor,
+                    overwrite: "auto"
+                    }),
+                onLeaveBack: () =>
+                    gsap.to("body", {
+                    backgroundColor: prevBg,
+                    color: prevText,
+                    overwrite: "auto"
+                    })
+                });
             });
             
             ScrollTrigger.addEventListener("refresh", () => scroller.update());
