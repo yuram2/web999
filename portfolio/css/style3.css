@@ -539,16 +539,18 @@ body {
     font-size: 15vh;
     line-height: 1;
     padding: 3rem;
+    cursor: default;
 }
 #section5 span {
     position: absolute;
     text-align: left;
     font-family: "IropkeBatang";
     font-size: 2vh;
-    line-height: 4vh;
-    width: 60vh;
-    top: 19.1%;
+    line-height: 1.5;
+    width: 65vh;
+    top: 20%;
     padding: 3rem;
+    cursor: default;
 }
 
 #section5 p {
@@ -561,6 +563,7 @@ body {
     position: absolute;
     top: 50%;
     letter-spacing: -5vh;
+    cursor: default;
 }
 
 #section5 iframe {
@@ -568,8 +571,21 @@ body {
     width: 60vw;
     height: 70vh;
     left: 35%;
-    top: 0%;
+    top: -3%;
     border-radius: 50px;
 }
 
+#section5 .desc a {
+    position: relative;
+    width: 20vh;
+    top: 19vh;
+    left: 19%;
+    padding: 1rem 3rem;
+    font-family: "SCoreDream";
+    border-radius: 4px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 3;
+}
 /* //section5 */
