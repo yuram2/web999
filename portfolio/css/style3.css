@@ -149,7 +149,7 @@ body {
 
 /* section2 */
 #section2 {
-    height: 130vh;
+    /* height: 130vh; */
     text-align: center;
     margin-top: 5%;
 }
@@ -203,6 +203,7 @@ body {
     position: absolute;
     left: 0;
     top: 145vh;
+    padding-top: 10vh;
 }
 
 #section2 .slide {
@@ -268,6 +269,9 @@ body {
 
 
 /* section3 */
+#section3 {
+    margin-top: 100vh;
+}
 #section3 .sec3-1 {
     width: 100%;
     overflow: hidden;
