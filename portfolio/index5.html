@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,45 +13,46 @@
     <link rel="stylesheet" href="../javascript/effect/css/min.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <style>
         /* layout */
-        #section5 {background-color: #efeeea;}
-        #section3 {background-color: #efeeea;}
-        #section7 {background-image: url(./img/img1.png);}
+        #section5 {
+            background-color: #efeeea;
+        }
+
+        #section3 {
+            background-color: #efeeea;
+        }
+
+        #section7 {
+            background-image: url(./img/img1.png);
+        }
+
         #section5 {
             height: 100vh;
             overflow: hidden;
             display: flex;
             left: 0;
         }
+
         .sec5_wrap {
             height: 100vh;
             display: flex;
             justify-content: flex-start;
             align-items: center;
         }
-        .sec5_wrap > div {
+
+        .sec5_wrap>div {
             width: 100vw;
             min-width: 100vw;
             height: 100vh;
         }
-        /* .sec2-1 {background-color: #000000;}
-        .sec2-2 {background-color: #B9B3A9;}
-        .sec2-3 {background-color: #51442B;}
-        .sec2-4 {background-color: #c3b69d;}
-        .sec2-5 {background-color: #ac740e;}
-        .sec2-6 {background-color: #1d160a;}
-        .sec2-7 {background-color: #c3b69d;}
-        .sec2-8 {background-color: #a5700d;}
-        .sec2-9 {background-color: #412c06;}
-        .sec2-10 {background-color: #d1cec8;}
-        .sec2-11 {background-color: #4a3610;}
-        .sec2-12 {background-color: #d8d0c0;}
-        .sec2-13 {background-color: #432c00;} */
     </style>
 </head>
+
 <body>
     <header id="header" style="--reveal-speed: 0.75">
         <a href="#" style="--delay: 1.0; --color: #F85858;">PORTFLIO</a>
@@ -58,15 +60,18 @@
     </header>
     <!-- //header -->
     <main id="main" data-scroll-container>
-        <section id="section1">
+        <section id="section1" data-bgcolor="#efeeea">
             <div class="sec1_wrap">
                 <div class="sec1-1">
                     <canvas id="sec1_bg"></canvas>
                     <div class="sec1_text">
                         <div class="t1">WELCOME</div>
-                        <div class="t2" data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">THE WORLSPACE</div>
-                        <div class="t3" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">OF MY </div>
-                        <div class="t4" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">PORTFLIO</div>
+                        <div class="t2" data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">THE
+                            WORLSPACE</div>
+                        <div class="t3" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">OF MY
+                        </div>
+                        <div class="t4" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">PORTFLIO
+                        </div>
                     </div>
                     <div class="sec1_img" data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
                         <img src="../class/img/img10.jpg">
@@ -81,7 +86,7 @@
                 </div>
             </div>
         </section>
-        <section id="section2">
+        <section id="section2" data-bgcolor="#FFFF9A">
             <h2>about me</h2>
             <p>
                 어떤 일이라도 노력하고 <em>즐기면</em> 그 결과는 빛을 바란다고 생각합니다.<br>
@@ -96,7 +101,7 @@
             <!-- slide -->
             <div class="slides">
                 <div class="slide">
-                <div class="canvas"></div>
+                    <div class="canvas"></div>
                     <div class="plane">
                         <figure>
                             <figcaption>PASSION</figcaption>
@@ -106,7 +111,7 @@
                         <img data-sampler="map" id="map" src="https://raw.githubusercontent.com/ivanalbizu/WEBGL-texture-Hover/main/src/img/displacements/02.jpg" crossorigin="anonymous" />
                     </div>
                 </div>
-                    <div class="slide">
+                <div class="slide">
                     <div class="canvas"></div>
                     <div class="plane">
                         <figure>
@@ -116,8 +121,8 @@
                         <img data-sampler="texture1" id="texture1" src="./img/pro1-1-min.png" crossorigin="anonymous" />
                         <img data-sampler="map" id="map" src="https://raw.githubusercontent.com/ivanalbizu/WEBGL-texture-Hover/main/src/img/displacements/03.jpg" crossorigin="anonymous" />
                     </div>
-                    </div>
-                    <div class="slide">
+                </div>
+                <div class="slide">
                     <div class="canvas"></div>
                     <div class="plane">
                         <figure>
@@ -127,8 +132,8 @@
                         <img data-sampler="texture1" id="texture1" src="./img/pro2-1-min.png" crossorigin="anonymous" />
                         <img data-sampler="map" id="map" src="https://raw.githubusercontent.com/ivanalbizu/WEBGL-texture-Hover/main/src/img/displacements/05.jpg" crossorigin="anonymous" />
                     </div>
-                    </div>
-                    <div class="slide">
+                </div>
+                <div class="slide">
                     <div class="canvas"></div>
                     <div class="plane">
                         <figure>
@@ -138,8 +143,8 @@
                         <img data-sampler="texture1" id="texture1" src="./img/pro3-1-min.png" crossorigin="anonymous" />
                         <img data-sampler="map" id="map" src="https://raw.githubusercontent.com/ivanalbizu/WEBGL-texture-Hover/main/src/img/displacements/04.jpg" crossorigin="anonymous" />
                     </div>
-                    </div>
-                    <div class="slide">
+                </div>
+                <div class="slide">
                     <div class="canvas"></div>
                     <div class="plane">
                         <figure>
@@ -149,22 +154,26 @@
                         <img data-sampler="texture1" id="texture1" src="./img/pro4-1-min.png" crossorigin="anonymous" />
                         <img data-sampler="map" id="map" src="https://raw.githubusercontent.com/ivanalbizu/WEBGL-texture-Hover/main/src/img/displacements/06.jpg" crossorigin="anonymous" />
                     </div>
-                    </div>
-                
+                </div>
+
             </div>
         </section>
         <!-- //section2 -->
         <!-- section3 -->
-        <section id="section3">
-            <div class="sec3-1">
-                <h2>skill</h2>
-                <p class="line1" data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">REACT JAVASCRIPT VUE PHP FIGMA HTML CSS MYSQL jQuery</p>
-                <p class="line2" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">REACT HTML CSS MYSQL jQuery JAVASCRIPT VUE PHP FIGMA</p>
-                <div class="line"></div>
+        <section id="section3" data-bgcolor="#FFFF58">
+            <div class="container">
+                <div class="sec3-1">
+                    <h2>skill</h2>
+                    <p class="line1" data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">REACT JAVASCRIPT
+                        VUE PHP FIGMA HTML CSS MYSQL jQuery</p>
+                    <p class="line2" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">REACT HTML CSS
+                        MYSQL jQuery JAVASCRIPT VUE PHP FIGMA</p>
+                    <div class="line"></div>
+                </div>
             </div>
         </section>
-       <!-- section4 -->
-       <section id="section4">
+        <!-- section4 -->
+        <section id="section4" data-bgcolor="#FFFF00">
             <!-- projects -->
             <h2>projects</h2>
             <div class="pro__cont">
@@ -172,69 +181,57 @@
                     <ul>
                         <li class="pro01">
                             <div class="pro01-image_wrap">
-                                    <div class="pro01-image_inner">
-                                        <img class="pro01-image" src="./img/webstandardmu.png"/>
-                                            <div class="pro__item01">
-                                                
-                                            </div>
-                                    </div>
+                                <div class="pro01-image_inner">
+                                    <img class="pro01-image" src="./img/webstandardmu.png" />
+                                </div>
                             </div>
                             <span class="pro01-text">
-                            <span class="pro01-innertext-num" style="color:#F85858;">(01)</span>
-                            <span class="pro01-innertext"><a href="../webstandard/index.html" target='_blank'>WEBSTANDARD</a></span>
+                                <span class="pro01-innertext-num" style="color:#F85858;">(01)</span>
+                                <span class="pro01-innertext"><a href="../webstandard/index.html" target='_blank'>WEBSTANDARD</a></span>
                             </span>
                         </li>
                         <!-- 02 -->
                         <li class="pro01">
                             <div class="pro01-image_wrap">
-                                    <div class="pro01-image_inner">
-                                        <img class="pro01-image" src="./img/phpmu.png" />
-                                            <div class="pro__item02">
-                                                
-                                            </div>
-                                    </div>
+                                <div class="pro01-image_inner">
+                                    <img class="pro01-image" src="./img/phpmu.png" />
+                                </div>
                             </div>
                             <span class="pro01-text">
-                            <span class="pro01-innertext-num" style="color:#FFCE29;">(02)</span>
-                            <span class="pro01-innertext"><a href="http://lur0872.dothome.co.kr/php/pages/main.php" target='_blank'>PHP SITE</a></span>
+                                <span class="pro01-innertext-num" style="color:#FFCE29;">(02)</span>
+                                <span class="pro01-innertext"><a href="http://lur0872.dothome.co.kr/php/pages/main.php" target='_blank'>PHP SITE</a></span>
                             </span>
                         </li>
                         <!-- 03 -->
                         <li class="pro01">
                             <div class="pro01-image_wrap">
-                                    <div class="pro01-image_inner">
-                                        <img class="pro01-image" src="./img/reactmu.png"/>
-                                            <div class="pro__item03">
-                                                
-                                            </div>
-                                    </div>
+                                <div class="pro01-image_inner">
+                                    <img class="pro01-image" src="./img/reactmu.png" />
+                                </div>
                             </div>
                             <span class="pro01-text">
-                            <span class="pro01-innertext-num" style="color:#74CC33;">(03)</span>
-                            <span class="pro01-innertext"><a href="https://yuram2react.netlify.app" target='_blank'>REACT SITE</a></span>
+                                <span class="pro01-innertext-num" style="color:#74CC33;">(03)</span>
+                                <span class="pro01-innertext"><a href="https://yuram2react.netlify.app" target='_blank'>REACT SITE</a></span>
                             </span>
                         </li>
                         <!-- 04 -->
                         <li class="pro01">
                             <div class="pro01-image_wrap">
-                                    <div class="pro01-image_inner">
-                                        <img class="pro01-image" src="./img/vuemu.png"/>
-                                            <div class="pro__item04">
-                                                
-                                            </div>
-                                    </div>
+                                <div class="pro01-image_inner">
+                                    <img class="pro01-image" src="./img/vuemu.png" />
+                                </div>
                             </div>
                             <span class="pro01-text">
-                            <span class="pro01-innertext-num" style="color:#EFA8EF;">(04)</span>
-                            <span class="pro01-innertext"><a href="https://yuram2vue.netlify.app" target='_blank'>VUE SITE</a></span>
+                                <span class="pro01-innertext-num" style="color:#EFA8EF;">(04)</span>
+                                <span class="pro01-innertext"><a href="https://yuram2vue.netlify.app" target='_blank'>VUE SITE</a></span>
                             </span>
                         </li>
                     </ul>
                 </div>
             </div>
             <!-- //project -->
-       </section>
-       <!-- //section4 -->
+        </section>
+        <!-- //section4 -->
     </main>
     <!-- slide -->
     <script id="vs" type="x-shader/x-vertex">
@@ -272,7 +269,7 @@
           vVertexPosition = vertexPosition;
         }
       </script>
-      <script id="fs" type="x-shader/x-fragment">
+    <script id="fs" type="x-shader/x-fragment">
         #ifdef GL_ES
         precision mediump float;
         #endif
@@ -353,9 +350,10 @@
           gl_FragColor = mix(color, color1, progress0 );          
         }
       </script>
-      <!-- partial -->
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script><script type="module" src="./js/script.js"></script>
-      
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
+    <script type="module" src="./js/script.js"></script>
+
     <!-- //slide -->
     <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
@@ -401,97 +399,166 @@
                 ease: "none"
             });
 
-            const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
-            scrollColorElems.forEach((colorSection, i) => {
-                const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;
-                const prevText = i === 0 ? "" : scrollColorElems[i - 1].dataset.textcolor;
-
-                ScrollTrigger.create({
-                trigger: colorSection,
-                scroller: "[data-scroll-container]",
-                start: "top 50%",
-                onEnter: () =>
-                    gsap.to("body", {
-                    backgroundColor: colorSection.dataset.bgcolor,
-                    color: colorSection.dataset.textcolor,
-                    overwrite: "auto"
-                    }),
-                onLeaveBack: () =>
-                    gsap.to("body", {
-                    backgroundColor: prevBg,
-                    color: prevText,
-                    overwrite: "auto"
-                    })
-                });
-            });
-            
             ScrollTrigger.addEventListener("refresh", () => scroller.update());
             ScrollTrigger.refresh();
         });
     </script>
     <script>
-console.clear();
-//텍스트
-const { gsap } = window;
+        //배경색 체인지
+        window.addEventListener("load", function () {
+  gsap.registerPlugin(ScrollTrigger);
 
-gsap.timeline()
-	.set(".pro__cont", { autoAlpha: 1 })
-	.from(".pro01-text", {
-		delay: 1,
-		duration: 0.85,
-		yPercent: 125,
-		stagger: 0.095,
-		skewY: gsap.utils.wrap([-8, 8]),
-		ease: "expo.out",
-	})
-	.set(".pro__cont", { pointerEvents: "all" });
+  const pageContainer = document.querySelector(".container");
+  pageContainer.setAttribute("data-scroll-container", "");
 
-gsap.defaults({
-	duration: 0.55,
-	ease: "expo.out",
+  const scroller = new LocomotiveScroll({
+    el: pageContainer,
+    smooth: true,
+    getDirection: true
+  });
+
+  scroller.on("scroll", function (t) {
+    document.documentElement.setAttribute("data-direction", t.direction);
+  });
+
+  scroller.on("scroll", ScrollTrigger.update);
+
+  ScrollTrigger.scrollerProxy(pageContainer, {
+    scrollTop(value) {
+      return arguments.length
+        ? scroller.scrollTo(value, 0, 0)
+        : scroller.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+      return {
+        left: 0,
+        top: 0,
+        width: window.innerWidth,
+        height: window.innerHeight
+      };
+    },
+    pinType: pageContainer.style.transform ? "transform" : "fixed"
+  });
+
+
+  /* COLOR CHANGER */
+
+  const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
+  scrollColorElems.forEach((colorSection, i) => {
+    const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;
+
+    ScrollTrigger.create({
+      trigger: colorSection,
+      scroller: "[data-scroll-container]",
+      start: "top 50%",
+      onEnter: () =>
+        gsap.to("body", {
+          backgroundColor: colorSection.dataset.bgcolor,
+          overwrite: "auto"
+        }),
+      onLeaveBack: () =>
+        gsap.to("body", {
+          backgroundColor: prevBg,
+          overwrite: "auto"
+        })
+    });
+  });
+
+  ScrollTrigger.addEventListener("refresh", () => scroller.update());
+
+  ScrollTrigger.refresh();
 });
-//이미지
-const mouseImg = document.querySelectorAll(".pro01");
+    </script>
+    <script>
+        console.clear();
+        //텍스트
+        const {
+            gsap
+        } = window;
 
-mouseImg.forEach((item) => { //item = mouseimg
-	const imageWrap = item.querySelector(".pro01-image_wrap");
-	const imageWrapBounds = imageWrap.getBoundingClientRect();  //위치값을 가져옴
-	let itemBounds = item.getBoundingClientRect();  //item의 위치값
+        gsap.timeline()
+            .set(".pro__cont", {
+                autoAlpha: 1
+            })
+            .from(".pro01-text", {
+                delay: 1,
+                duration: 0.85,
+                yPercent: 125,
+                stagger: 0.095,
+                skewY: gsap.utils.wrap([-8, 8]),
+                ease: "expo.out",
+            })
+            .set(".pro__cont", {
+                pointerEvents: "all"
+            });
 
-	const onMouseEnter = () => {  //마우스가 영역에 들어왔을때
-		gsap.set(imageWrap, {xPercent: -50, yPercent: 50, scale: 0.8, rotation: -15 }); //set = 설정해주는거
-		gsap.to(imageWrap, {xPercent: -100, yPercent: -50, scale: 1, rotation: 0, opacity: 1});
-	};
-	const onMouseLeave = () => { //마우스가 영역을 떠났을때
-		gsap.to(imageWrap, {xPercent: -50, yPercent: -50, scale: 0.8, rotation: -15, opacity: 0,});
-	};
-	const onMouseMove = ({ x, y }) => { //마우스 움직일때
-        
-		gsap.to(imageWrap, {
-			duration: 1.25,
-			x: Math.abs(x - itemBounds.left), //x 1000이면 itemBounds값이 500이됨 -,+되든 절대값으로 만들어줌
-			// y: Math.abs(y - itemBounds.top)
-		});
-	};
+        gsap.defaults({
+            duration: 0.55,
+            ease: "expo.out",
+        });
+        //이미지
+        const mouseImg = document.querySelectorAll(".pro01");
 
-	item.addEventListener("mouseenter", onMouseEnter);
-	item.addEventListener("mouseleave", onMouseLeave);
-	item.addEventListener("mousemove", onMouseMove);
+        mouseImg.forEach((item) => { //item = mouseimg
+            const imageWrap = item.querySelector(".pro01-image_wrap");
+            const imageWrapBounds = imageWrap.getBoundingClientRect(); //위치값을 가져옴
+            let itemBounds = item.getBoundingClientRect(); //item의 위치값
 
-	window.addEventListener("resize", () => {
-		itemBounds = item.getBoundingClientRect();
-	});
-});
+            const onMouseEnter = () => { //마우스가 영역에 들어왔을때
+                gsap.set(imageWrap, {
+                    xPercent: -50,
+                    yPercent: 50,
+                    scale: 0.8,
+                    rotation: -15
+                }); //set = 설정해주는거
+                gsap.to(imageWrap, {
+                    xPercent: -100,
+                    yPercent: -50,
+                    scale: 1,
+                    rotation: 0,
+                    opacity: 1
+                });
+            };
+            const onMouseLeave = () => { //마우스가 영역을 떠났을때
+                gsap.to(imageWrap, {
+                    xPercent: -50,
+                    yPercent: -50,
+                    scale: 0.8,
+                    rotation: -15,
+                    opacity: 0,
+                });
+            };
+            const onMouseMove = ({
+                x,
+                y
+            }) => { //마우스 움직일때
+
+                gsap.to(imageWrap, {
+                    duration: 1.25,
+                    x: Math.abs(x - itemBounds.left), //x 1000이면 itemBounds값이 500이됨 -,+되든 절대값으로 만들어줌
+                    // y: Math.abs(y - itemBounds.top)
+                });
+            };
+
+            item.addEventListener("mouseenter", onMouseEnter);
+            item.addEventListener("mouseleave", onMouseLeave);
+            item.addEventListener("mousemove", onMouseMove);
+
+            window.addEventListener("resize", () => {
+                itemBounds = item.getBoundingClientRect();
+            });
+        });
     </script>
 
     <!-- 리빌효과 -->
     <script>
-const restart = () => {
-  const blocks = document.querySelector("#header");
-  const newBlocks = blocks.cloneNode(true);
-  document.body.removeChild(blocks);
-  document.body.appendChild(newBlocks);
-};
+        const restart = () => {
+            const blocks = document.querySelector("#header");
+            const newBlocks = blocks.cloneNode(true);
+            document.body.removeChild(blocks);
+            document.body.appendChild(newBlocks);
+        };
     </script>
 </body>
+
 </html>
