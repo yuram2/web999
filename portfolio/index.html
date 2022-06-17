@@ -1,7 +1,6 @@
 <script>
-            //로딩
-            function loading(){
-    let progress = $("#progress"),
+function loading(){
+    let progress = $(".progress"),
             progressText = $(".progress-text"),
             imgLoad = imagesLoaded("body"),
             imgTotal = imgLoad.images.length,	//전체 이미지 수
@@ -24,8 +23,6 @@
             progress.addClass('active');
             html.css("overflow","auto");
         }
-            
-        }
         
         if(imgCurrent > 99){
             imgCurrent = 100;
@@ -33,7 +30,167 @@
             
     }
     
-//document ready
+}//document ready
 
 loading();
+
 </script>
+.load{
+    width:100vw;
+    height:100vh;
+    background: #F3EEE8;
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 10000;
+}
+.load-text {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translateX(-50%);
+    font-size: 3vw;
+    color:#7EC1A3;
+}
+.all {
+    width: 400px;
+    height:  400px;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+    transform: scale(0.2);
+    filter: url('#goo'); 
+}
+#load .container, .loader {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: calc(50% - 200px); 
+    left: calc(50% - 200px);   
+    transform-origin: center;
+}
+    .circle, .load-circle {
+    width: 80px;
+    height: 80px;  
+    position: absolute;
+    background-color: #7EC1A3;
+    left: calc(50% - 40px);
+    border-radius: 50px;  
+}
+    #load .container:nth-child(2) {
+    transform: rotate(45deg);
+}
+    #load .container:nth-child(3) {
+    transform: rotate(90deg);
+}
+    #load .container:nth-child(4) {
+    transform: rotate(135deg);
+}
+    #load .container:nth-child(5) {
+    transform: rotate(180deg);
+}
+    #load .container:nth-child(6) {
+    transform: rotate(225deg);
+}
+    #load .container:nth-child(7) {
+    transform: rotate(270deg);
+}
+    #load .container:nth-child(8) {
+    transform: rotate(315deg);
+}
+    .loader {  
+    transform-origin: center;
+    animation: anim 4s infinite ease-in-out;
+}
+    .load-circle {
+    width: 60px;
+    height: 60px;
+    top: 20px;
+}
+    @keyframes anim {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+
+
+
+
+
+
+
+<div class="load" id="load">
+    <span class="load-text">0%</span>
+    <div class="all">
+        <div class="container">
+            <div class="circle"></div>
+        </div>
+        <div class="container">
+            <div class="circle"></div>
+        </div>
+        <div class="container">
+            <div class="circle"></div>
+        </div>
+        <div class="container">
+            <div class="circle"></div>
+        </div>
+        <div class="container">
+            <div class="circle"></div>
+        </div>
+        <div class="container">
+            <div class="circle"></div>
+        </div>
+        <div class="container">
+            <div class="circle"></div>
+        </div>
+        <div class="container">
+            <div class="circle"></div>
+        </div>
+        <div class="loader">
+            <div class="load-circle"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+//로딩
+function imagesProgress () {
+    var $container = $('#load'),            
+        $progressText = $container.find('.load-text'), 
+
+        imgLoad = imagesLoaded('body'),//이미지 로딩을 모니터링
+        imgTotal = imgLoad.images.length,//body 전체 이미지갯수
+        imgLoaded  = 0,// 읽은 이미지갯수
+        current = 0,//현재 진행률 
+        progressTimer = setInterval(updateProgress, 1000 / 60);
+
+        imgLoad.on('progress', function () {
+            imgLoaded++;
+        });
+
+        function updateProgress () {
+            var target = (imgLoaded / imgTotal) * 100;
+            current += (target - current) * 0.1; //부드러운 효과
+            $progressText.text(Math.floor(current) + '%');
+
+            if(current >= 100){
+                clearInterval(progressTimer);
+
+                gsap.to("#load", {top: "-100%"})
+            }
+            if (current > 99.9) {
+                current = 100;
+            }
+        }
+    }
+    imagesProgress();
+
+
+
+
+
+
+

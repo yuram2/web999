@@ -12,15 +12,78 @@
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="../javascript/effect/css/min.css">
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <style>
+         /* 로딩 페이지 */
+/* 로딩 */
+.progress{position: fixed; left: 0; top: 0; z-index: 99999;
+    width: 100%; height: 100vh; background: #b2ffa1;}
+.progress-text{
+   position: absolute; left: 50%; top: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 6vw;
+   font-family: 'S-CoreDream-2ExtraLight';
+   color: #F85858;
+}
+.spring {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: visible;
+}
+.bubbles {
+    background: rgba(255, 255, 255, .4);
+    width: 7vw;
+    height: 7vw;
+    position: absolute;
+    display: block;
+    left: 0;
+    margin-left:-12px;
+    bottom: 0;
+    opacity: 0;
+    border-radius: 50%;
+    animation: bubbleUp 1s infinite ease-in-out;
+    -webkit-animation: bubbleUp 1s infinite ease-in-out;
+    -o-animation: bubbleUp 1s infinite ease-in-out;
+    -moz-animation: bubbleUp 1s infinite ease-in-out;
+}
+.bubble1s {left: -10vw; top: -10vw; -webkit-animation-delay: 0; animation-delay: 0;}
+.bubble2s {left: -5vw; top: -5vw; width: 5vw; height: 5vw;-webkit-animation-delay: 300ms; animation-delay: 300ms;}
+.bubble3s {right: -15vw; top: -15vw; -webkit-animation-delay: 600ms; animation-delay: 600ms;}
+.bubble4s {right: -10vw; top: -10vw;width: 10vw; height: 10vw; -webkit-animation-delay: 900ms; animation-delay: 900ms; -webkit-animation-duration: 1.5s; animation-duration: 1.5s;}
+.bubble5s {left: -7vw; top: -7vw;width: 15vw; height: 15vw;-webkit-animation-delay: 1200ms; animation-delay: 1200ms; -webkit-animation-duration: 1.2s; animation-duration: 1.2s;}
+@keyframes bubbleUp {
+    0% {top: 0px;-webkit-transform: scale(0.5);opacity: 0}
+    20% {top: 0px;-webkit-transform: scale(.7);opacity: 1}
+    93% {top: -30px;-webkit-transform: scale(1);opacity: 1}
+    99% {top: -36px;-webkit-transform: scale(2);opacity: 0}
+    100% {top: 0px; -webkit-transform: scale(1); opacity: 0}
+}
+
     </style>
 </head>
 
 <body>
+    <div class="progress">
+        <span class="progress-text">0</span>
+        <div class="porgress-ani">
+            <div class="bubble_container">
+                <div class="spring">
+                  <span class="bubbles bubble1s"></span>
+                  <span class="bubbles bubble2s"></span>
+                  <span class="bubbles bubble3s"></span>
+                  <span class="bubbles bubble4s"></span>
+                  <span class="bubbles bubble5s"></span>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <!--//loading-->
     <header id="header" style="--reveal-speed: 0.75">
         <a href="#" style="--delay: 1.0; --color: #F85858;">PORTFLIO</a>
     </header>
@@ -536,9 +599,42 @@
     <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js'></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="./js/imagesloaded.pkgd.min.js"></script>
+
     <script>
+//loadign
+function loading(){
+    const progress = $(".progress"),
+            progressText = progress.find(".progress-text");
+
+    let imgLoad = imagesLoaded("body"),
+        imgTotal = imgLoad.images.length,
+        imgLoaded = 0,
+        imgCurrent = 0,
+        progressTimer = setInterval(updateProgress, 1000/60);
+
+    imgLoad.on("progress",function(){
+        imgLoaded++;
+    })
+
+    function updateProgress(){
+        let target = (imgLoaded / imgTotal) * 100;
+
+        imgCurrent += (target - imgCurrent) * 0.1;
+        progressText.text(Math.floor(imgCurrent) + "%");
+
+        if(imgCurrent >= 100) {
+            clearInterval(progressTimer)
+            progress.delay(1000).fadeOut(1000);
+            
+        }
+        if(imgCurrent > 99) {
+            imgCurrent = 100;
+        } 
+    }
+ }
+ loading ();
         //텍스트
         console.clear();
         const {
