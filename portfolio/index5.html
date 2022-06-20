@@ -603,38 +603,46 @@
 <script src="./js/imagesloaded.pkgd.min.js"></script>
 
     <script>
-//loadign
-function loading(){
-    const progress = $(".progress"),
+        //loadign
+        function loading(){
+            const progress = $(".progress"),
             progressText = progress.find(".progress-text");
 
-    let imgLoad = imagesLoaded("body"),
-        imgTotal = imgLoad.images.length,
-        imgLoaded = 0,
-        imgCurrent = 0,
-        progressTimer = setInterval(updateProgress, 1000/60);
+            let imgLoad = imagesLoaded("body"),
+            imgTotal = imgLoad.images.length,
+            imgLoaded = 0,
+            imgCurrent = 0,
+            progressTimer = setInterval(updateProgress, 1000/60);
 
-    imgLoad.on("progress",function(){
-        imgLoaded++;
-    })
+            imgLoad.on("progress",function(){
+                imgLoaded++;
+        })
+        
 
-    function updateProgress(){
-        let target = (imgLoaded / imgTotal) * 100;
+        function updateProgress(){
+            let target = (imgLoaded / imgTotal) * 100;
 
-        imgCurrent += (target - imgCurrent) * 0.1;
-        progressText.text(Math.floor(imgCurrent) + "%");
+            imgCurrent += (target - imgCurrent) * 0.1;
+            progressText.text(Math.floor(imgCurrent) + "%");
 
-        if(imgCurrent >= 100) {
-            clearInterval(progressTimer)
-            progress.delay(1000).fadeOut(1000);
-            
+            if(imgCurrent >= 100) {
+                clearInterval(progressTimer)
+                progress.delay(1000).fadeOut(1000);
+
+                setTimeout(()=> {
+                    gsap.to(".sec1_text .t1", {opacity: 1, duration: 0.4})
+                    gsap.to(".sec1_text .t2", {opacity: 1, duration: 0.4, delay: 0.4})
+                    gsap.to(".sec1_text .t3", {opacity: 1, duration: 0.4, delay: 0.6})
+                    gsap.to(".sec1_text .t4", {opacity: 1, duration: 0.4, delay: 0.8})
+                },2000)
+                
+            }
+            if(imgCurrent > 99) {
+                imgCurrent = 100;
+            } 
         }
-        if(imgCurrent > 99) {
-            imgCurrent = 100;
-        } 
     }
- }
- loading ();
+    loading ();
         //텍스트
         console.clear();
         const {
